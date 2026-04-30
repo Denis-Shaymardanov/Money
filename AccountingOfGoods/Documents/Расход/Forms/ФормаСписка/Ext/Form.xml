@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОткрытьСписокШаблонов" id="75">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьСписокШаблоновExtendedTooltip" id="81"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<RowsPicture>
+				<xr:Ref>CommonPicture.СтатусыОпераций</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</RowsPicture>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<ChildItems>
+					<Button name="СписокОбщаяКомандаСоздатьШаблонОперации" id="74">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="СписокОбщаяКомандаСоздатьШаблонОперацииExtendedTooltip" id="82"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="83"/>
+			<SearchStringAddition name="СписокSearchString" id="98">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокSearchStringContextMenu" id="99"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="100"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокViewStatus" id="101">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокViewStatusContextMenu" id="102"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="103"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокSearchControl" id="104">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокSearchControlContextMenu" id="105"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="106"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Ссылка" id="4">
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="СсылкаExtendedTooltip" id="84"/>
+				</LabelField>
+				<LabelField name="Дата" id="6">
+					<DefaultItem>true</DefaultItem>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="85"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаСчетСубконто" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Источник оплаты и иконка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа счет субконто</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаСчетСубконтоExtendedTooltip" id="86"/>
+					<ChildItems>
+						<PictureField name="НомерИконкиСчета" id="64">
+							<ReadOnly>true</ReadOnly>
+							<SkipOnInput>true</SkipOnInput>
+							<TitleLocation>None</TitleLocation>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.КоллекцияИконокСчетов</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="НомерИконкиСчетаКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="НомерИконкиСчетаExtendedTooltip" id="87"/>
+						</PictureField>
+						<LabelField name="КошелекДолг" id="10">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Источник оплаты</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КошелекДолгКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="КошелекДолгРасширеннаяПодсказка" id="88"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаСуммаВалюта" id="22">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма оплаты, валюта</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаСуммаВалютаExtendedTooltip" id="89"/>
+					<ChildItems>
+						<LabelField name="СуммаОперации" id="20">
+							<MarkNegatives>true</MarkNegatives>
+							<ContextMenu name="СуммаОперацииКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="СуммаОперацииExtendedTooltip" id="90"/>
+						</LabelField>
+						<LabelField name="СубконтоВалюта" id="18">
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="СубконтоВалютаКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="СубконтоВалютаExtendedTooltip" id="91"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаСтоимостьИмущества" id="76">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость имущества. валюта</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаСтоимостьИмуществаExtendedTooltip" id="92"/>
+					<ChildItems>
+						<LabelField name="СтоимостьИмущества" id="77">
+							<ContextMenu name="СтоимостьИмуществаКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="СтоимостьИмуществаExtendedTooltip" id="93"/>
+						</LabelField>
+						<LabelField name="ВалютаДокумента" id="79">
+							<TitleLocation>None</TitleLocation>
+							<Width>4</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ВалютаДокументаКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ВалютаДокументаExtendedTooltip" id="94"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="ОписаниеОперации" id="12">
+					<ContextMenu name="ОписаниеОперацииКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ОписаниеОперацииExtendedTooltip" id="95"/>
+				</LabelField>
+				<LabelField name="Пользователь" id="14">
+					<ContextMenu name="ПользовательКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ПользовательExtendedTooltip" id="96"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="57">
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="КомментарийExtendedTooltip" id="97"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СубконтоВалюта</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.СуммаОплаты</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВалютаДокумента</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.СтоимостьИмущества</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьЧекиИзНалоговой" id="1000000">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить чеки из налоговой</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить чеки из налоговой</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">УчетТоваров_ЗагрузитьЧекиИзНалоговойПосле</Action>
+		</Command>
+	</Commands>
+	<BaseForm version="2.21">
+		<WindowOpeningMode>DontBlock</WindowOpeningMode>
+		<Group>Vertical</Group>
+		<VerticalScroll>useIfNecessary</VerticalScroll>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<ChildItems>
+				<Button name="ФормаОткрытьСписокШаблонов" id="75">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаОткрытьСписокШаблоновExtendedTooltip" id="81"/>
+				</Button>
+			</ChildItems>
+		</AutoCommandBar>
+		<ChildItems>
+			<Table name="Список" id="1">
+				<Representation>List</Representation>
+				<CommandBarLocation>None</CommandBarLocation>
+				<RowSelectionMode>Cell</RowSelectionMode>
+				<InitialTreeView>ExpandTopLevel</InitialTreeView>
+				<EnableStartDrag>true</EnableStartDrag>
+				<FileDragMode>AsFile</FileDragMode>
+				<RowsPicture>
+					<xr:Ref>CommonPicture.СтатусыОпераций</xr:Ref>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</RowsPicture>
+				<SearchStringLocation>None</SearchStringLocation>
+				<ViewStatusLocation>None</ViewStatusLocation>
+				<SearchControlLocation>None</SearchControlLocation>
+				<AutoRefresh>false</AutoRefresh>
+				<AutoRefreshPeriod>60</AutoRefreshPeriod>
+				<Period>
+					<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+					<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+					<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+				</Period>
+				<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+				<RestoreCurrentRow>false</RestoreCurrentRow>
+				<TopLevelParent xsi:nil="true"/>
+				<ShowRoot>true</ShowRoot>
+				<AllowRootChoice>false</AllowRootChoice>
+				<UpdateOnDataChange>Auto</UpdateOnDataChange>
+				<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+				<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+				<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+					<ChildItems>
+						<Button name="СписокОбщаяКомандаСоздатьШаблонОперации" id="74">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="СписокОбщаяКомандаСоздатьШаблонОперацииExtendedTooltip" id="82"/>
+						</Button>
+					</ChildItems>
+				</AutoCommandBar>
+				<ExtendedTooltip name="СписокExtendedTooltip" id="83"/>
+				<SearchStringAddition name="СписокSearchString" id="98">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>SearchStringRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="СписокSearchStringContextMenu" id="99"/>
+					<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="100"/>
+				</SearchStringAddition>
+				<ViewStatusAddition name="СписокViewStatus" id="101">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>ViewStatusRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="СписокViewStatusContextMenu" id="102"/>
+					<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="103"/>
+				</ViewStatusAddition>
+				<SearchControlAddition name="СписокSearchControl" id="104">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>SearchControl</Type>
+					</AdditionSource>
+					<ContextMenu name="СписокSearchControlContextMenu" id="105"/>
+					<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="106"/>
+				</SearchControlAddition>
+				<ChildItems>
+					<LabelField name="Ссылка" id="4">
+						<UserVisible>
+							<xr:Common>false</xr:Common>
+						</UserVisible>
+						<ContextMenu name="СсылкаКонтекстноеМеню" id="5"/>
+						<ExtendedTooltip name="СсылкаExtendedTooltip" id="84"/>
+					</LabelField>
+					<LabelField name="Дата" id="6">
+						<DefaultItem>true</DefaultItem>
+						<Format>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ДФ=dd.MM.yyyy</v8:content>
+							</v8:item>
+						</Format>
+						<ContextMenu name="ДатаКонтекстноеМеню" id="7"/>
+						<ExtendedTooltip name="ДатаExtendedTooltip" id="85"/>
+					</LabelField>
+					<ColumnGroup name="ГруппаСчетСубконто" id="23">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Источник оплаты и иконка</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа счет субконто</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Group>InCell</Group>
+						<ExtendedTooltip name="ГруппаСчетСубконтоExtendedTooltip" id="86"/>
+						<ChildItems>
+							<PictureField name="НомерИконкиСчета" id="64">
+								<ReadOnly>true</ReadOnly>
+								<SkipOnInput>true</SkipOnInput>
+								<TitleLocation>None</TitleLocation>
+								<ValuesPicture>
+									<xr:Ref>CommonPicture.КоллекцияИконокСчетов</xr:Ref>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</ValuesPicture>
+								<FileDragMode>AsFile</FileDragMode>
+								<ContextMenu name="НомерИконкиСчетаКонтекстноеМеню" id="65"/>
+								<ExtendedTooltip name="НомерИконкиСчетаExtendedTooltip" id="87"/>
+							</PictureField>
+							<LabelField name="КошелекДолг" id="10">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Источник оплаты</v8:content>
+									</v8:item>
+								</Title>
+								<ContextMenu name="КошелекДолгКонтекстноеМеню" id="11"/>
+								<ExtendedTooltip name="КошелекДолгРасширеннаяПодсказка" id="88"/>
+							</LabelField>
+						</ChildItems>
+					</ColumnGroup>
+					<ColumnGroup name="ГруппаСуммаВалюта" id="22">
+						<EnableContentChange>true</EnableContentChange>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма оплаты, валюта</v8:content>
+							</v8:item>
+						</Title>
+						<Group>InCell</Group>
+						<ExtendedTooltip name="ГруппаСуммаВалютаExtendedTooltip" id="89"/>
+						<ChildItems>
+							<LabelField name="СуммаОперации" id="20">
+								<MarkNegatives>true</MarkNegatives>
+								<ContextMenu name="СуммаОперацииКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="СуммаОперацииExtendedTooltip" id="90"/>
+							</LabelField>
+							<LabelField name="СубконтоВалюта" id="18">
+								<TitleLocation>None</TitleLocation>
+								<ContextMenu name="СубконтоВалютаКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="СубконтоВалютаExtendedTooltip" id="91"/>
+							</LabelField>
+						</ChildItems>
+					</ColumnGroup>
+					<ColumnGroup name="ГруппаСтоимостьИмущества" id="76">
+						<EnableContentChange>true</EnableContentChange>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Стоимость имущества. валюта</v8:content>
+							</v8:item>
+						</Title>
+						<Group>InCell</Group>
+						<ExtendedTooltip name="ГруппаСтоимостьИмуществаExtendedTooltip" id="92"/>
+						<ChildItems>
+							<LabelField name="СтоимостьИмущества" id="77">
+								<ContextMenu name="СтоимостьИмуществаКонтекстноеМеню" id="78"/>
+								<ExtendedTooltip name="СтоимостьИмуществаExtendedTooltip" id="93"/>
+							</LabelField>
+							<LabelField name="ВалютаДокумента" id="79">
+								<TitleLocation>None</TitleLocation>
+								<Width>4</Width>
+								<HorizontalStretch>false</HorizontalStretch>
+								<ContextMenu name="ВалютаДокументаКонтекстноеМеню" id="80"/>
+								<ExtendedTooltip name="ВалютаДокументаExtendedTooltip" id="94"/>
+							</LabelField>
+						</ChildItems>
+					</ColumnGroup>
+					<LabelField name="ОписаниеОперации" id="12">
+						<ContextMenu name="ОписаниеОперацииКонтекстноеМеню" id="13"/>
+						<ExtendedTooltip name="ОписаниеОперацииExtendedTooltip" id="95"/>
+					</LabelField>
+					<LabelField name="Пользователь" id="14">
+						<ContextMenu name="ПользовательКонтекстноеМеню" id="15"/>
+						<ExtendedTooltip name="ПользовательExtendedTooltip" id="96"/>
+					</LabelField>
+					<LabelField name="Комментарий" id="57">
+						<ContextMenu name="КомментарийКонтекстноеМеню" id="58"/>
+						<ExtendedTooltip name="КомментарийExtendedTooltip" id="97"/>
+					</LabelField>
+				</ChildItems>
+			</Table>
+		</ChildItems>
+		<Attributes>
+			<ConditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СубконтоВалюта</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.СуммаОплаты</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВалютаДокумента</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Список.СтоимостьИмущества</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</ConditionalAppearance>
+		</Attributes>
+	</BaseForm>
+</Form>
