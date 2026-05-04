@@ -846,6 +846,11 @@
 										<CommandName>0</CommandName>
 										<ExtendedTooltip name="РасходыУказатьФинансовуюЦельРасширеннаяПодсказка" id="92"/>
 									</Button>
+									<Button name="РасходыУчетТоваров_ЗаполнитьРасходыПоНоменклатуре" id="885">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УчетТоваров_ЗаполнитьРасходыПоНоменклатуре</CommandName>
+										<ExtendedTooltip name="РасходыУчетТоваров_ЗаполнитьРасходыПоНоменклатуреРасширеннаяПодсказка" id="886"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="РасходыРасширеннаяПодсказка" id="93"/>
@@ -1219,6 +1224,9 @@
 								<ContextMenu name="УчетТоваров_НоменклатураУправлениеПоискомКонтекстноеМеню" id="706"/>
 								<ExtendedTooltip name="УчетТоваров_НоменклатураУправлениеПоискомРасширеннаяПодсказка" id="707"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange" callType="After">УчетТоваров_НоменклатураПриИзмененииПосле</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="УчетТоваров_НоменклатураНомерСтроки" id="716">
 									<DataPath>Объект.УчетТоваров_Номенклатура.LineNumber</DataPath>
@@ -1234,6 +1242,9 @@
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="УчетТоваров_НоменклатураНоменклатураПоставщикаКонтекстноеМеню" id="721"/>
 									<ExtendedTooltip name="УчетТоваров_НоменклатураНоменклатураПоставщикаРасширеннаяПодсказка" id="722"/>
+									<Events>
+										<Event name="OnChange" callType="After">УчетТоваров_НоменклатураНоменклатураПоставщикаПриИзмененииПосле</Event>
+									</Events>
 								</InputField>
 								<InputField name="УчетТоваров_НоменклатураНоменклатура" id="724">
 									<DataPath>Объект.УчетТоваров_Номенклатура.Номенклатура</DataPath>
@@ -1242,6 +1253,9 @@
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="УчетТоваров_НоменклатураНоменклатураКонтекстноеМеню" id="725"/>
 									<ExtendedTooltip name="УчетТоваров_НоменклатураНоменклатураРасширеннаяПодсказка" id="726"/>
+									<Events>
+										<Event name="OnChange" callType="After">УчетТоваров_НоменклатураНоменклатураПриИзмененииПосле</Event>
+									</Events>
 								</InputField>
 								<InputField name="УчетТоваров_НоменклатураКоличество" id="728">
 									<DataPath>Объект.УчетТоваров_Номенклатура.Количество</DataPath>
@@ -1754,6 +1768,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ЗагрузитьДанныеЧекаИзНалоговойПосле</Action>
+		</Command>
+		<Command name="УчетТоваров_ЗаполнитьРасходыПоНоменклатуре" id="1000001">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить расходы по номенклатуре</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет товаров заполнить расходы по номенклатуре</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="After">УчетТоваров_ЗаполнитьРасходыПоНоменклатуреПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.21">
