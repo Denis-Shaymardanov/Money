@@ -149,6 +149,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="AfterWrite" callType="After">УчетТоваров_ПослеЗаписиПосле</Event>
 		<Event name="OnCreateAtServer" callType="After">УчетТоваров_ПриСозданииНаСервереПосле</Event>
 	</Events>
 	<ChildItems>
@@ -1291,6 +1292,38 @@
 								</InputField>
 							</ChildItems>
 						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Дополнительно" id="981">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДополнительноРасширеннаяПодсказка" id="982"/>
+					<ChildItems>
+						<CheckBoxField name="УчетТоваров_ЗагруженИзНалоговой" id="983">
+							<DataPath>Объект.УчетТоваров_ЗагруженИзНалоговой</DataPath>
+							<ContextMenu name="УчетТоваров_ЗагруженИзНалоговойКонтекстноеМеню" id="984"/>
+							<ExtendedTooltip name="УчетТоваров_ЗагруженИзНалоговойРасширеннаяПодсказка" id="985"/>
+						</CheckBoxField>
+						<CheckBoxField name="УчетТоваров_НоменклатураОбработана" id="987">
+							<DataPath>Объект.УчетТоваров_НоменклатураОбработана</DataPath>
+							<ContextMenu name="УчетТоваров_НоменклатураОбработанаКонтекстноеМеню" id="988"/>
+							<ExtendedTooltip name="УчетТоваров_НоменклатураОбработанаРасширеннаяПодсказка" id="989"/>
+						</CheckBoxField>
+						<CheckBoxField name="УчетТоваров_РасходыЗаполненыПоНоменклатуре" id="991">
+							<DataPath>Объект.УчетТоваров_РасходыЗаполненыПоНоменклатуре</DataPath>
+							<ContextMenu name="УчетТоваров_РасходыЗаполненыПоНоменклатуреКонтекстноеМеню" id="992"/>
+							<ExtendedTooltip name="УчетТоваров_РасходыЗаполненыПоНоменклатуреРасширеннаяПодсказка" id="993"/>
+						</CheckBoxField>
 					</ChildItems>
 				</Page>
 			</ChildItems>
