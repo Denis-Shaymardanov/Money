@@ -1,24 +1,41 @@
+"""
+Логика определения типа операции (доход/расход/перевод) и парсинг описания транзакции.
+"""
 import re
 
 def get_operation_type(category: str, description: str, amount_sign: str, rules: dict) -> str:
+    """
+    Определяет тип операции на основе категории, описания и знака суммы.
+    Возвращает: 'income' (приход), 'expense' (расход), 'transfer' (перевод).
+    """
     text = f"{category} {description}".lower()
+    # Проверяем ключевые слова доходов
     for kw in rules.get("income_keywords", []):
         if kw.lower() in text:
             return "income"
+    # Проверяем ключевые слова переводов
     for kw in rules.get("transfer_keywords", []):
         if kw.lower() in text:
             return "transfer"
+    # Если сумма с плюсом – тоже доход
     if amount_sign == "+":
         return "income"
+    # Всё остальное – расход
     return "expense"
 
 def parse_description(desc: str) -> dict:
+    """
+    Разбирает текстовое описание транзакции и извлекает:
+    - shop (магазин/контрагент)
+    - operation_type (тип операции: Перевод, Карта, Счёт, Иное)
+    """
     result = {"shop": "", "operation_type": ""}
     if not desc or not isinstance(desc, str):
         return result
     desc = desc.strip()
     low_desc = desc.lower()
 
+    # --- Переводы ---
     if "перевод" in low_desc:
         result["operation_type"] = "Перевод"
         idx = -1
@@ -38,6 +55,7 @@ def parse_description(desc: str) -> dict:
             result["shop"] = raw_shop
         return result
 
+    # --- Операции по карте ---
     if "по карте" in low_desc or "операция по карте" in low_desc:
         result["operation_type"] = "Карта"
         clean_desc = re.sub(r'^\d{6}\s+', '', desc)
@@ -55,6 +73,7 @@ def parse_description(desc: str) -> dict:
         result["shop"] = shop
         return result
 
+    # --- Операции по счёту ---
     if "по счету" in low_desc:
         result["operation_type"] = "Счёт"
         clean_desc = re.sub(r'^\d{6}\s+', '', desc)
@@ -65,6 +84,7 @@ def parse_description(desc: str) -> dict:
         result["shop"] = shop
         return result
 
+    # --- Все остальные ---
     result["operation_type"] = "Иное"
     clean_desc = re.sub(r'^\d{6}\s+', '', desc)
     if " RUS." in clean_desc:
