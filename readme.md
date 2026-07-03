@@ -57,23 +57,23 @@ json
 ## Структура проекта
 
 Money/
-├── main.py                  # точка входа
+├── main.py # точка входа
 ├── requirements.txt
-├── rules.json               # правила категоризации
+├── rules.json # правила категоризации
 ├── app/
-│   ├── __init__.py          # создание FastAPI
-│   ├── api/
-│   │   ├── endpoints.py     # маршруты
-│   │   └── models.py        # модели
-│   ├── core/
-│   │   ├── parser.py        # чтение PDF
-│   │   ├── transactions.py  # обработка транзакций
-│   │   ├── categorization.py
-│   │   ├── rules.py
-│   │   └── utils.py
-│   └── services/
-│       └── check_service.py # API чеков
-└── AccountingOfGoods/       # конфигурация 1С
+│ ├── init.py # создание FastAPI
+│ ├── api/
+│ │ ├── endpoints.py # маршруты
+│ │ └── models.py # модели
+│ ├── core/
+│ │ ├── parser.py # чтение PDF
+│ │ ├── transactions.py # обработка транзакций
+│ │ ├── categorization.py
+│ │ ├── rules.py
+│ │ └── utils.py
+│ └── services/
+│ └── check_service.py # API чеков
+└── AccountingOfGoods/ # конфигурация 1С
 
 ## Настройка правил
 Файл rules.json содержит списки ключевых слов для определения доходов и переводов. Изменения вступают в силу после перезапуска сервера.
