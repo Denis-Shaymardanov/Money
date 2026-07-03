@@ -8,14 +8,12 @@
 - Зависимости из `requirements.txt`
 
 ## Установка
-bash
 cd Money
 python -m venv .venv
 .venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 
 ## Запуск
-bash
 python main.py
 Сервер запустится на http://127.0.0.1:8000. Логи пишутся в server.log.
 
@@ -57,7 +55,7 @@ json
 }
 
 ## Структура проекта
-text
+
 Money/
 ├── main.py                  # точка входа
 ├── requirements.txt
