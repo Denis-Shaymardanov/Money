@@ -1,5 +1,5 @@
 import uvicorn
-from check import app 
+from app import app
 
 log_config = {
     "version": 1,
@@ -12,7 +12,7 @@ log_config = {
     "handlers": {
         "file": {
             "class": "logging.FileHandler",
-            "filename": "server.log",          # ← файл логов рядом с exe
+            "filename": "server.log",
             "formatter": "default",
         },
     },
@@ -26,7 +26,7 @@ log_config = {
 
 if __name__ == "__main__":
     uvicorn.run(
-        "check:app",
+        "app:app",
         host="127.0.0.1",
         port=8000,
         log_config=log_config
