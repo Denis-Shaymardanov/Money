@@ -33,17 +33,17 @@
 		</InternalInfo>
 		<Properties>
 			<ObjectBelonging>Adopted</ObjectBelonging>
-			<Name>УчетТоваров</Name>
+			<Name>Money</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Учет товаров</v8:content>
+					<v8:content>Money</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
 			<ConfigurationExtensionPurpose>Customization</ConfigurationExtensionPurpose>
 			<KeepMappingToExtendedConfigurationObjectsByIDs>true</KeepMappingToExtendedConfigurationObjectsByIDs>
-			<NamePrefix>УчетТоваров_</NamePrefix>
+			<NamePrefix>money_</NamePrefix>
 			<ConfigurationExtensionCompatibilityMode>Version8_3_17</ConfigurationExtensionCompatibilityMode>
 			<DefaultRunMode>ManagedApplication</DefaultRunMode>
 			<UsePurposes>
@@ -51,7 +51,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles>
-				<xr:Item xsi:type="xr:MDObjectRef">Role.УчетТоваров_ОсновнаяРоль</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.money_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
 			<Version/>
@@ -74,13 +74,16 @@
 			<StyleItem>ПоясняющийТекст</StyleItem>
 			<StyleItem>ДеньгиФонПрикрепленныхФайлов</StyleItem>
 			<StyleItem>ФонУправляющегоПоля</StyleItem>
+			<StyleItem>БюджетФонТекущегоПериода</StyleItem>
 			<CommonPicture>СтатусыОпераций</CommonPicture>
 			<CommonPicture>КоллекцияИконокСчетов</CommonPicture>
 			<CommonPicture>ИконкаПлановаяПокупка16х16</CommonPicture>
 			<CommonPicture>СостоянияОпераций</CommonPicture>
 			<CommonPicture>ИконкаОтчет16х16</CommonPicture>
-			<Role>УчетТоваров_ОсновнаяРоль</Role>
+			<CommonPicture>БыстроСоздатьЭлементСписка</CommonPicture>
+			<Role>money_ОсновнаяРоль</Role>
 			<CommonModule>ОбщегоНазначенияВызовСервера</CommonModule>
+			<CommonModule>money_РаботаССерверомPython</CommonModule>
 			<Constant>СерверФункцийPython</Constant>
 			<Constant>ТокенПроверкаЧеков</Constant>
 			<Constant>ИспользоватьДополнительныеРеквизитыИСведения</Constant>
@@ -90,17 +93,21 @@
 			<Constant>ДетализироватьОбновлениеИБВЖурналеРегистрации</Constant>
 			<Constant>ИспользоватьДополнительныеОтчетыИОбработки</Constant>
 			<Catalog>Контакты</Catalog>
-			<Catalog>УчетТоваров_Номенклатура</Catalog>
-			<Catalog>УчетТоваров_НоменклатураПоставщиков</Catalog>
+			<Catalog>money_Номенклатура</Catalog>
+			<Catalog>money_НоменклатураПоставщиков</Catalog>
 			<Catalog>СтатьиРасходов</Catalog>
 			<Catalog>Пользователи</Catalog>
 			<Catalog>ФинансовыеЦели</Catalog>
+			<Catalog>КошелькиИСчета</Catalog>
 			<Document>Расход</Document>
 			<Enum>СостоянияРасходаПоЧеку</Enum>
-			<Report>УчетТоваров_РасходыСоСреднимиЧеками</Report>
+			<Enum>ТипыЗагружаемыхДокументов</Enum>
+			<Report>money_РасходыСоСреднимиЧеками</Report>
 			<DataProcessor>НастройкаИОбслуживание</DataProcessor>
 			<DataProcessor>РазделОперации</DataProcessor>
+			<DataProcessor>ЗагрузкаВыпискиБанка</DataProcessor>
 			<ChartOfCharacteristicTypes>ВидыСубконто</ChartOfCharacteristicTypes>
+			<ChartOfCharacteristicTypes>ВидыАналитик</ChartOfCharacteristicTypes>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

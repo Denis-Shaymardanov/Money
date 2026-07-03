@@ -141,16 +141,16 @@
 				<CommandName>0</CommandName>
 				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="123"/>
 			</Button>
-			<Button name="ФормаУчетТоваров_ЗагрузитьДанныеЧекаИзНалоговой" id="507">
+			<Button name="Форма_ЗагрузитьДанныеЧекаИзНалоговой" id="507">
 				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.УчетТоваров_ЗагрузитьДанныеЧекаИзНалоговой</CommandName>
-				<ExtendedTooltip name="ФормаУчетТоваров_ЗагрузитьДанныеЧекаИзНалоговойРасширеннаяПодсказка" id="508"/>
+				<CommandName>Form.Command.money_ЗагрузитьДанныеЧекаИзНалоговой</CommandName>
+				<ExtendedTooltip name="Форма_ЗагрузитьДанныеЧекаИзНалоговойРасширеннаяПодсказка" id="508"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
-		<Event name="AfterWrite" callType="After">УчетТоваров_ПослеЗаписиПосле</Event>
-		<Event name="OnCreateAtServer" callType="After">УчетТоваров_ПриСозданииНаСервереПосле</Event>
+		<Event name="AfterWrite" callType="After">money_ПослеЗаписиПосле</Event>
+		<Event name="OnCreateAtServer" callType="After">money_ПриСозданииНаСервереПосле</Event>
 	</Events>
 	<ChildItems>
 		<InputField name="QRКод" id="503">
@@ -847,10 +847,10 @@
 										<CommandName>0</CommandName>
 										<ExtendedTooltip name="РасходыУказатьФинансовуюЦельРасширеннаяПодсказка" id="92"/>
 									</Button>
-									<Button name="РасходыУчетТоваров_ЗаполнитьРасходыПоНоменклатуре" id="885">
+									<Button name="Расходы_ЗаполнитьРасходыПоНоменклатуре" id="885">
 										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.УчетТоваров_ЗаполнитьРасходыПоНоменклатуре</CommandName>
-										<ExtendedTooltip name="РасходыУчетТоваров_ЗаполнитьРасходыПоНоменклатуреРасширеннаяПодсказка" id="886"/>
+										<CommandName>Form.Command.money_ЗаполнитьРасходыПоНоменклатуре</CommandName>
+										<ExtendedTooltip name="Расходы_ЗаполнитьРасходыПоНоменклатуреРасширеннаяПодсказка" id="886"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
@@ -1191,104 +1191,104 @@
 					</ToolTip>
 					<ExtendedTooltip name="СтраницаНоменклатураРасширеннаяПодсказка" id="694"/>
 					<ChildItems>
-						<Table name="УчетТоваров_Номенклатура" id="695">
+						<Table name="money_Номенклатура" id="695">
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
-							<DataPath>Объект.УчетТоваров_Номенклатура</DataPath>
+							<DataPath>Объект.money_Номенклатура</DataPath>
 							<ShowCommandBar>auto</ShowCommandBar>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="УчетТоваров_НоменклатураКонтекстноеМеню" id="696"/>
-							<AutoCommandBar name="УчетТоваров_НоменклатураКоманднаяПанель" id="697"/>
-							<ExtendedTooltip name="УчетТоваров_НоменклатураРасширеннаяПодсказка" id="698"/>
-							<SearchStringAddition name="УчетТоваров_НоменклатураСтрокаПоиска" id="699">
+							<ContextMenu name="money_НоменклатураКонтекстноеМеню" id="696"/>
+							<AutoCommandBar name="money_НоменклатураКоманднаяПанель" id="697"/>
+							<ExtendedTooltip name="money_НоменклатураРасширеннаяПодсказка" id="698"/>
+							<SearchStringAddition name="money_НоменклатураСтрокаПоиска" id="699">
 								<AdditionSource>
-									<Item>УчетТоваров_Номенклатура</Item>
+									<Item>money_Номенклатура</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="УчетТоваров_НоменклатураСтрокаПоискаКонтекстноеМеню" id="700"/>
-								<ExtendedTooltip name="УчетТоваров_НоменклатураСтрокаПоискаРасширеннаяПодсказка" id="701"/>
+								<ContextMenu name="money_НоменклатураСтрокаПоискаКонтекстноеМеню" id="700"/>
+								<ExtendedTooltip name="money_НоменклатураСтрокаПоискаРасширеннаяПодсказка" id="701"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="УчетТоваров_НоменклатураСостояниеПросмотра" id="702">
+							<ViewStatusAddition name="money_НоменклатураСостояниеПросмотра" id="702">
 								<AdditionSource>
-									<Item>УчетТоваров_Номенклатура</Item>
+									<Item>money_Номенклатура</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="УчетТоваров_НоменклатураСостояниеПросмотраКонтекстноеМеню" id="703"/>
-								<ExtendedTooltip name="УчетТоваров_НоменклатураСостояниеПросмотраРасширеннаяПодсказка" id="704"/>
+								<ContextMenu name="money_НоменклатураСостояниеПросмотраКонтекстноеМеню" id="703"/>
+								<ExtendedTooltip name="money_НоменклатураСостояниеПросмотраРасширеннаяПодсказка" id="704"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="УчетТоваров_НоменклатураУправлениеПоиском" id="705">
+							<SearchControlAddition name="money_НоменклатураУправлениеПоиском" id="705">
 								<AdditionSource>
-									<Item>УчетТоваров_Номенклатура</Item>
+									<Item>money_Номенклатура</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="УчетТоваров_НоменклатураУправлениеПоискомКонтекстноеМеню" id="706"/>
-								<ExtendedTooltip name="УчетТоваров_НоменклатураУправлениеПоискомРасширеннаяПодсказка" id="707"/>
+								<ContextMenu name="money_НоменклатураУправлениеПоискомКонтекстноеМеню" id="706"/>
+								<ExtendedTooltip name="money_НоменклатураУправлениеПоискомРасширеннаяПодсказка" id="707"/>
 							</SearchControlAddition>
 							<Events>
-								<Event name="OnChange" callType="After">УчетТоваров_НоменклатураПриИзмененииПосле</Event>
+								<Event name="OnChange" callType="After">money_НоменклатураПриИзмененииПосле</Event>
 							</Events>
 							<ChildItems>
-								<LabelField name="УчетТоваров_НоменклатураНомерСтроки" id="716">
-									<DataPath>Объект.УчетТоваров_Номенклатура.LineNumber</DataPath>
+								<LabelField name="money_НоменклатураНомерСтроки" id="716">
+									<DataPath>Объект.money_Номенклатура.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoEditMode>true</AutoEditMode>
-									<ContextMenu name="УчетТоваров_НоменклатураНомерСтрокиКонтекстноеМеню" id="717"/>
-									<ExtendedTooltip name="УчетТоваров_НоменклатураНомерСтрокиРасширеннаяПодсказка" id="718"/>
+									<ContextMenu name="money_НоменклатураНомерСтрокиКонтекстноеМеню" id="717"/>
+									<ExtendedTooltip name="money_НоменклатураНомерСтрокиРасширеннаяПодсказка" id="718"/>
 								</LabelField>
-								<InputField name="УчетТоваров_НоменклатураНоменклатураПоставщика" id="720">
-									<DataPath>Объект.УчетТоваров_Номенклатура.НоменклатураПоставщика</DataPath>
+								<InputField name="money_НоменклатураНоменклатураПоставщика" id="720">
+									<DataPath>Объект.money_Номенклатура.НоменклатураПоставщика</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoEditMode>true</AutoEditMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="УчетТоваров_НоменклатураНоменклатураПоставщикаКонтекстноеМеню" id="721"/>
-									<ExtendedTooltip name="УчетТоваров_НоменклатураНоменклатураПоставщикаРасширеннаяПодсказка" id="722"/>
+									<ContextMenu name="money_НоменклатураНоменклатураПоставщикаКонтекстноеМеню" id="721"/>
+									<ExtendedTooltip name="money_НоменклатураНоменклатураПоставщикаРасширеннаяПодсказка" id="722"/>
 									<Events>
-										<Event name="OnChange" callType="After">УчетТоваров_НоменклатураНоменклатураПоставщикаПриИзмененииПосле</Event>
+										<Event name="OnChange" callType="After">money_НоменклатураНоменклатураПоставщикаПриИзмененииПосле</Event>
 									</Events>
 								</InputField>
-								<InputField name="УчетТоваров_НоменклатураНоменклатура" id="724">
-									<DataPath>Объект.УчетТоваров_Номенклатура.Номенклатура</DataPath>
+								<InputField name="money_НоменклатураНоменклатура" id="724">
+									<DataPath>Объект.money_Номенклатура.Номенклатура</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoEditMode>true</AutoEditMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="УчетТоваров_НоменклатураНоменклатураКонтекстноеМеню" id="725"/>
-									<ExtendedTooltip name="УчетТоваров_НоменклатураНоменклатураРасширеннаяПодсказка" id="726"/>
+									<ContextMenu name="money_НоменклатураНоменклатураКонтекстноеМеню" id="725"/>
+									<ExtendedTooltip name="money_НоменклатураНоменклатураРасширеннаяПодсказка" id="726"/>
 									<Events>
-										<Event name="OnChange" callType="After">УчетТоваров_НоменклатураНоменклатураПриИзмененииПосле</Event>
+										<Event name="OnChange" callType="After">money_НоменклатураНоменклатураПриИзмененииПосле</Event>
 									</Events>
 								</InputField>
-								<InputField name="УчетТоваров_НоменклатураКоличество" id="728">
-									<DataPath>Объект.УчетТоваров_Номенклатура.Количество</DataPath>
+								<InputField name="money_НоменклатураКоличество" id="728">
+									<DataPath>Объект.money_Номенклатура.Количество</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoEditMode>true</AutoEditMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="УчетТоваров_НоменклатураКоличествоКонтекстноеМеню" id="729"/>
-									<ExtendedTooltip name="УчетТоваров_НоменклатураКоличествоРасширеннаяПодсказка" id="730"/>
+									<ContextMenu name="money_НоменклатураКоличествоКонтекстноеМеню" id="729"/>
+									<ExtendedTooltip name="money_НоменклатураКоличествоРасширеннаяПодсказка" id="730"/>
 								</InputField>
-								<InputField name="УчетТоваров_НоменклатураЦена" id="732">
-									<DataPath>Объект.УчетТоваров_Номенклатура.Цена</DataPath>
+								<InputField name="money_НоменклатураЦена" id="732">
+									<DataPath>Объект.money_Номенклатура.Цена</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoEditMode>true</AutoEditMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="УчетТоваров_НоменклатураЦенаКонтекстноеМеню" id="733"/>
-									<ExtendedTooltip name="УчетТоваров_НоменклатураЦенаРасширеннаяПодсказка" id="734"/>
+									<ContextMenu name="money_НоменклатураЦенаКонтекстноеМеню" id="733"/>
+									<ExtendedTooltip name="money_НоменклатураЦенаРасширеннаяПодсказка" id="734"/>
 								</InputField>
-								<InputField name="УчетТоваров_НоменклатураСумма" id="736">
-									<DataPath>Объект.УчетТоваров_Номенклатура.Сумма</DataPath>
+								<InputField name="money_НоменклатураСумма" id="736">
+									<DataPath>Объект.money_Номенклатура.Сумма</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoEditMode>true</AutoEditMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="УчетТоваров_НоменклатураСуммаКонтекстноеМеню" id="737"/>
-									<ExtendedTooltip name="УчетТоваров_НоменклатураСуммаРасширеннаяПодсказка" id="738"/>
+									<ContextMenu name="money_НоменклатураСуммаКонтекстноеМеню" id="737"/>
+									<ExtendedTooltip name="money_НоменклатураСуммаРасширеннаяПодсказка" id="738"/>
 								</InputField>
-								<InputField name="УчетТоваров_НоменклатураСтатьяРасходов" id="740">
-									<DataPath>Объект.УчетТоваров_Номенклатура.СтатьяРасходов</DataPath>
+								<InputField name="money_НоменклатураСтатьяРасходов" id="740">
+									<DataPath>Объект.money_Номенклатура.СтатьяРасходов</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoEditMode>true</AutoEditMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="УчетТоваров_НоменклатураСтатьяРасходовКонтекстноеМеню" id="741"/>
-									<ExtendedTooltip name="УчетТоваров_НоменклатураСтатьяРасходовРасширеннаяПодсказка" id="742"/>
+									<ContextMenu name="money_НоменклатураСтатьяРасходовКонтекстноеМеню" id="741"/>
+									<ExtendedTooltip name="money_НоменклатураСтатьяРасходовРасширеннаяПодсказка" id="742"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1309,20 +1309,31 @@
 					</ToolTip>
 					<ExtendedTooltip name="ДополнительноРасширеннаяПодсказка" id="982"/>
 					<ChildItems>
-						<CheckBoxField name="УчетТоваров_ЗагруженИзНалоговой" id="983">
-							<DataPath>Объект.УчетТоваров_ЗагруженИзНалоговой</DataPath>
-							<ContextMenu name="УчетТоваров_ЗагруженИзНалоговойКонтекстноеМеню" id="984"/>
-							<ExtendedTooltip name="УчетТоваров_ЗагруженИзНалоговойРасширеннаяПодсказка" id="985"/>
+						<CheckBoxField name="money_ЗагруженИзНалоговой" id="983">
+							<DataPath>Объект.money_ЗагруженИзНалоговой</DataPath>
+							<ContextMenu name="money_ЗагруженИзНалоговойКонтекстноеМеню" id="984"/>
+							<ExtendedTooltip name="money_ЗагруженИзНалоговойРасширеннаяПодсказка" id="985"/>
+							<Events>
+								<Event name="OnChange" callType="After">money_ЗагруженИзНалоговойПриИзмененииПосле</Event>
+							</Events>
 						</CheckBoxField>
-						<CheckBoxField name="УчетТоваров_НоменклатураОбработана" id="987">
-							<DataPath>Объект.УчетТоваров_НоменклатураОбработана</DataPath>
-							<ContextMenu name="УчетТоваров_НоменклатураОбработанаКонтекстноеМеню" id="988"/>
-							<ExtendedTooltip name="УчетТоваров_НоменклатураОбработанаРасширеннаяПодсказка" id="989"/>
+						<CheckBoxField name="money_НоменклатураОбработана" id="987">
+							<DataPath>Объект.money_НоменклатураОбработана</DataPath>
+							<ContextMenu name="money_НоменклатураОбработанаКонтекстноеМеню" id="988"/>
+							<ExtendedTooltip name="money_НоменклатураОбработанаРасширеннаяПодсказка" id="989"/>
 						</CheckBoxField>
-						<CheckBoxField name="УчетТоваров_РасходыЗаполненыПоНоменклатуре" id="991">
-							<DataPath>Объект.УчетТоваров_РасходыЗаполненыПоНоменклатуре</DataPath>
-							<ContextMenu name="УчетТоваров_РасходыЗаполненыПоНоменклатуреКонтекстноеМеню" id="992"/>
-							<ExtendedTooltip name="УчетТоваров_РасходыЗаполненыПоНоменклатуреРасширеннаяПодсказка" id="993"/>
+						<CheckBoxField name="money_РасходыЗаполненыПоНоменклатуре" id="991">
+							<DataPath>Объект.money_РасходыЗаполненыПоНоменклатуре</DataPath>
+							<ContextMenu name="money_РасходыЗаполненыПоНоменклатуреКонтекстноеМеню" id="992"/>
+							<ExtendedTooltip name="money_РасходыЗаполненыПоНоменклатуреРасширеннаяПодсказка" id="993"/>
+							<Events>
+								<Event name="OnChange" callType="After">money_РасходыЗаполненыПоНоменклатуреПриИзмененииПосле</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="money_Отладка" id="1045">
+							<DataPath>Объект.money_Отладка</DataPath>
+							<ContextMenu name="money_ОтладкаКонтекстноеМеню" id="1046"/>
+							<ExtendedTooltip name="money_ОтладкаРасширеннаяПодсказка" id="1047"/>
 						</CheckBoxField>
 					</ChildItems>
 				</Page>
@@ -1787,7 +1798,7 @@
 		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
-		<Command name="УчетТоваров_ЗагрузитьДанныеЧекаИзНалоговой" id="1000000">
+		<Command name="money_ЗагрузитьДанныеЧекаИзНалоговой" id="1000000">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1797,12 +1808,12 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Учет товаров загрузить данные чека из налоговой</v8:content>
+					<v8:content>Money загрузить данные чека из налоговой</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action callType="After">ЗагрузитьДанныеЧекаИзНалоговойПосле</Action>
 		</Command>
-		<Command name="УчетТоваров_ЗаполнитьРасходыПоНоменклатуре" id="1000001">
+		<Command name="money_ЗаполнитьРасходыПоНоменклатуре" id="1000001">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1812,10 +1823,10 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Учет товаров заполнить расходы по номенклатуре</v8:content>
+					<v8:content>Money заполнить расходы по номенклатуре</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action callType="After">УчетТоваров_ЗаполнитьРасходыПоНоменклатуреПосле</Action>
+			<Action callType="After">money_ЗаполнитьРасходыПоНоменклатуреПосле</Action>
 		</Command>
 	</Commands>
 	<BaseForm version="2.21">

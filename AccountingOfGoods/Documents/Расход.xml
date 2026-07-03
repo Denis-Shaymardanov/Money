@@ -195,7 +195,7 @@
 			</Attribute>
 			<Attribute uuid="3eae84d1-e84f-404d-aab3-457308f969cc">
 				<Properties>
-					<Name>УчетТоваров_ЗагруженИзНалоговой</Name>
+					<Name>money_ЗагруженИзНалоговой</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -234,7 +234,7 @@
 			</Attribute>
 			<Attribute uuid="3c77bb6a-53f1-41c7-ab97-3f55e506fd52">
 				<Properties>
-					<Name>УчетТоваров_НоменклатураОбработана</Name>
+					<Name>money_НоменклатураОбработана</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -273,7 +273,7 @@
 			</Attribute>
 			<Attribute uuid="dc673e3f-88d8-4d24-8005-7db48e494f41">
 				<Properties>
-					<Name>УчетТоваров_РасходыЗаполненыПоНоменклатуре</Name>
+					<Name>money_РасходыЗаполненыПоНоменклатуре</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -310,20 +310,59 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="05dfe497-4a1d-4108-a999-79b3f87f8a1d">
+				<Properties>
+					<Name>money_Отладка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отладка</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
 			<Form>ФормаДокумента</Form>
 			<TabularSection uuid="095ccd51-f6cd-4a7e-b4d8-7d922ab76556">
 				<InternalInfo>
-					<xr:GeneratedType name="DocumentTabularSection.Расход.УчетТоваров_Номенклатура" category="TabularSection">
+					<xr:GeneratedType name="DocumentTabularSection.Расход.money_Номенклатура" category="TabularSection">
 						<xr:TypeId>1f30d405-7522-4d57-b24a-1a18a944f7ed</xr:TypeId>
 						<xr:ValueId>47dc332e-5793-417f-aeee-502885462682</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="DocumentTabularSectionRow.Расход.УчетТоваров_Номенклатура" category="TabularSectionRow">
+					<xr:GeneratedType name="DocumentTabularSectionRow.Расход.money_Номенклатура" category="TabularSectionRow">
 						<xr:TypeId>dd513113-a279-4410-8cfe-688eb13ee1fe</xr:TypeId>
 						<xr:ValueId>62e68743-d4ed-498a-8f4a-1d94313eab43</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
-					<Name>УчетТоваров_Номенклатура</Name>
+					<Name>money_Номенклатура</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -376,7 +415,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:CatalogRef.УчетТоваров_НоменклатураПоставщиков</v8:Type>
+								<v8:Type>cfg:CatalogRef.money_НоменклатураПоставщиков</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>
@@ -413,7 +452,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:CatalogRef.УчетТоваров_Номенклатура</v8:Type>
+								<v8:Type>cfg:CatalogRef.money_Номенклатура</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>

@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<DataProcessor uuid="df851162-f9b2-44eb-95df-e628d55a3806">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.ЗагрузкаВыпискиБанка" category="Object">
+				<xr:TypeId>d7fa61ce-a8fe-4605-8a04-645e62e76b7b</xr:TypeId>
+				<xr:ValueId>b430d931-d9a4-4644-ad5c-0078f38f3ae2</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.ЗагрузкаВыпискиБанка" category="Manager">
+				<xr:TypeId>0cbf6d59-1b79-4b22-a8b4-4b8d3a73e7b1</xr:TypeId>
+				<xr:ValueId>ba802223-992e-48fe-b8d3-181db235e81e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:PropertyState>
+				<xr:Property>ObjectModule</xr:Property>
+				<xr:State>Extended</xr:State>
+			</xr:PropertyState>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>ЗагрузкаВыпискиБанка</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>fb7ff5ef-9ea2-4e65-87a1-e325cd9829cf</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="f21285f3-f519-4c01-8edc-36cfa7afa3ba">
+				<Properties>
+					<Name>money_Кошелек</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кошелек</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КошелькиИСчета</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+				</Properties>
+			</Attribute>
+			<TabularSection uuid="835f3b1a-bcc3-423d-857e-1200c85a3531">
+				<InternalInfo>
+					<xr:GeneratedType name="DataProcessorTabularSection.ЗагрузкаВыпискиБанка.ТаблицаОпераций" category="TabularSection">
+						<xr:TypeId>c8332a18-db81-4510-89b6-cc45c04ab547</xr:TypeId>
+						<xr:ValueId>ac27dc98-0d03-4d44-8bb0-de95c0cc7993</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DataProcessorTabularSectionRow.ЗагрузкаВыпискиБанка.ТаблицаОпераций" category="TabularSectionRow">
+						<xr:TypeId>c9f03f8a-e22f-4c0f-9b6a-35593c3cee6d</xr:TypeId>
+						<xr:ValueId>551a494c-233c-4980-896f-c34cb29cf98d</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ТаблицаОпераций</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>53b1d0c3-1053-4543-aaec-70a940cc526a</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="c0b58d0b-93b3-40b5-b015-584983e39282">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>Загружать</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>35b7f4c0-556f-4ab5-9890-d0fd8fbe66ba</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="94c23be7-dfac-4ebc-b7ba-af458ae12f0d">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>СуммаСписания</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>a7f37ac0-e46f-4109-83ac-7a2a7423837d</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="cf84b775-a24d-4ce0-98e0-6696007393f8">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>Дата</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>bc562df3-e2f7-4119-b0e4-1f38516d1285</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:dateTime</v8:Type>
+								<v8:DateQualifiers>
+									<v8:DateFractions>DateTime</v8:DateFractions>
+								</v8:DateQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="cfb2c574-6450-49ed-9c6d-2f28efb85d3c">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>СтатьяДолг</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>0f33e177-c28e-4aac-ac98-c1f69dcbfc20</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="bcfb2c45-13ee-4b71-a1fd-63896230a7fc">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>Кошелек</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>d54c0b37-37a5-4096-bbad-3122b6e4394c</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.КошелькиИСчета</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="67f59fc7-2b83-49bf-b1cd-c567b36e1de2">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>СуммаПоступления</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>5b9e4b0f-5572-4478-bfcf-4657ae8e3e1e</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="9cb76997-b62f-4a4d-8a91-448b04b74754">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>СсылкаНаОперациюПредставление</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>8c5b626c-0a1f-40af-afe3-1c36ad22001e</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>0</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="0fc2c4bc-438d-4f97-8f76-b5b9dd2a9e07">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>ТекстСтрокиВыписки</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>1b5242f6-a0f9-42aa-8bf2-0091b3e48ead</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>0</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="de77a149-38fd-488c-95c6-c4fad2caa41e">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>АналитикаПредставление</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>30afe750-5d17-4ced-9453-b1db4508d38d</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>150</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="d64b5aaf-40a6-4fd6-9a59-76bb86e81ca5">
+						<Properties>
+							<Name>money_СтатьяЗаполнена</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Cтатья заполнена</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>5</v8:Digits>
+									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<Form>ЗагрузкаВыписки</Form>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>
