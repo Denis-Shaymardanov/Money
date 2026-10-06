@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Sequence uuid="d4c3cc4c-f92a-41cc-9cfc-2aef1c2acfcf">
+		<InternalInfo>
+			<xr:GeneratedType name="SequenceRecord.ВводИзменениеОстатков" category="Record">
+				<xr:TypeId>312ea70c-cc4b-46c4-b74f-b0b500a53096</xr:TypeId>
+				<xr:ValueId>b5da52e9-de59-487e-80fc-ff12aa68fee2</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="SequenceManager.ВводИзменениеОстатков" category="Manager">
+				<xr:TypeId>0f403eeb-1ebb-442b-9938-9c5062d5f7c3</xr:TypeId>
+				<xr:ValueId>1b8a74da-bfe8-46e7-bcee-cfd9d4a2d6c4</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="SequenceRecordSet.ВводИзменениеОстатков" category="RecordSet">
+				<xr:TypeId>e75788b6-8287-406d-81a1-5b00c47ab048</xr:TypeId>
+				<xr:ValueId>f09f3639-b5c8-4f4c-b66a-e057d375c3c2</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВводИзменениеОстатков</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввод/изменение остатков</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<MoveBoundaryOnPosting>Move</MoveBoundaryOnPosting>
+			<Documents>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыДалиВДолг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОбменВалюты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыВернулиДолг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыВзялиВДолг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Доход</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Расход</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация</xr:Item>
+			</Documents>
+			<RegisterRecords>
+				<xr:Item xsi:type="xr:MDObjectRef">AccountingRegister.ЖурналОпераций</xr:Item>
+			</RegisterRecords>
+			<DataLockControlMode>Managed</DataLockControlMode>
+		</Properties>
+		<ChildObjects>
+			<Dimension uuid="0670a3a3-61ba-42d3-b569-4d4331ae4b82">
+				<Properties>
+					<Name>РазделУчета</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Раздел учета</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:ChartOfAccountsRef.РазделыУчета</v8:Type>
+					</Type>
+					<DocumentMap>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка.Attribute.РазделУчета</xr:Item>
+					</DocumentMap>
+					<RegisterRecordsMap/>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="755d8e25-154f-46bf-80d4-548f9d3a876b">
+				<Properties>
+					<Name>ОбъектУчета</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.ВидыСубконто</v8:TypeSet>
+					</Type>
+					<DocumentMap>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка.Attribute.ОбъектУчета</xr:Item>
+					</DocumentMap>
+					<RegisterRecordsMap/>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</Sequence>
+</MetaDataObject>

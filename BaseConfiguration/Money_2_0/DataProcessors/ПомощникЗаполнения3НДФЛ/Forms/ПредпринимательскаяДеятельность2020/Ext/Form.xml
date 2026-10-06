@@ -1,0 +1,2732 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКомандаОК" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаОК</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="ФормаКомандаОКРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаОтмена" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаОтмена</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="4"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<RadioButtonField name="СпособЗаполнения" id="418">
+			<DataPath>СпособЗаполнения</DataPath>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>По данным учета</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ПоДаннымУчета</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вручную</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Вручную</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="СпособЗаполненияКонтекстноеМеню" id="419"/>
+			<ExtendedTooltip name="СпособЗаполненияРасширеннаяПодсказка" id="420"/>
+			<Events>
+				<Event name="OnChange">СпособЗаполненияПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<InputField name="ВидДеятельности" id="130">
+			<DataPath>ВидДеятельности</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<Width>19</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="ВидДеятельностиКонтекстноеМеню" id="131"/>
+			<ExtendedTooltip name="ВидДеятельностиРасширеннаяПодсказка" id="132"/>
+			<Events>
+				<Event name="OnChange">ВидДеятельностиПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="КодОКВЭД" id="199">
+			<DataPath>КодОКВЭД</DataPath>
+			<Width>8</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="КодОКВЭДКонтекстноеМеню" id="200"/>
+			<ExtendedTooltip name="КодОКВЭДРасширеннаяПодсказка" id="201"/>
+			<Events>
+				<Event name="OnChange">КодОКВЭДПриИзменении</Event>
+				<Event name="StartChoice">КодОКВЭДНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаСуммыВручную" id="416">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Суммы вручную</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСуммыВручнуюРасширеннаяПодсказка" id="417"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаДоходы" id="229">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>style:FormBackColor</BackColor>
+					<ExtendedTooltip name="ГруппаДоходыРасширеннаяПодсказка" id="230"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДоходыЗаголовкиВручную" id="213">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДоходыЗаголовкиВручнуюРасширеннаяПодсказка" id="214"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОтступ" id="215">
+									<Width>20</Width>
+									<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="216"/>
+									<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="217"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияСуммаДоходаВручную" id="218">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доходы от реализации:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияСуммаДоходаВручнуюКонтекстноеМеню" id="219"/>
+									<ExtendedTooltip name="ДекорацияСуммаДоходаВручнуюРасширеннаяПодсказка" id="220"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияУплаченныйТорговыйСборВручную" id="224">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Уплаченный торговый сбор:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияУплаченныйТорговыйСборВручнуюКонтекстноеМеню" id="225"/>
+									<ExtendedTooltip name="ДекорацияУплаченныйТорговыйСборВручнуюРасширеннаяПодсказка" id="226"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияАвансовыеПлатежиВручную" id="221">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Уплаченные авансовые платежи по налогу:</v8:content>
+										</v8:item>
+									</Title>
+									<TitleHeight>2</TitleHeight>
+									<ContextMenu name="ДекорацияАвансовыеПлатежиВручнуюКонтекстноеМеню" id="222"/>
+									<ExtendedTooltip name="ДекорацияАвансовыеПлатежиВручнуюРасширеннаяПодсказка" id="223"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДоходы1Квартал" id="227">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДоходы1КварталРасширеннаяПодсказка" id="228"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация1Квартал" id="210">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>1 квартал</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<ContextMenu name="Декорация1КварталКонтекстноеМеню" id="211"/>
+									<ExtendedTooltip name="Декорация1КварталРасширеннаяПодсказка" id="212"/>
+								</LabelDecoration>
+								<InputField name="СуммаДохода1Квартал" id="164">
+									<DataPath>СуммаДохода1Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="СуммаДохода1КварталКонтекстноеМеню" id="165"/>
+									<ExtendedTooltip name="СуммаДохода1КварталРасширеннаяПодсказка" id="166"/>
+									<Events>
+										<Event name="OnChange">СуммаДохода1КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="УплаченныйТорговыйСбор1Квартал" id="170">
+									<DataPath>УплаченныйТорговыйСбор1Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="УплаченныйТорговыйСбор1КварталКонтекстноеМеню" id="171"/>
+									<ExtendedTooltip name="УплаченныйТорговыйСбор1КварталРасширеннаяПодсказка" id="172"/>
+									<Events>
+										<Event name="OnChange">УплаченныйТорговыйСбор1КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="АвансовыеПлатежи1Квартал" id="167">
+									<DataPath>АвансовыеПлатежи1Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="АвансовыеПлатежи1КварталКонтекстноеМеню" id="168"/>
+									<ExtendedTooltip name="АвансовыеПлатежи1КварталРасширеннаяПодсказка" id="169"/>
+									<Events>
+										<Event name="OnChange">АвансовыеПлатежи1КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДоходы2Квартал" id="231">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доходы 2 квартал</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДоходы2КварталРасширеннаяПодсказка" id="232"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация2Квартал" id="233">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>2 квартал</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<ContextMenu name="Декорация2КварталКонтекстноеМеню" id="234"/>
+									<ExtendedTooltip name="Декорация2КварталРасширеннаяПодсказка" id="235"/>
+								</LabelDecoration>
+								<InputField name="СуммаДохода2Квартал" id="236">
+									<DataPath>СуммаДохода2Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="СуммаДохода2КварталКонтекстноеМеню" id="237"/>
+									<ExtendedTooltip name="СуммаДохода2КварталРасширеннаяПодсказка" id="238"/>
+									<Events>
+										<Event name="OnChange">СуммаДохода2КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="УплаченныйТорговыйСбор2Квартал" id="242">
+									<DataPath>УплаченныйТорговыйСбор2Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="УплаченныйТорговыйСбор2КварталКонтекстноеМеню" id="243"/>
+									<ExtendedTooltip name="УплаченныйТорговыйСбор2КварталРасширеннаяПодсказка" id="244"/>
+									<Events>
+										<Event name="OnChange">УплаченныйТорговыйСбор2КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаАвансовыеПлатежи2Квартал" id="426">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Авансовые платежи 2 квартал</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаАвансовыеПлатежи2КварталРасширеннаяПодсказка" id="427"/>
+									<ChildItems>
+										<InputField name="АвансовыеПлатежи2Квартал" id="239">
+											<DataPath>АвансовыеПлатежи2Квартал</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Width>11</Width>
+											<ChoiceButton>false</ChoiceButton>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="АвансовыеПлатежи2КварталКонтекстноеМеню" id="240"/>
+											<ExtendedTooltip name="АвансовыеПлатежи2КварталРасширеннаяПодсказка" id="241"/>
+											<Events>
+												<Event name="OnChange">АвансовыеПлатежи2КварталПриИзменении</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияИПОсвобожденОтНалога" id="423">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Освобожден</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Индивидуальный предприниматель освобожден от уплаты НДФЛ за 2 квартал 2020 года, поскольку занят в сфере деятельности, наиболее пострадавшей от коронавирусной инфекции.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<ContextMenu name="ДекорацияИПОсвобожденОтНалогаКонтекстноеМеню" id="424"/>
+											<ExtendedTooltip name="ДекорацияИПОсвобожденОтНалогаРасширеннаяПодсказка" id="425"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДоходы3Квартал" id="245">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доходы 3 квартал</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДоходы3КварталРасширеннаяПодсказка" id="246"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация3Квартал" id="247">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>3 квартал</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<ContextMenu name="Декорация3КварталКонтекстноеМеню" id="248"/>
+									<ExtendedTooltip name="Декорация3КварталРасширеннаяПодсказка" id="249"/>
+								</LabelDecoration>
+								<InputField name="СуммаДохода3Квартал" id="250">
+									<DataPath>СуммаДохода3Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="СуммаДохода3КварталКонтекстноеМеню" id="251"/>
+									<ExtendedTooltip name="СуммаДохода3КварталРасширеннаяПодсказка" id="252"/>
+									<Events>
+										<Event name="OnChange">СуммаДохода3КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="УплаченныйТорговыйСбор3Квартал" id="256">
+									<DataPath>УплаченныйТорговыйСбор3Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="УплаченныйТорговыйСбор3КварталКонтекстноеМеню" id="257"/>
+									<ExtendedTooltip name="УплаченныйТорговыйСбор3КварталРасширеннаяПодсказка" id="258"/>
+									<Events>
+										<Event name="OnChange">УплаченныйТорговыйСбор3КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="АвансовыеПлатежи3Квартал" id="253">
+									<DataPath>АвансовыеПлатежи3Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="АвансовыеПлатежи3КварталКонтекстноеМеню" id="254"/>
+									<ExtendedTooltip name="АвансовыеПлатежи3КварталРасширеннаяПодсказка" id="255"/>
+									<Events>
+										<Event name="OnChange">АвансовыеПлатежи3КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДоходы4Квартал" id="347">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доходы 4 квартал</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДоходы4КварталРасширеннаяПодсказка" id="348"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация4Квартал" id="349">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>4 квартал</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<ContextMenu name="Декорация4КварталКонтекстноеМеню" id="350"/>
+									<ExtendedTooltip name="Декорация4КварталРасширеннаяПодсказка" id="351"/>
+								</LabelDecoration>
+								<InputField name="СуммаДохода4Квартал" id="352">
+									<DataPath>СуммаДохода4Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="СуммаДохода4КварталКонтекстноеМеню" id="353"/>
+									<ExtendedTooltip name="СуммаДохода4КварталРасширеннаяПодсказка" id="354"/>
+									<Events>
+										<Event name="OnChange">СуммаДохода4КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="УплаченныйТорговыйСбор4Квартал" id="358">
+									<DataPath>УплаченныйТорговыйСбор4Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="УплаченныйТорговыйСбор4КварталКонтекстноеМеню" id="359"/>
+									<ExtendedTooltip name="УплаченныйТорговыйСбор4КварталРасширеннаяПодсказка" id="360"/>
+									<Events>
+										<Event name="OnChange">УплаченныйТорговыйСбор4КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="АвансовыеПлатежи4Квартал" id="355">
+									<DataPath>АвансовыеПлатежи4Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="АвансовыеПлатежи4КварталКонтекстноеМеню" id="356"/>
+									<ExtendedTooltip name="АвансовыеПлатежи4КварталРасширеннаяПодсказка" id="357"/>
+									<Events>
+										<Event name="OnChange">АвансовыеПлатежи4КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДоходыГод" id="259">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДоходыГодРасширеннаяПодсказка" id="260"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияГод" id="261">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Год</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<ContextMenu name="ДекорацияГодКонтекстноеМеню" id="262"/>
+									<ExtendedTooltip name="ДекорацияГодРасширеннаяПодсказка" id="263"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаСФоном" id="421">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа с фоном</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<United>false</United>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСФономРасширеннаяПодсказка" id="422"/>
+									<ChildItems>
+										<InputField name="СуммаДохода" id="264">
+											<DataPath>СуммаДохода</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<Width>11</Width>
+											<ChoiceButton>false</ChoiceButton>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="СуммаДоходаКонтекстноеМеню" id="265"/>
+											<ExtendedTooltip name="СуммаДоходаРасширеннаяПодсказка" id="266"/>
+										</InputField>
+										<InputField name="УплаченныйТорговыйСбор" id="270">
+											<DataPath>УплаченныйТорговыйСбор</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<Width>11</Width>
+											<ChoiceButton>false</ChoiceButton>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="УплаченныйТорговыйСборКонтекстноеМеню" id="271"/>
+											<ExtendedTooltip name="УплаченныйТорговыйСборРасширеннаяПодсказка" id="272"/>
+										</InputField>
+										<InputField name="АвансовыеПлатежи" id="267">
+											<DataPath>АвансовыеПлатежи</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<Width>11</Width>
+											<ChoiceButton>false</ChoiceButton>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="АвансовыеПлатежиКонтекстноеМеню" id="268"/>
+											<ExtendedTooltip name="АвансовыеПлатежиРасширеннаяПодсказка" id="269"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРасходы" id="273">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документально подтвержденные расходы</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<BackColor>style:FormBackColor</BackColor>
+					<ExtendedTooltip name="ГруппаРасходыРасширеннаяПодсказка" id="274"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаРасходыЗаголовкиВручную" id="275">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасходыЗаголовкиВручнуюРасширеннаяПодсказка" id="276"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияМатериальныеРасходыВручную" id="277">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Материальные расходы:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияМатериальныеРасходыВручнуюКонтекстноеМеню" id="278"/>
+									<ExtendedTooltip name="ДекорацияМатериальныеРасходыВручнуюРасширеннаяПодсказка" id="279"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияАмортизацияОСВручную" id="280">
+									<Width>20</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Амортизация основных средств:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияАмортизацияОСВручнуюКонтекстноеМеню" id="281"/>
+									<ExtendedTooltip name="ДекорацияАмортизацияОСВручнуюРасширеннаяПодсказка" id="282"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияЗарплатаВручную" id="283">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Зарплата и вознаграждения:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияЗарплатаВручнуюКонтекстноеМеню" id="284"/>
+									<ExtendedTooltip name="ДекорацияЗарплатаВручнуюРасширеннаяПодсказка" id="285"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияПрочиеРасходыВручную" id="286">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Прочие расходы:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПрочиеРасходыВручнуюКонтекстноеМеню" id="287"/>
+									<ExtendedTooltip name="ДекорацияПрочиеРасходыВручнуюРасширеннаяПодсказка" id="288"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРасходы1Квартал" id="292">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расходы 1 квартал</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасходы1КварталРасширеннаяПодсказка" id="293"/>
+							<ChildItems>
+								<InputField name="МатериальныеРасходы1Квартал" id="177">
+									<DataPath>МатериальныеРасходы1Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="МатериальныеРасходы1КварталКонтекстноеМеню" id="178"/>
+									<ExtendedTooltip name="МатериальныеРасходы1КварталРасширеннаяПодсказка" id="179"/>
+									<Events>
+										<Event name="OnChange">МатериальныеРасходы1КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Амортизация1Квартал" id="180">
+									<DataPath>Амортизация1Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="Амортизация1КварталКонтекстноеМеню" id="181"/>
+									<ExtendedTooltip name="Амортизация1КварталРасширеннаяПодсказка" id="182"/>
+									<Events>
+										<Event name="OnChange">Амортизация1КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Зарплата1Квартал" id="183">
+									<DataPath>Зарплата1Квартал</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Зарплата и вознаграждения</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="Зарплата1КварталКонтекстноеМеню" id="184"/>
+									<ExtendedTooltip name="Зарплата1КварталРасширеннаяПодсказка" id="185"/>
+									<Events>
+										<Event name="OnChange">Зарплата1КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПрочиеРасходы1Квартал" id="186">
+									<DataPath>ПрочиеРасходы1Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ПрочиеРасходы1КварталКонтекстноеМеню" id="187"/>
+									<ExtendedTooltip name="ПрочиеРасходы1КварталРасширеннаяПодсказка" id="188"/>
+									<Events>
+										<Event name="OnChange">ПрочиеРасходы1КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРасходы2Квартал" id="294">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расходы 2 квартал</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасходы2КварталРасширеннаяПодсказка" id="295"/>
+							<ChildItems>
+								<InputField name="МатериальныеРасходы2Квартал" id="296">
+									<DataPath>МатериальныеРасходы2Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="МатериальныеРасходы2КварталКонтекстноеМеню" id="297"/>
+									<ExtendedTooltip name="МатериальныеРасходы2КварталРасширеннаяПодсказка" id="298"/>
+									<Events>
+										<Event name="OnChange">МатериальныеРасходы2КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Амортизация2Квартал" id="299">
+									<DataPath>Амортизация2Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="Амортизация2КварталКонтекстноеМеню" id="300"/>
+									<ExtendedTooltip name="Амортизация2КварталРасширеннаяПодсказка" id="301"/>
+									<Events>
+										<Event name="OnChange">Амортизация2КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Зарплата2Квартал" id="302">
+									<DataPath>Зарплата2Квартал</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Зарплата и вознаграждения</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="Зарплата2КварталКонтекстноеМеню" id="303"/>
+									<ExtendedTooltip name="Зарплата2КварталРасширеннаяПодсказка" id="304"/>
+									<Events>
+										<Event name="OnChange">Зарплата2КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПрочиеРасходы2Квартал" id="305">
+									<DataPath>ПрочиеРасходы2Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ПрочиеРасходы2КварталКонтекстноеМеню" id="306"/>
+									<ExtendedTooltip name="ПрочиеРасходы2КварталРасширеннаяПодсказка" id="307"/>
+									<Events>
+										<Event name="OnChange">ПрочиеРасходы2КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРасходы3Квартал" id="311">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расходы 3 квартал</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасходы3КварталРасширеннаяПодсказка" id="312"/>
+							<ChildItems>
+								<InputField name="МатериальныеРасходы3Квартал" id="313">
+									<DataPath>МатериальныеРасходы3Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="МатериальныеРасходы3КварталКонтекстноеМеню" id="314"/>
+									<ExtendedTooltip name="МатериальныеРасходы3КварталРасширеннаяПодсказка" id="315"/>
+									<Events>
+										<Event name="OnChange">МатериальныеРасходы3КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Амортизация3Квартал" id="316">
+									<DataPath>Амортизация3Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="Амортизация3КварталКонтекстноеМеню" id="317"/>
+									<ExtendedTooltip name="Амортизация3КварталРасширеннаяПодсказка" id="318"/>
+									<Events>
+										<Event name="OnChange">Амортизация3КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Зарплата3Квартал" id="319">
+									<DataPath>Зарплата3Квартал</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Зарплата и вознаграждения</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="Зарплата3КварталКонтекстноеМеню" id="320"/>
+									<ExtendedTooltip name="Зарплата3КварталРасширеннаяПодсказка" id="321"/>
+									<Events>
+										<Event name="OnChange">Зарплата3КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПрочиеРасходы3Квартал" id="322">
+									<DataPath>ПрочиеРасходы3Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ПрочиеРасходы3КварталКонтекстноеМеню" id="323"/>
+									<ExtendedTooltip name="ПрочиеРасходы3КварталРасширеннаяПодсказка" id="324"/>
+									<Events>
+										<Event name="OnChange">ПрочиеРасходы3КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРасходы4Квартал" id="361">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расходы 4 квартал</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасходы4КварталРасширеннаяПодсказка" id="362"/>
+							<ChildItems>
+								<InputField name="МатериальныеРасходы4Квартал" id="363">
+									<DataPath>МатериальныеРасходы4Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="МатериальныеРасходы4КварталКонтекстноеМеню" id="364"/>
+									<ExtendedTooltip name="МатериальныеРасходы4КварталРасширеннаяПодсказка" id="365"/>
+									<Events>
+										<Event name="OnChange">МатериальныеРасходы4КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Амортизация4Квартал" id="366">
+									<DataPath>Амортизация4Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="Амортизация4КварталКонтекстноеМеню" id="367"/>
+									<ExtendedTooltip name="Амортизация4КварталРасширеннаяПодсказка" id="368"/>
+									<Events>
+										<Event name="OnChange">Амортизация4КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Зарплата4Квартал" id="369">
+									<DataPath>Зарплата4Квартал</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Зарплата и вознаграждения</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="Зарплата4КварталКонтекстноеМеню" id="370"/>
+									<ExtendedTooltip name="Зарплата4КварталРасширеннаяПодсказка" id="371"/>
+									<Events>
+										<Event name="OnChange">Зарплата4КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПрочиеРасходы4Квартал" id="372">
+									<DataPath>ПрочиеРасходы4Квартал</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ПрочиеРасходы4КварталКонтекстноеМеню" id="373"/>
+									<ExtendedTooltip name="ПрочиеРасходы4КварталРасширеннаяПодсказка" id="374"/>
+									<Events>
+										<Event name="OnChange">ПрочиеРасходы4КварталПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРасходыГод" id="328">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расходы год</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасходыГодРасширеннаяПодсказка" id="329"/>
+							<ChildItems>
+								<InputField name="МатериальныеРасходы" id="330">
+									<DataPath>МатериальныеРасходы</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="МатериальныеРасходыКонтекстноеМеню" id="331"/>
+									<ExtendedTooltip name="МатериальныеРасходыРасширеннаяПодсказка" id="332"/>
+								</InputField>
+								<InputField name="Амортизация" id="333">
+									<DataPath>Амортизация</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="АмортизацияКонтекстноеМеню" id="334"/>
+									<ExtendedTooltip name="АмортизацияРасширеннаяПодсказка" id="335"/>
+								</InputField>
+								<InputField name="Зарплата" id="336">
+									<DataPath>Зарплата</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Зарплата и вознаграждения</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ЗарплатаКонтекстноеМеню" id="337"/>
+									<ExtendedTooltip name="ЗарплатаРасширеннаяПодсказка" id="338"/>
+								</InputField>
+								<InputField name="ПрочиеРасходы" id="339">
+									<DataPath>ПрочиеРасходы</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>11</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ПрочиеРасходыКонтекстноеМеню" id="340"/>
+									<ExtendedTooltip name="ПрочиеРасходыРасширеннаяПодсказка" id="341"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРасходыИтогиВручную" id="345">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРасходыИтогиВручнуюРасширеннаяПодсказка" id="346"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияСуммаРасходыВручную" id="289">
+							<Width>20</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма расходов:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияСуммаРасходыВручнуюКонтекстноеМеню" id="290"/>
+							<ExtendedTooltip name="ДекорацияСуммаРасходыВручнуюРасширеннаяПодсказка" id="291"/>
+						</LabelDecoration>
+						<InputField name="ИтогоПодтвержденныхРасходов1Квартал" id="191">
+							<DataPath>ИтогоПодтвержденныхРасходов1Квартал</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма расходов</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<Width>11</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ИтогоПодтвержденныхРасходов1КварталКонтекстноеМеню" id="192"/>
+							<ExtendedTooltip name="ИтогоПодтвержденныхРасходов1КварталРасширеннаяПодсказка" id="193"/>
+						</InputField>
+						<InputField name="ИтогоПодтвержденныхРасходов2Квартал" id="308">
+							<DataPath>ИтогоПодтвержденныхРасходов2Квартал</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма расходов</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<Width>11</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ИтогоПодтвержденныхРасходов2КварталКонтекстноеМеню" id="309"/>
+							<ExtendedTooltip name="ИтогоПодтвержденныхРасходов2КварталРасширеннаяПодсказка" id="310"/>
+						</InputField>
+						<InputField name="ИтогоПодтвержденныхРасходов3Квартал" id="325">
+							<DataPath>ИтогоПодтвержденныхРасходов3Квартал</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма расходов</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<Width>11</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ИтогоПодтвержденныхРасходов3КварталКонтекстноеМеню" id="326"/>
+							<ExtendedTooltip name="ИтогоПодтвержденныхРасходов3КварталРасширеннаяПодсказка" id="327"/>
+						</InputField>
+						<InputField name="ИтогоПодтвержденныхРасходов4Квартал" id="375">
+							<DataPath>ИтогоПодтвержденныхРасходов4Квартал</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма расходов</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<Width>11</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ИтогоПодтвержденныхРасходов4КварталКонтекстноеМеню" id="376"/>
+							<ExtendedTooltip name="ИтогоПодтвержденныхРасходов4КварталРасширеннаяПодсказка" id="377"/>
+						</InputField>
+						<InputField name="ИтогоПодтвержденныхРасходов" id="342">
+							<DataPath>ИтогоПодтвержденныхРасходов</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма расходов</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<Width>11</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ИтогоПодтвержденныхРасходовКонтекстноеМеню" id="343"/>
+							<ExtendedTooltip name="ИтогоПодтвержденныхРасходовРасширеннаяПодсказка" id="344"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСуммыПоДаннымУчета" id="378">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Суммы</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<United>false</United>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСуммыПоДаннымУчетаРасширеннаяПодсказка" id="379"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияПоДаннымУчета" id="428">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заполнение данными учета доступно только в приложении 1С:БизнесСтарт</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="ДекорацияПоДаннымУчетаКонтекстноеМеню" id="429"/>
+					<ExtendedTooltip name="ДекорацияПоДаннымУчетаРасширеннаяПодсказка" id="430"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаПоУчетуНедоступна" id="431">
+					<Enabled>false</Enabled>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПоУчетуНедоступнаРасширеннаяПодсказка" id="432"/>
+					<ChildItems>
+						<LabelField name="СуммаДоходаПоДаннымУчета" id="380">
+							<DataPath>СуммаДохода</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доходы от реализации</v8:content>
+								</v8:item>
+							</Title>
+							<Width>20</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+								</v8:item>
+							</Format>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="СуммаДоходаПоДаннымУчетаКонтекстноеМеню" id="381"/>
+							<ExtendedTooltip name="СуммаДоходаПоДаннымУчетаРасширеннаяПодсказка" id="382"/>
+							<Events>
+								<Event name="Click">СуммаДоходаНажатие</Event>
+							</Events>
+						</LabelField>
+						<LabelField name="АвансыПокупателей" id="385">
+							<DataPath>АвансыПокупателей</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>20</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="АвансыПокупателейКонтекстноеМеню" id="386"/>
+							<ExtendedTooltip name="АвансыПокупателейРасширеннаяПодсказка" id="387"/>
+							<Events>
+								<Event name="Click">АвансыПокупателейНажатие</Event>
+							</Events>
+						</LabelField>
+						<LabelField name="ПрочиеДоходы" id="388">
+							<DataPath>ПрочиеДоходы</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>20</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+								</v8:item>
+							</Format>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ПрочиеДоходыКонтекстноеМеню" id="389"/>
+							<ExtendedTooltip name="ПрочиеДоходыРасширеннаяПодсказка" id="390"/>
+							<Events>
+								<Event name="Click">ПрочиеДоходыНажатие</Event>
+							</Events>
+						</LabelField>
+						<LabelField name="АвансовыеПлатежиПоДаннымУчета" id="391">
+							<DataPath>АвансовыеПлатежи</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>20</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="АвансовыеПлатежиПоДаннымУчетаКонтекстноеМеню" id="392"/>
+							<ExtendedTooltip name="АвансовыеПлатежиПоДаннымУчетаРасширеннаяПодсказка" id="393"/>
+							<Events>
+								<Event name="Click">АвансовыеПлатежиНажатие</Event>
+							</Events>
+						</LabelField>
+						<LabelField name="УплаченныйТорговыйСборПоДаннымУчета" id="394">
+							<DataPath>УплаченныйТорговыйСбор</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>20</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="УплаченныйТорговыйСборПоДаннымУчетаКонтекстноеМеню" id="395"/>
+							<ExtendedTooltip name="УплаченныйТорговыйСборПоДаннымУчетаРасширеннаяПодсказка" id="396"/>
+							<Events>
+								<Event name="Click">УплаченныйТорговыйСборНажатие</Event>
+							</Events>
+						</LabelField>
+						<UsualGroup name="ГруппаРасходыПоДаннымУчета" id="397">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Документально подтвержденные расходы</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаРасходыПоДаннымУчетаРасширеннаяПодсказка" id="398"/>
+							<ChildItems>
+								<LabelField name="МатериальныеРасходыПоДаннымУчета" id="399">
+									<DataPath>МатериальныеРасходы</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>20</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="МатериальныеРасходыПоДаннымУчетаКонтекстноеМеню" id="400"/>
+									<ExtendedTooltip name="МатериальныеРасходыПоДаннымУчетаРасширеннаяПодсказка" id="401"/>
+									<Events>
+										<Event name="Click">МатериальныеРасходыНажатие</Event>
+									</Events>
+								</LabelField>
+								<LabelField name="АмортизацияПоДаннымУчета" id="402">
+									<DataPath>Амортизация</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>20</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="АмортизацияПоДаннымУчетаКонтекстноеМеню" id="403"/>
+									<ExtendedTooltip name="АмортизацияПоДаннымУчетаРасширеннаяПодсказка" id="404"/>
+									<Events>
+										<Event name="Click">АмортизацияНажатие</Event>
+									</Events>
+								</LabelField>
+								<LabelField name="ЗарплатаПоДаннымУчета" id="405">
+									<DataPath>Зарплата</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Зарплата и вознаграждения</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>20</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="ЗарплатаПоДаннымУчетаКонтекстноеМеню" id="406"/>
+									<ExtendedTooltip name="ЗарплатаПоДаннымУчетаРасширеннаяПодсказка" id="407"/>
+									<Events>
+										<Event name="Click">ЗарплатаНажатие</Event>
+									</Events>
+								</LabelField>
+								<LabelField name="ПрочиеРасходыПоДаннымУчета" id="408">
+									<DataPath>ПрочиеРасходы</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>20</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="ПрочиеРасходыПоДаннымУчетаКонтекстноеМеню" id="409"/>
+									<ExtendedTooltip name="ПрочиеРасходыПоДаннымУчетаРасширеннаяПодсказка" id="410"/>
+									<Events>
+										<Event name="Click">ПрочиеРасходыНажатие</Event>
+									</Events>
+								</LabelField>
+								<UsualGroup name="ГруппаИтогоПоДаннымУчета" id="411">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Итого</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>style:ИтогиФонГруппы</BackColor>
+									<ExtendedTooltip name="ГруппаИтогоПоДаннымУчетаРасширеннаяПодсказка" id="412"/>
+									<ChildItems>
+										<LabelField name="ИтогоПодтвержденныхРасходовПоДаннымУчета" id="413">
+											<DataPath>ИтогоПодтвержденныхРасходов</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма расходов</v8:content>
+												</v8:item>
+											</Title>
+											<Width>20</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=0,00</v8:content>
+												</v8:item>
+											</Format>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ИтогоПодтвержденныхРасходовПоДаннымУчетаКонтекстноеМеню" id="414"/>
+											<ExtendedTooltip name="ИтогоПодтвержденныхРасходовПоДаннымУчетаРасширеннаяПодсказка" id="415"/>
+											<Events>
+												<Event name="Click">ИтогоПодтвержденныхРасходовНажатие</Event>
+											</Events>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВидДеятельности" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид деятельности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="СуммаДохода1Квартал" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма дохода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="МатериальныеРасходы1Квартал" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Материальные расходы 1 квартал</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Амортизация1Квартал" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация основных средств</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Зарплата1Квартал" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарплата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПрочиеРасходы1Квартал" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодОКВЭД" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код по ОКВЭД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ИтогоПодтвержденныхРасходов1Квартал" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Период" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвансовыеПлатежи1Квартал" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авансовые платежи по налогу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="УплаченныйТорговыйСбор1Квартал" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уплаченный торговый сбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПодсказкаОКВЭД2" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсказка ОКВЭД2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособЗаполнения" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доходы и расходы заполнены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НаименованиеОКВЭД" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование ОКВЭД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УплачиваетсяТорговыйСбор" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уплачивается торговый сбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроцентПрофВычета" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент проф вычета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвансыПокупателей1Квартал" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авансы покупателей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрочиеДоходы1Квартал" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие доходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаДоходаПолугодие" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма дохода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвансовыеПлатежиПолугодие" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авансовые платежи по налогу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвансовыеПлатежи9Месяцев" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авансовые платежи по налогу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвансовыеПлатежи" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авансовые платежи по налогу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаДохода9Месяцев" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма дохода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаДохода" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма дохода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УплаченныйТорговыйСборПолугодие" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уплаченный торговый сбор1 кв</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УплаченныйТорговыйСбор9Месяцев" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уплаченный торговый сбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УплаченныйТорговыйСбор" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уплаченный торговый сбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МатериальныеРасходыПолугодие" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Материальные расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МатериальныеРасходы9Месяцев" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Материальные расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МатериальныеРасходы" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Материальные расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АмортизацияПолугодие" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация основных средств</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Амортизация9Месяцев" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация основных средств</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Амортизация" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация основных средств</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗарплатаПолугодие" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарплата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Зарплата9Месяцев" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарплата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Зарплата" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарплата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрочиеРасходыПолугодие" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрочиеРасходы9Месяцев" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрочиеРасходы" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогоПодтвержденныхРасходовПолугодие" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогоПодтвержденныхРасходов9Месяцев" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогоПодтвержденныхРасходов" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвансыПокупателейПолугодие" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авансы покупателей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвансыПокупателей9Месяцев" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авансы покупателей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвансыПокупателей" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авансы покупателей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрочиеДоходыПолугодие" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие доходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрочиеДоходы9Месяцев" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие доходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрочиеДоходы" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие доходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвансовыеПлатежи2Квартал" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авансовые платежи по налогу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АвансовыеПлатежи3Квартал" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авансовые платежи по налогу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АвансовыеПлатежи4Квартал" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авансовые платежи по налогу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Амортизация2Квартал" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация основных средств</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Амортизация3Квартал" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация основных средств</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Амортизация4Квартал" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Амортизация основных средств</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Зарплата2Квартал" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарплата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Зарплата3Квартал" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарплата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Зарплата4Квартал" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарплата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИтогоПодтвержденныхРасходов2Квартал" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогоПодтвержденныхРасходов3Квартал" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогоПодтвержденныхРасходов4Квартал" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МатериальныеРасходы2Квартал" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Материальные расходы 2 квартал</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="МатериальныеРасходы3Квартал" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Материальные расходы 3 квартал</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="МатериальныеРасходы4Квартал" id="64">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Материальные расходы 4 квартал</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПрочиеРасходы2Квартал" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПрочиеРасходы3Квартал" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПрочиеРасходы4Квартал" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СуммаДохода2Квартал" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма дохода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СуммаДохода3Квартал" id="69">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма дохода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СуммаДохода4Квартал" id="70">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма дохода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="УплаченныйТорговыйСбор2Квартал" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уплаченный торговый сбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="УплаченныйТорговыйСбор3Квартал" id="72">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уплаченный торговый сбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="УплаченныйТорговыйСбор4Квартал" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уплаченный торговый сбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПрименяетсяОсвобождениеОтНалога" id="74">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применяется освобождение от налога</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОтмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаОтмена</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Период">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="АвансовыеПлатежи">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="УплаченныйТорговыйСбор">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>12</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Декларация3НДФЛВыбраннаяФорма">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+		<ExcludedCommand>ShowInList</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКомандаЗаписатьИЗакрыть" id="51">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаЗаписатьИЗакрыть</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="ФормаКомандаЗаписатьИЗакрытьРасширеннаяПодсказка" id="52"/>
+			</Button>
+			<Button name="ФормаКомандаЗаписать" id="53">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаЗаписать</CommandName>
+				<ExtendedTooltip name="ФормаКомандаЗаписатьРасширеннаяПодсказка" id="54"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодExtendedTooltip" id="32"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>Left</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="34"/>
+		</InputField>
+		<UsualGroup name="ГруппаСтавка" id="18">
+			<ReadOnly>true</ReadOnly>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСтавкаExtendedTooltip" id="35"/>
+			<ChildItems>
+				<InputField name="СтавкаНалогообложенияРезидента" id="5">
+					<DataPath>Объект.СтавкаНалогообложенияРезидента</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Налоговая ставка</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="СтавкаНалогообложенияРезидентаКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="СтавкаНалогообложенияРезидентаExtendedTooltip" id="36"/>
+				</InputField>
+				<CheckBoxField name="НеОблагаетсяУНалоговогоАгента" id="7">
+					<DataPath>Объект.НеОблагаетсяУНалоговогоАгента</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>Right</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="НеОблагаетсяУНалоговогоАгентаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="НеОблагаетсяУНалоговогоАгентаExtendedTooltip" id="37"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРедактируемыеРеквизиты" id="46">
+			<Group>HorizontalIfPossible</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРедактируемыеРеквизитыРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<CheckBoxField name="РедактируемыеРеквизитыКодаДоходаНДФЛСоответствуетОплатеТруда" id="48">
+					<TitleLocation>Right</TitleLocation>
+					<ContextMenu name="РедактируемыеРеквизитыКодаДоходаНДФЛСоответствуетОплатеТрудаКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="РедактируемыеРеквизитыКодаДоходаНДФЛСоответствуетОплатеТрудаРасширеннаяПодсказка" id="50"/>
+					<Events>
+						<Event name="OnChange">РедактируемыеРеквизитыКодаДоходаНДФЛСоответствуетОплатеТрудаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="КодыПрименяемыеВНалоговойОтчетности" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление в налоговой отчетности</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="КодыПрименяемыеВНалоговойОтчетностиExtendedTooltip" id="56"/>
+			<ChildItems>
+				<InputField name="КодПрименяемыйВНалоговойОтчетностиС2021Года" id="57">
+					<DataPath>Объект.КодПрименяемыйВНалоговойОтчетностиС2021Года</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>с 2021 года</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КодПрименяемыйВНалоговойОтчетностиС2021ГодаКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="КодПрименяемыйВНалоговойОтчетностиС2021ГодаРасширеннаяПодсказка" id="59"/>
+				</InputField>
+				<InputField name="КодПрименяемыйВНалоговойОтчетностиС2010Года" id="60">
+					<DataPath>Объект.КодПрименяемыйВНалоговойОтчетностиС2010Года</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>в 2010-2020 годах</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КодПрименяемыйВНалоговойОтчетностиС2010ГодаКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="КодПрименяемыйВНалоговойОтчетностиС2010ГодаРасширеннаяПодсказка" id="62"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВычет" id="19">
+			<ReadOnly>true</ReadOnly>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВычетExtendedTooltip" id="38"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВычетыПоДоходамНДФЛ" id="20">
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычет к доходу</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаВычетыПоДоходамНДФЛExtendedTooltip" id="40"/>
+			<ChildItems>
+				<InputField name="ВычетПоУмолчанию" id="13">
+					<DataPath>Объект.ВычетПоУмолчанию</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ВычетПоУмолчаниюКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ВычетПоУмолчаниюExtendedTooltip" id="39"/>
+				</InputField>
+				<UsualGroup name="ВычетыПоДоходамНДФЛГоризонтальная" id="30">
+					<ReadOnly>true</ReadOnly>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ВычетыПоДоходамНДФЛГоризонтальнаяExtendedTooltip" id="41"/>
+					<ChildItems>
+						<InputField name="ВычетыПоДоходамНДФЛГодовойВычет" id="23">
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ВычетыПоДоходамНДФЛГодовойВычетКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ВычетыПоДоходамНДФЛГодовойВычетExtendedTooltip" id="42"/>
+						</InputField>
+						<InputField name="ВычетыПоДоходамНДФЛНормативЗатрат" id="25">
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ВычетыПоДоходамНДФЛНормативЗатратКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ВычетыПоДоходамНДФЛНормативЗатратExtendedTooltip" id="43"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="ВычетыПоДоходамНДФЛПериод" id="28">
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вычет действует с</v8:content>
+						</v8:item>
+					</Title>
+					<ChoiceButton>false</ChoiceButton>
+					<SpinButton>true</SpinButton>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=гггг</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ВычетыПоДоходамНДФЛПериодКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ВычетыПоДоходамНДФЛПериодExtendedTooltip" id="44"/>
+					<Events>
+						<Event name="Tuning">ВычетыПоДоходамНДФЛПериодРегулирование</Event>
+					</Events>
+				</InputField>
+				<Button name="ВычетыПоДоходамНДФЛИстория" id="27">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ВычетыПоДоходамНДФЛИстория</CommandName>
+					<ExtendedTooltip name="ВычетыПоДоходамНДФЛИсторияExtendedTooltip" id="45"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ВидыДоходовНДФЛ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВычетыПоДоходамНДФЛ" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВычетыПоДоходамНДФЛПрежняя" id="3">
+			<Type/>
+		</Attribute>
+		<Attribute name="ВычетыПоДоходамНДФЛНаборЗаписей" id="4">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВычетыПоДоходамНДФЛНаборЗаписейПрочитан" id="5">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВычетыПоДоходамНДФЛНоваяЗапись" id="6">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СсылкаНаОбъект" id="7">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыДоходовНДФЛ</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РедактируемыеРеквизитыКодаДоходаНДФЛ" id="8">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РедактируемыеРеквизитыКодаДоходаНДФЛНоваяЗапись" id="9">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РедактируемыеРеквизитыКодаДоходаНДФЛПрежняя" id="10">
+			<Type/>
+		</Attribute>
+		<Attribute name="РедактируемыеРеквизитыКодаДоходаНДФЛНаборЗаписей" id="11">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РедактируемыеРеквизитыКодаДоходаНДФЛНаборЗаписейПрочитан" id="12">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВычетыПоДоходамНДФЛИстория" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История изменения вычета к доходу по НДФЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВычетыПоДоходамНДФЛИстория</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаписать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Ctrl+S</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаписать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаписатьИЗакрыть" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаписатьИЗакрыть</Action>
+			<Representation>Text</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

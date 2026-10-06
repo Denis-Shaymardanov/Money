@@ -4,6 +4,7 @@
 - /check/         – получение данных чека через внешний API
 """
 import base64
+import hashlib
 import tempfile
 import os
 import time
@@ -57,13 +58,18 @@ async def convert_pdf_to_csv_json(request: PDFRequest):
         reader = PDFTransactionReader(tmp_path)
         raw_data = reader.parse_transactions()
 
-        # Обогащаем, нормализуем, удаляем дубли и сортируем
+        # Обогащаем и нормализуем. Дедупликация выполняется на стороне 1С:
+        # Python не должен удалять две реально одинаковые банковские операции.
         processor = TransactionProcessor(rules_loader.load())
         df = processor.enrich_and_clean(raw_data)
 
         # Преобразуем DataFrame в CSV (с разделителем ';' и кодировкой UTF-8 с BOM)
         csv_string = df.to_csv(index=False, sep=';', quotechar='"', quoting=1, encoding='utf-8-sig')
-        return {"csv": csv_string}
+        return {
+            "csv": csv_string,
+            "pdf_sha256": hashlib.sha256(pdf_bytes).hexdigest(),
+            "normalized_csv_sha256": hashlib.sha256(csv_string.encode("utf-8-sig")).hexdigest(),
+        }
 
     except ValueError as ve:
         # Ошибки, связанные с некорректными данными (например, нет таблиц)

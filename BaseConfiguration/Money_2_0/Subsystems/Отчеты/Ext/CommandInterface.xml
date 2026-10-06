@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<CommandsVisibility>
+		<Command name="Report.ОтчетПоСписаниямДенег.Command.ПотраченныеДеньги">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоПоступлениямДенег.Command.ПолученныеДеньги">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СверкаСВыпискойБанка.Command.СверкаСВыпискойБанка">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоДолгам.Command.СверкаПоДолгам">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоБюджету.Command.ОтчетПоБюджету">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОтчетыСервис">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРегламентированныеОтчеты">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ДинамикаДоходовИРасходов.Command.ДинамикаДоходовИРасходов">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="Report.ОтчетПоСписаниямДенег.Command.ПотраченныеДеньги">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоПоступлениямДенег.Command.ПолученныеДеньги">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.СверкаСВыпискойБанка.Command.СверкаСВыпискойБанка">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоДолгам.Command.СверкаПоДолгам">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоБюджету.Command.ОтчетПоБюджету">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОтчетыСервис">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРегламентированныеОтчеты">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.ДинамикаДоходовИРасходов.Command.ДинамикаДоходовИРасходов">
+			<CommandGroup>CommandGroup.ПанельДействийОтчетыАналитические</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="Report.ОтчетПоСписаниямДенег.Command.ПотраченныеДеньги">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоПоступлениямДенег.Command.ПолученныеДеньги">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.СверкаСВыпискойБанка.Command.СверкаСВыпискойБанка">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоДолгам.Command.СверкаПоДолгам">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоБюджету.Command.ОтчетПоБюджету">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОтчетыСервис">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРегламентированныеОтчеты">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.СтруктураРасходов.Command.СтруктураРасходов">
+			<CommandGroup>CommandGroup.ПанельДействийОтчетыАналитические</CommandGroup>
+		</Command>
+		<Command name="Report.СтруктураДоходов.Command.СтруктураДоходов">
+			<CommandGroup>CommandGroup.ПанельДействийОтчетыАналитические</CommandGroup>
+		</Command>
+		<Command name="Report.ДинамикаДоходовИРасходов.Command.ДинамикаДоходовИРасходов">
+			<CommandGroup>CommandGroup.ПанельДействийОтчетыАналитические</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетОбИзмененииФинансовогоСостояния.Command.ИзмененияФинансовогоСостояния">
+			<CommandGroup>CommandGroup.ПанельДействийОтчетыАналитические</CommandGroup>
+		</Command>
+		<Command name="Report.СравнениеДоходовИРасходовЗа2Периода.Command.СравнениеДоходовИРасходовЗа2Периода">
+			<CommandGroup>CommandGroup.ПанельДействийОтчетыАналитические</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоСкидкам.Command.ПолученныеСкидки">
+			<CommandGroup>CommandGroup.ПанельДействийОтчетыАналитические</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоКурсамВалют.Command.КурсыВалют">
+			<CommandGroup>CommandGroup.ПанельДействийОтчетыАналитические</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоКошелькам.Command.ДеньгиВКошельках">
+			<CommandGroup>CommandGroup.ПанельДействийОтчетыПоОстаткам</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоИмуществу.Command.СтоимостьИмущества">
+			<CommandGroup>CommandGroup.ПанельДействийОтчетыПоОстаткам</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоФинансовымЦелям.Command.НакопленияНаФинЦели">
+			<CommandGroup>CommandGroup.ПанельДействийОтчетыПоОстаткам</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelOrdinary</Group>
+		<Group>CommandGroup.ПанельДействийОтчетыАналитические</Group>
+		<Group>CommandGroup.ПанельДействийОтчетыПоОстаткам</Group>
+	</GroupsOrder>
+</CommandInterface>

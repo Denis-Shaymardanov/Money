@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<CommandsVisibility>
+		<Command name="DataProcessor.ОбзорОсновныхВозможностей.Command.Обучение">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="0:61892a62-9381-401d-af31-9073ef2509fb">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ПерсональнаяНастройкаПроксиСервера">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.СписокПользователей">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.УправлениеИтогамиИАгрегатами.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ЗагрузкаВыпискиБанка.Command.ЗагрузкаВыпискиБанка">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.Конференция1СДеньги8">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="DataProcessor.ОбзорОсновныхВозможностей.Command.Обучение">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="CommonCommand.ПерсональнаяНастройкаПроксиСервера">
+			<CommandGroup>CommandGroup.ПанельДействийАдминистрирование</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="CommonCommand.СписокПользователей">
+			<CommandGroup>CommandGroup.ПанельДействийАдминистрирование</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="DataProcessor.УправлениеИтогамиИАгрегатами.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ПанельДействийАдминистрирование</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="DataProcessor.ЗагрузкаВыпискиБанка.Command.ЗагрузкаВыпискиБанка">
+			<CommandGroup>CommandGroup.ПанельДействийИнтеграция</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="CommonCommand.Конференция1СДеньги8">
+			<CommandGroup>CommandGroup.ПанельДействийИнтеграция</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="DataProcessor.НастройкиПользователяПерсональные.Command.ПерсональныеНастройкиПользователя">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ОбзорОсновныхВозможностей.Command.Обучение">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.Пользователи.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ЖурналРегистрации.Command.ЖурналРегистрации">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ПоискИУдалениеДублей.Command.ПоискИУдалениеДублей">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.РегламентныеИФоновыеЗадания.Command.РегламентныеИФоновыеЗадания">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.УдалениеПомеченныхОбъектов.Command.УдалениеПомеченныхОбъектов">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ПанельАдминистрированияБСП.Command.ИнтернетПоддержкаИСервисы">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.РезервноеКопированиеИБ.Command.ВыполнитьВосстановлениеДанных">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.РезервноеКопированиеИБ.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ЖурналРегистрации.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.НастройкаРезервногоКопированияИБ.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.РегламентныеИФоновыеЗадания.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.УдалениеПомеченныхОбъектов.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.РедакторАналитики.Command.ИзменитьАналитикуВОперациях">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.УстановкаОбновлений.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОбработкиСервис">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.НаписатьОтзывОПрограмме">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.СообщитьВСлужбуПоддержки">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="0:5f85d93c-463b-42cc-b068-074fa5f836b0">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="CommonForm.УправлениеСервисомАвтосинхронизации.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ПерсональнаяНастройкаПроксиСервера">
+			<CommandGroup>CommandGroup.ПанельДействийАдминистрирование</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.СписокПользователей">
+			<CommandGroup>CommandGroup.ПанельДействийАдминистрирование</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.УправлениеИтогамиИАгрегатами.StandardCommand.Open">
+			<CommandGroup>CommandGroup.ПанельДействийАдминистрирование</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.МониторСинхронизацииСМобильнымиУстройствами.Command.СинхронизацияСМобильнымиУстройствами">
+			<CommandGroup>CommandGroup.ПанельДействийИнтеграция</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ЗагрузкаВыпискиБанка.Command.ЗагрузкаВыпискиБанка">
+			<CommandGroup>CommandGroup.ПанельДействийИнтеграция</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.Конференция1СДеньги8">
+			<CommandGroup>CommandGroup.ПанельДействийИнтеграция</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ВыбратьСпособСинхронизации">
+			<CommandGroup>CommandGroup.ПанельДействийИнтеграция</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ЗагрузкаКурсовВалют">
+			<CommandGroup>CommandGroup.ПанельДействийИнтеграция</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelOrdinary</Group>
+		<Group>ActionsPanelTools</Group>
+		<Group>CommandGroup.ПанельДействийАдминистрирование</Group>
+		<Group>CommandGroup.ПанельДействийИнтеграция</Group>
+	</GroupsOrder>
+</CommandInterface>

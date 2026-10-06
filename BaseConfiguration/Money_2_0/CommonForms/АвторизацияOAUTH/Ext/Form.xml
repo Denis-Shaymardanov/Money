@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Авторизация приложения</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<ShowCommandBar>false</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницФормы" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницФормыРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<Page name="СтраницаАвторизации" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница авторизации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница авторизации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаАвторизацииРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<LabelDecoration name="ПояснениеАвторизации" id="1">
+							<Width>60</Width>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дождитесь загрузки страницы и войдите в сервис под своим логином.
+Разрешение приложению &lt;b&gt;1С:Деньги 8&lt;/&gt; доступ к ресурсам сервиса, после чего можете закрыть окно</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПояснениеАвторизацииКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ПояснениеАвторизацииРасширеннаяПодсказка" id="3"/>
+						</LabelDecoration>
+						<LabelDecoration name="ПояснениеАвторизации2" id="4">
+							<Width>60</Width>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если авторизовать приложение в этом окне не получается - откройте &lt;link http://1c.ru&gt;эту ссылку&lt;/&gt; в своем браузере и выполните авторизацию там. После выдачи разрешения браузер можно закрыть  не дожидаясь окончания проверки.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПояснениеАвторизации2КонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ПояснениеАвторизации2РасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="URLProcessing">ПояснениеАвторизации2ОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+						<HTMLDocumentField name="HTMLДокумент" id="7">
+							<DataPath>HTMLДокумент</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>60</Width>
+							<Height>16</Height>
+							<ContextMenu name="HTMLДокументКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="HTMLДокументРасширеннаяПодсказка" id="9"/>
+							<Events>
+								<Event name="DocumentComplete">HTMLДокументДокументСформирован</Event>
+							</Events>
+						</HTMLDocumentField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОтменыАвторизации" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница отмены авторизации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница отмены авторизации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаОтменыАвторизацииРасширеннаяПодсказка" id="17"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="23">
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Group>Vertical</Group>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="24"/>
+							<ChildItems>
+								<LabelDecoration name="ПояснениеОтмены" id="20">
+									<Width>50</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>После отмены авторизации приложение не сможет использовать облачный сервис. Файлы, созданные приложением, останутся в облаке - их можно использовать после повторной авторизации или удалить вручную.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеОтменыКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ПояснениеОтменыРасширеннаяПодсказка" id="22"/>
+								</LabelDecoration>
+								<LabelDecoration name="ПояснениеОтмены1" id="25">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>
+Отменить авторизацию приложения в сервисе?</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<ContextMenu name="ПояснениеОтмены1КонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ПояснениеОтмены1РасширеннаяПодсказка" id="27"/>
+								</LabelDecoration>
+								<Button name="ОменитьАвторизацию" id="28">
+									<Type>UsualButton</Type>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<CommandName>Form.Command.ОменитьАвторизацию</CommandName>
+									<ExtendedTooltip name="ОменитьАвторизациюРасширеннаяПодсказка" id="29"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОтменыАвторизацииЯндекс" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница отмены авторизации яндекс</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница отмены авторизации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаОтменыАвторизацииЯндексРасширеннаяПодсказка" id="19"/>
+					<ChildItems>
+						<LabelDecoration name="ПояснениеОтменыЯндекс" id="30">
+							<Width>60</Width>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отменить авторизацию на Яндексе можно только командой &lt;b&gt;Выйти на всех устройствах&lt;/&gt;. После чего во всех приложениях, использующих этот аккаунт, придется повторно выполнять вход.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПояснениеОтменыЯндексКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ПояснениеОтменыЯндексРасширеннаяПодсказка" id="32"/>
+						</LabelDecoration>
+						<LabelDecoration name="ПояснениеОтменыЯндекс1" id="33">
+							<Width>60</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>После отмены авторизации приложение не сможет использовать облачный сервис. Файлы, созданные приложением, останутся в облаке - их можно использовать после повторной авторизации или удалить вручную.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПояснениеОтменыЯндекс1КонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ПояснениеОтменыЯндекс1РасширеннаяПодсказка" id="35"/>
+						</LabelDecoration>
+						<HTMLDocumentField name="HTMLДокумент1" id="36">
+							<DataPath>HTMLДокумент</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>60</Width>
+							<Height>16</Height>
+							<ContextMenu name="HTMLДокумент1КонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="HTMLДокумент1РасширеннаяПодсказка" id="38"/>
+						</HTMLDocumentField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СвойстваПровайдера" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойства провайдера</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СвойстваАккаунта" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойства аккаунта</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ОтменаАвторизации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена авторизации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Провайдер" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провайдер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыПровайдеровREST</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="HTMLДокумент" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>HTMLДокумент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодОжидания" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период ожидания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Токен" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Токен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодДоступа" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код доступа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодДоступаПроверен" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код доступа проверен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТокенОбработан" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Токен обработан</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрольнаяСтрока" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрольная строка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТокенВосстановления" id="12">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОменитьАвторизацию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оменить авторизацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оменить авторизацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОменитьАвторизацию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ОтменаАвторизации">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Провайдер">
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыПровайдеровREST</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

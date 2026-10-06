@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Subsystem uuid="f69a2ef2-52a9-44a3-bb31-3ae465c2793e">
+		<Properties>
+			<Name>БазовыйФункционалУчетаДенег</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Базовый функционал учета денег</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КошелькиИСчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОбменВалюты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Расход</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Доход</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПомощникСозданияКошелька</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Валюты16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Переводы16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Расходы16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Доходы16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СтатьиРасходов16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СверкаСВыпискойБанка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИзменениеОстатка16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СтатьиДоходов16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.УниверсальнаяОперация16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Кошелек48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Кошелек32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Кошелек16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.БанковскаяКартаСиняя48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.БанковскаяКартаСиняя32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Валюта16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ДоходВКошелек16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СейфСМонетами16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.БанковскаяКартаСиняя16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КошелекСМонетами16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КошелекЭлектронный16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВалютаИндикаторовРабочегоСтола</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДеньгиВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДеньгиКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РазделыУчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РазделыУчетаПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДеньгиКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ВалютаУчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ПараметрыПереходаПоНавигационнойСсылке</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ВалютаОтчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПосмотретьДвижения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВалютаУчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Валюты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.ОбщийЖурналДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыСчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетОбИзмененииФинансовогоСостояния</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоПоступлениямДенег</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоСписаниямДенег</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПросмотрДвиженийОперации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.РазделОперации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfCharacteristicTypes.ВидыСубконто</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfAccounts.РазделыУчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccountingRegister.ЖурналОпераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбщегоНазначенияДеньги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.ДополнительныеКомандыСправочников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.АктивныеИндикаторы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ИдентификаторЗаданияИндикаторов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ДатаПоследнейОперации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ОсновнойКошелек</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ГруппаКомандСправочники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ФормаОперацииУчесть</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ФормаОперацииВЧерновики</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ФормаОперацииНаУдаление</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.БыстроСоздатьЭлементСписка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ЗаписьОбъектовОпераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СписокОперацийОтборУчтенныеИЧерновики</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СписокОперацийОтборТолькоУчтенные</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СписокОперацийОтборТолькоЧерновики</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СписокОперацийОтборПомеченныеНаУдаление</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СписокОперацийОтборВсе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.КомандыСпискаОпераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СписокОперацийУчесть</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СписокОперацийЗаписатьКакЧерновик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СписокОперацийПометитьНаУдаление</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.РасширенныйВыборСтандартногоПериода</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыборСтандартногоПериодаДень</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ФонВыделеннойКнопки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ДеньгиФонИнформационнойГруппы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ОсновнойЭлементСписка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.НачальнаяСтраница</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветЛинииРазделителя</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОперацияДоход48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОперацияПеремещение48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОперацияОбменВалюты48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ГруппаОперацийМыДолжны48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ГруппаОперацийНамДолжны48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОперацияМыДалиВДолг48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОперацияНамВернулиДолг48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОперацияМыВзялиВДолг48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОперацияМыВернулиДолг48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.СправочникиУчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыборОбъектаУчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФормамиСправочников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФормамиСправочниковКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФормамиСправочниковКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФормамиДокументовПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФормамиДокументовКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФормамиДокументовКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСФормамиДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбслуживаниеДокументовКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РазделыУчетаВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПередУдалениемДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПередУдалениемСправочника</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.ПанельДействийСправочники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СписокОперацийОтметкаПроверено</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СостоянияОпераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.ОтборОперацийПоСостоянию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Возврат16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Бюджет48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.БюджетОтметкаФакта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыДоходов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПомощникНачалаРаботы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ФормыПодборов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ДеньгиЦветГиперссылки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ВторостепеннаяНадписьЦвет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЗаголовокГруппыЦвет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ИнформационнаяНадписьЦвет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.МикротекстЦвет</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

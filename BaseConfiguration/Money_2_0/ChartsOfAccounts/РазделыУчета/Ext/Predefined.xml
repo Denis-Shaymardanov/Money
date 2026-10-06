@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ChartOfAccountsPredefinedItems" version="2.21">
+	<Item id="09bb700d-1282-4d87-8922-112158e5e875">
+		<Name>Деньги</Name>
+		<Code>100</Code>
+		<Description>Деньги</Description>
+		<AccountType>ActivePassive</AccountType>
+		<OffBalance>false</OffBalance>
+		<Order>100</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконто.КошелькиИСчета">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+		<ChildItems>
+			<Item id="9f9f96d2-ab5a-4907-aa8c-b4851046a8bc">
+				<Name>СвободныеДеньги</Name>
+				<Code>100.01</Code>
+				<Description>Свободные деньги</Description>
+				<AccountType>ActivePassive</AccountType>
+				<OffBalance>false</OffBalance>
+				<Order>101</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконто.КошелькиИСчета">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+				</ExtDimensionTypes>
+			</Item>
+			<Item id="986d37b8-24ff-44fc-a1e8-af755c867499">
+				<Name>Накопления</Name>
+				<Code>100.10</Code>
+				<Description>Накопления</Description>
+				<AccountType>ActivePassive</AccountType>
+				<OffBalance>false</OffBalance>
+				<Order>110</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконто.КошелькиИСчета">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконто.ФинансовыеЦели">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+				</ExtDimensionTypes>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="daf43ac7-32dc-4e89-8073-30173c12b745">
+		<Name>Имущество</Name>
+		<Code>200</Code>
+		<Description>Имущество</Description>
+		<AccountType>Active</AccountType>
+		<OffBalance>false</OffBalance>
+		<Order>200</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконто.Имущество">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+	</Item>
+	<Item id="5127ea9b-5fc2-46c5-b72c-090b70261505">
+		<Name>Долги</Name>
+		<Code>500</Code>
+		<Description>Долги</Description>
+		<AccountType>ActivePassive</AccountType>
+		<OffBalance>false</OffBalance>
+		<Order>500</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконто.Долги">
+				<Turnover>false</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+		<ChildItems>
+			<Item id="b74fc1a5-1ff3-49b6-ba53-181dd0310f6b">
+				<Name>ОсновныеСуммыДолгов</Name>
+				<Code>500.10</Code>
+				<Description>Основные суммы долгов</Description>
+				<AccountType>ActivePassive</AccountType>
+				<OffBalance>false</OffBalance>
+				<Order>510</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконто.Долги">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+				</ExtDimensionTypes>
+			</Item>
+			<Item id="ff5f5904-4d43-462b-a35c-85cb6f2546b5">
+				<Name>ПроцентыПоДолгам</Name>
+				<Code>500.20</Code>
+				<Description>Проценты по долгам</Description>
+				<AccountType>ActivePassive</AccountType>
+				<OffBalance>false</OffBalance>
+				<Order>520</Order>
+				<AccountingFlags/>
+				<ExtDimensionTypes>
+					<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконто.Долги">
+						<Turnover>false</Turnover>
+						<AccountingFlags/>
+					</ExtDimensionType>
+				</ExtDimensionTypes>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="d59d5b10-e3a2-432a-8f6d-70241c973dde">
+		<Name>Капитал</Name>
+		<Code>900</Code>
+		<Description>Капитал</Description>
+		<AccountType>Passive</AccountType>
+		<OffBalance>false</OffBalance>
+		<Order>900</Order>
+		<AccountingFlags/>
+		<ExtDimensionTypes>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконто.СтатьиДоходовРасходов">
+				<Turnover>true</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+			<ExtDimensionType name="ChartOfCharacteristicTypes.ВидыСубконто.Аналитика">
+				<Turnover>true</Turnover>
+				<AccountingFlags/>
+			</ExtDimensionType>
+		</ExtDimensionTypes>
+	</Item>
+</PredefinedData>

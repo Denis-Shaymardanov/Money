@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Узел" id="1">
+			<DataPath>Запись.Узел</DataPath>
+			<ContextMenu name="УзелКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="УзелРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">УзелПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаКолонок" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа колонок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа колонок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>WeakSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКолонокРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаТекущиеЗначения" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущие значения настроек</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа текущие значения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>WeakSeparation</Representation>
+					<ExtendedTooltip name="ГруппаТекущиеЗначенияРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<InputField name="СценарийЗапрашиваемыхДанных" id="7">
+							<DataPath>Запись.СценарийЗапрашиваемыхДанных</DataPath>
+							<ContextMenu name="СценарийЗапрашиваемыхДанныхКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="СценарийЗапрашиваемыхДанныхРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="СценарийПереданныхДанных" id="4">
+							<DataPath>Запись.СценарийПереданныхДанных</DataPath>
+							<ContextMenu name="СценарийПереданныхДанныхКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="СценарийПереданныхДанныхРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="КоличествоПериодов" id="10">
+							<DataPath>Запись.КоличествоПериодов</DataPath>
+							<ContextMenu name="КоличествоПериодовКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="КоличествоПериодовРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="ВидПериода" id="13">
+							<DataPath>Запись.ВидПериода</DataPath>
+							<ContextMenu name="ВидПериодаКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ВидПериодаРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<CheckBoxField name="УчитыватьОтборПоКошелькам" id="16">
+							<DataPath>Запись.УчитыватьОтборПоКошелькам</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="УчитыватьОтборПоКошелькамКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="УчитыватьОтборПоКошелькамРасширеннаяПодсказка" id="18"/>
+						</CheckBoxField>
+						<InputField name="КлючОтбораПоКошелькам" id="19">
+							<DataPath>Запись.КлючОтбораПоКошелькам</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="КлючОтбораПоКошелькамКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="КлючОтбораПоКошелькамРасширеннаяПодсказка" id="21"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОбработанныеЗначения" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обработанные значения настроек</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа текущие значения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>WeakSeparation</Representation>
+					<ExtendedTooltip name="ГруппаОбработанныеЗначенияРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<InputField name="ПрежнееСценарийЗапрашиваемыхДанных" id="25">
+							<DataPath>Запись.ПрежнееСценарийЗапрашиваемыхДанных</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сценарий запрашиваемых данных</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПрежнееСценарийЗапрашиваемыхДанныхКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ПрежнееСценарийЗапрашиваемыхДанныхРасширеннаяПодсказка" id="27"/>
+						</InputField>
+						<InputField name="ПрежнееСценарийПереданныхДанных" id="22">
+							<DataPath>Запись.ПрежнееСценарийПереданныхДанных</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сценарий переданных данных</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПрежнееСценарийПереданныхДанныхКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ПрежнееСценарийПереданныхДанныхРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<InputField name="ПрежнееКоличествоПериодов" id="28">
+							<DataPath>Запись.ПрежнееКоличествоПериодов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество периодов</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПрежнееКоличествоПериодовКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ПрежнееКоличествоПериодовРасширеннаяПодсказка" id="30"/>
+						</InputField>
+						<InputField name="ПрежнееВидПериода" id="31">
+							<DataPath>Запись.ПрежнееВидПериода</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид периода</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПрежнееВидПериодаКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ПрежнееВидПериодаРасширеннаяПодсказка" id="33"/>
+						</InputField>
+						<CheckBoxField name="ПрежнееУчитыватьОтборПоКошелькам" id="34">
+							<DataPath>Запись.ПрежнееУчитыватьОтборПоКошелькам</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="ПрежнееУчитыватьОтборПоКошелькамКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ПрежнееУчитыватьОтборПоКошелькамРасширеннаяПодсказка" id="36"/>
+						</CheckBoxField>
+						<InputField name="ПрежнееКлючОтбораПоКошелькам" id="37">
+							<DataPath>Запись.ПрежнееКлючОтбораПоКошелькам</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="ПрежнееКлючОтбораПоКошелькамКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ПрежнееКлючОтбораПоКошелькамРасширеннаяПодсказка" id="39"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ПараметрыСинхронизацииАвтономныхКопий</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ЗаголовокСписка" id="26">
+			<Visible>false</Visible>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список плановых операций за период с 00.00.0000 по 00.00.0000</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ЗаголовокСпискаКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="ЗаголовокСпискаРасширеннаяПодсказка" id="28"/>
+		</LabelDecoration>
+		<Table name="СписокШаблонов" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ReadOnly>true</ReadOnly>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<Width>60</Width>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<Footer>true</Footer>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>СписокШаблонов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокШаблоновКонтекстноеМеню" id="2">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СписокШаблоновКонтекстноеМенюИзменитьОперацию" id="53">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ИзменитьОперацию</CommandName>
+						<ExtendedTooltip name="СписокШаблоновКонтекстноеМенюИзменитьОперациюРасширеннаяПодсказка" id="54"/>
+					</Button>
+					<Button name="СписокШаблоновКонтекстноеМенюПропустить" id="39">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПропуститьВосстановить</CommandName>
+						<ExtendedTooltip name="СписокШаблоновКонтекстноеМенюПропуститьРасширеннаяПодсказка" id="40"/>
+					</Button>
+					<ButtonGroup name="СписокШаблоновКонтекстноеМенюГруппаКомандВывода" id="37">
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список шаблонов контекстное меню группа команд вывода</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="СписокШаблоновКонтекстноеМенюГруппаКомандВыводаРасширеннаяПодсказка" id="38"/>
+						<ChildItems>
+							<Button name="СписокШаблоновКонтекстноеМенюКопироватьВБуферОбмена" id="33">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокШаблонов.StandardCommand.CopyToClipboard</CommandName>
+								<ExtendedTooltip name="СписокШаблоновКонтекстноеМенюКопироватьВБуферОбменаРасширеннаяПодсказка" id="34"/>
+							</Button>
+							<Button name="СписокШаблоновКонтекстноеМенюВывестиСписок" id="35">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокШаблонов.StandardCommand.OutputList</CommandName>
+								<ExtendedTooltip name="СписокШаблоновКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="36"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СписокШаблоновКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СписокШаблоновИзменить" id="41">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокШаблонов.StandardCommand.Change</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Изменить операцию</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СписокШаблоновИзменитьРасширеннаяПодсказка" id="42"/>
+					</Button>
+					<Button name="СписокШаблоновПропустить" id="51">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПропуститьВосстановить</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СписокШаблоновПропуститьРасширеннаяПодсказка" id="52"/>
+					</Button>
+					<ButtonGroup name="СписокШаблоновГруппаСтандартныхКоманд" id="45">
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список шаблонов группа стандартных команд</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="СписокШаблоновГруппаСтандартныхКомандРасширеннаяПодсказка" id="46"/>
+						<ChildItems>
+							<Button name="СписокШаблоновВывестиСписок" id="47">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокШаблонов.StandardCommand.OutputList</CommandName>
+								<ExtendedTooltip name="СписокШаблоновВывестиСписокРасширеннаяПодсказка" id="48"/>
+							</Button>
+							<Button name="СписокШаблоновКопироватьВБуферОбмена" id="49">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокШаблонов.StandardCommand.CopyToClipboard</CommandName>
+								<ExtendedTooltip name="СписокШаблоновКопироватьВБуферОбменаРасширеннаяПодсказка" id="50"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокШаблоновРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокШаблоновСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>СписокШаблонов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокШаблоновСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокШаблоновСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокШаблоновСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>СписокШаблонов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокШаблоновСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокШаблоновСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокШаблоновУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>СписокШаблонов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокШаблоновУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокШаблоновУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокШаблоновВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="СписокШаблоновДатаПлановойОперации" id="20">
+					<DataPath>СписокШаблонов.ДатаПлановойОперации</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<Width>12</Width>
+					<ContextMenu name="СписокШаблоновДатаПлановойОперацииКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СписокШаблоновДатаПлановойОперацииРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="СписокШаблоновШаблон" id="14">
+					<DataPath>СписокШаблонов.Шаблон</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<Width>35</Width>
+					<ContextMenu name="СписокШаблоновШаблонКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СписокШаблоновШаблонРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="СписокШаблоновСуммаПлановыхОпераций" id="17">
+					<DataPath>СписокШаблонов.СуммаПлановыхОпераций</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>СуммаПлановыхОпераций</FooterDataPath>
+					<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+					<AutoEditMode>true</AutoEditMode>
+					<Width>15</Width>
+					<ContextMenu name="СписокШаблоновСуммаПлановыхОперацийКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СписокШаблоновСуммаПлановыхОперацийРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="СписокШаблоновОперация" id="23">
+					<DataPath>СписокШаблонов.Операция</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="СписокШаблоновОперацияКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СписокШаблоновОперацияРасширеннаяПодсказка" id="25"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РазделБюджет</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="НачалоПериода" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерПериода" id="3">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатьяБюджета" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статья бюджета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.СтатьяБюджета</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ОкончаниеПериода" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Окончание периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокШаблонов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список шаблонов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Шаблон" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ОбменВалюты</v8:Type>
+						<v8:Type>cfg:DocumentRef.Доход</v8:Type>
+						<v8:Type>cfg:DocumentRef.МыВзялиВДолг</v8:Type>
+						<v8:Type>cfg:DocumentRef.МыВернулиДолг</v8:Type>
+						<v8:Type>cfg:DocumentRef.НамВернулиДолг</v8:Type>
+						<v8:Type>cfg:DocumentRef.МыДалиВДолг</v8:Type>
+						<v8:Type>cfg:DocumentRef.Перемещение</v8:Type>
+						<v8:Type>cfg:DocumentRef.Расход</v8:Type>
+						<v8:Type>cfg:DocumentRef.УниверсальнаяОперация</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СуммаПлановыхОпераций" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма плановых операций</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаПлановойОперации" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата плановой операции</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Операция" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Операция</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ОбменВалюты</v8:Type>
+						<v8:Type>cfg:DocumentRef.Доход</v8:Type>
+						<v8:Type>cfg:DocumentRef.МыВзялиВДолг</v8:Type>
+						<v8:Type>cfg:DocumentRef.МыВернулиДолг</v8:Type>
+						<v8:Type>cfg:DocumentRef.НамВернулиДолг</v8:Type>
+						<v8:Type>cfg:DocumentRef.МыДалиВДолг</v8:Type>
+						<v8:Type>cfg:DocumentRef.Перемещение</v8:Type>
+						<v8:Type>cfg:DocumentRef.Расход</v8:Type>
+						<v8:Type>cfg:DocumentRef.УниверсальнаяОперация</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПлановаяДата" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плановая дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаПроцентов" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма плановых операций</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаКомиссии" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма комиссии</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаДолга" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма долга</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВариантБюджета" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант бюджета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВариантыБюджетов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазделБюджета" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Раздел бюджета</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="НачалоКалендарногоПериода" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ГрафаБюджета" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Графа бюджета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ГрафыБюджета</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаПлановыхОпераций" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма плановых операций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПропуститьВосстановить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропустить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропустить восстановить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПропуститьВосстановить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьОперацию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить плановую операцию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить операцию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьОперацию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

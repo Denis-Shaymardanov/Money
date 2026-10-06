@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="НаборЗаписей" id="1">
+			<Representation>List</Representation>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>НаборЗаписей</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НаборЗаписейКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="НаборЗаписейКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="НаборЗаписейРасширеннаяПодсказка" id="38"/>
+			<SearchStringAddition name="НаборЗаписейСтрокаПоиска" id="39">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейСтрокаПоискаКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="НаборЗаписейСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НаборЗаписейСостояниеПросмотра" id="42">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейСостояниеПросмотраКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="НаборЗаписейСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НаборЗаписейУправлениеПоиском" id="45">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейУправлениеПоискомКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="НаборЗаписейУправлениеПоискомРасширеннаяПодсказка" id="47"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="НомерСтроки" id="4">
+					<DataPath>НаборЗаписей.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="НомерСтрокиКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НомерСтрокиРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<InputField name="Период" id="8">
+					<DataPath>НаборЗаписей.Period</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<ColumnGroup name="Группа1" id="32">
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<InputField name="СчетДт" id="12">
+							<DataPath>НаборЗаписей.AccountDr</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Счет Дт</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="СчетДтКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="СчетДтРасширеннаяПодсказка" id="51"/>
+						</InputField>
+						<ColumnGroup name="Группа6" id="37">
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="52"/>
+							<ChildItems>
+								<InputField name="ДействиеПоДебету" id="28">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид действия</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="ДействиеПоДебетуКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="ДействиеПоДебетуРасширеннаяПодсказка" id="53"/>
+								</InputField>
+								<InputField name="СубконтоДт1" id="14">
+									<DataPath>НаборЗаписей.ExtDimensionDr1</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="СубконтоДт1КонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="СубконтоДт1РасширеннаяПодсказка" id="54"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<InputField name="СубконтоДт2" id="16">
+							<DataPath>НаборЗаписей.ExtDimensionDr2</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="СубконтоДт2КонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="СубконтоДт2РасширеннаяПодсказка" id="55"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="Группа2" id="33">
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="56"/>
+					<ChildItems>
+						<InputField name="СчетКт" id="18">
+							<DataPath>НаборЗаписей.AccountCr</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Счет Кт</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="СчетКтКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="СчетКтРасширеннаяПодсказка" id="57"/>
+						</InputField>
+						<ColumnGroup name="Группа5" id="36">
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="58"/>
+							<ChildItems>
+								<InputField name="ДействиеПоКредиту" id="30">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Источник суммы</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="ДействиеПоКредитуКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ДействиеПоКредитуРасширеннаяПодсказка" id="59"/>
+								</InputField>
+								<InputField name="СубконтоКт1" id="20">
+									<DataPath>НаборЗаписей.ExtDimensionCr1</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="СубконтоКт1КонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="СубконтоКт1РасширеннаяПодсказка" id="60"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<InputField name="СубконтоКт2" id="22">
+							<DataPath>НаборЗаписей.ExtDimensionCr2</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="СубконтоКт2КонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="СубконтоКт2РасширеннаяПодсказка" id="61"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ВалютнаяСумма" id="24">
+					<DataPath>НаборЗаписей.ВалютнаяСумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="ВалютнаяСуммаКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ВалютнаяСуммаРасширеннаяПодсказка" id="62"/>
+				</InputField>
+				<InputField name="Валюта" id="10">
+					<DataPath>НаборЗаписей.Валюта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="ВалютаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="63"/>
+				</InputField>
+				<ColumnGroup name="Группа3" id="34">
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<ColumnGroup name="Группа4" id="35">
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="65"/>
+						</ColumnGroup>
+						<InputField name="Содержание" id="26">
+							<DataPath>НаборЗаписей.Содержание</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="СодержаниеКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="СодержаниеРасширеннаяПодсказка" id="66"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборЗаписей" id="1">
+			<Type>
+				<v8:Type>cfg:AccountingRegisterRecordSet.ЖурналОпераций</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+</Form>

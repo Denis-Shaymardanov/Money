@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<DocumentJournal uuid="9fa11519-0d0e-4b60-a4bf-ab30ff9fa751">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentJournalSelection.ОбщийЖурналДокументов" category="Selection">
+				<xr:TypeId>b2a20940-6a15-4c5d-98dd-95df70184e68</xr:TypeId>
+				<xr:ValueId>c2b79ac9-0049-4123-972f-4f43412d29e1</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalList.ОбщийЖурналДокументов" category="List">
+				<xr:TypeId>f2b8a1ce-feda-466d-bbb4-93e9cad03980</xr:TypeId>
+				<xr:ValueId>0eddf155-18f8-4d93-9db6-e90c775a2d3b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalManager.ОбщийЖурналДокументов" category="Manager">
+				<xr:TypeId>c380c1b6-4e63-4826-8ae5-9bfec412a28a</xr:TypeId>
+				<xr:ValueId>5f137aa8-0c55-4884-90c3-2403638f1d04</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ОбщийЖурналДокументов</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал операций</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DefaultForm>DocumentJournal.ОбщийЖурналДокументов.Form.ФормаСписка</DefaultForm>
+			<AuxiliaryForm/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<RegisteredDocuments>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыДалиВДолг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Доход</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОбменВалюты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Расход</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыВернулиДолг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыВзялиВДолг</xr:Item>
+			</RegisteredDocuments>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<StandardAttributes>
+				<xr:StandardAttribute name="Type">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:TypeReductionMode>TransformValues</xr:TypeReductionMode>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип операции</v8:content>
+						</v8:item>
+					</xr:Synonym>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="Ref">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:TypeReductionMode>TransformValues</xr:TypeReductionMode>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка на операцию</v8:content>
+						</v8:item>
+					</xr:Synonym>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="Date">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:TypeReductionMode>TransformValues</xr:TypeReductionMode>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ='дд.ММ.гггг (ЧЧ:мм)'</v8:content>
+						</v8:item>
+					</xr:Format>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ='дд.ММ.гггг (ЧЧ:мм)'</v8:content>
+						</v8:item>
+					</xr:EditFormat>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата, время</v8:content>
+						</v8:item>
+					</xr:Synonym>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="Posted">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:TypeReductionMode>TransformValues</xr:TypeReductionMode>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учтено</v8:content>
+						</v8:item>
+					</xr:Synonym>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="DeletionMark">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:TypeReductionMode>TransformValues</xr:TypeReductionMode>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="Number">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:TypeReductionMode>TransformValues</xr:TypeReductionMode>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+			</StandardAttributes>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Column uuid="766f17fb-6f40-4ce2-8eb7-d8677363d152">
+				<Properties>
+					<Name>СуммаПоступления</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступление</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка.Attribute.СуммаДохода</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Расход.Attribute.СтоимостьИмущества</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Доход.Attribute.СуммаОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация.Attribute.СуммаДоходовОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение.Attribute.ПолученоСУчетомРасходов</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОбменВалюты.Attribute.ПолученоСУчетомКомиссии</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг.Attribute.ВсегоСуммаПоступления</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВзялиВДолг.Attribute.СуммаПолучено</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="234edee6-205a-4777-879e-dccd6d27a89c">
+				<Properties>
+					<Name>ВалютаПоступления</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта поступления</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка.Attribute.ВалютаОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Расход.Attribute.ВалютаОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение.Attribute.ВалютаОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Доход.Attribute.ВалютаОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация.Attribute.ВалютаДоходовОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОбменВалюты.Attribute.ВалютаПоступления</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг.Attribute.ВалютаПолучено</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВзялиВДолг.Attribute.ВалютаПолучено</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="dc38d151-439a-4624-b570-f782ecdae45c">
+				<Properties>
+					<Name>СуммаСписания</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Списание</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Расход.Attribute.СуммаОплаты</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация.Attribute.СуммаРасходовОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка.Attribute.СуммаРасхода</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение.Attribute.СписаноСУчетомРасходов</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОбменВалюты.Attribute.СписаноСУчетомКомиссии</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВернулиДолг.Attribute.СуммаОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыДалиВДолг.Attribute.ВсегоРасход</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВзялиВДолг.Attribute.СуммаДополнительныхРасходов</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг.Attribute.СуммаДополнительныхРасходов</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="e9f0a939-1cbe-40f6-998e-2133dbfe58a8">
+				<Properties>
+					<Name>ВалютаСписания</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта списания</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка.Attribute.ВалютаОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОбменВалюты.Attribute.ВалютаСписания</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Расход.Attribute.ВалютаОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение.Attribute.ВалютаОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация.Attribute.ВалютаРасходовОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВзялиВДолг.Attribute.ВалютаПолучено</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВернулиДолг.Attribute.ВалютаКошелька</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыДалиВДолг.Attribute.ВалютаВыдано</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг.Attribute.ВалютаПолучено</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="13ea0e84-0190-43e1-b89d-d24a3fb5ab33">
+				<Properties>
+					<Name>ОписаниеОперации</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание операции</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыДалиВДолг.Attribute.ОписаниеОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Доход.Attribute.ОписаниеОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОбменВалюты.Attribute.ОписаниеОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение.Attribute.ОписаниеОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Расход.Attribute.ОписаниеОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация.Attribute.ОписаниеОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг.Attribute.ОписаниеОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка.Attribute.ОписаниеОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВернулиДолг.Attribute.ОписаниеОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВзялиВДолг.Attribute.ОписаниеОперации</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="b73b4b87-55a3-4c20-a631-2b9c5b0c07e2">
+				<Properties>
+					<Name>ЭтоШаблон</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это шаблон</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыДалиВДолг.Attribute.ЭтоШаблон</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Доход.Attribute.ЭтоШаблон</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка.Attribute.ЭтоШаблон</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОбменВалюты.Attribute.ЭтоШаблон</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение.Attribute.ЭтоШаблон</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Расход.Attribute.ЭтоШаблон</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация.Attribute.ЭтоШаблон</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг.Attribute.ЭтоШаблон</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВернулиДолг.Attribute.ЭтоШаблон</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВзялиВДолг.Attribute.ЭтоШаблон</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="b751dec6-da73-412e-be8f-327a1606bc23">
+				<Properties>
+					<Name>ОперацияПроверена</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Операция проверена</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка.Attribute.ОперацияПроверена</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Доход.Attribute.ОперацияПроверена</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВернулиДолг.Attribute.ОперацияПроверена</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВзялиВДолг.Attribute.ОперацияПроверена</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыДалиВДолг.Attribute.ОперацияПроверена</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг.Attribute.ОперацияПроверена</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОбменВалюты.Attribute.ОперацияПроверена</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение.Attribute.ОперацияПроверена</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Расход.Attribute.ОперацияПроверена</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация.Attribute.ОперацияПроверена</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="24c19542-b203-4691-b472-21f23e71e5aa">
+				<Properties>
+					<Name>СостояниеОперации</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние операции</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Расход.Attribute.СостояниеРасходаПоЧеку</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="2564a1be-84d9-46c4-8b8a-6ba387f97c7f">
+				<Properties>
+					<Name>Комментарий</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыДалиВДолг.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОбменВалюты.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Расход.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Доход.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВернулиДолг.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВзялиВДолг.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация.Attribute.Комментарий</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="e35aa369-f9bc-4c26-ae02-4084fa2f5fde">
+				<Properties>
+					<Name>Пользователь</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка.Attribute.Пользователь</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыДалиВДолг.Attribute.Пользователь</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг.Attribute.Пользователь</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ОбменВалюты.Attribute.Пользователь</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Расход.Attribute.Пользователь</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение.Attribute.Пользователь</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Доход.Attribute.Пользователь</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВернулиДолг.Attribute.Пользователь</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.МыВзялиВДолг.Attribute.Пользователь</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация.Attribute.Пользователь</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Form>ФормаСписка</Form>
+			<Form>ФормаВыбораШаблона</Form>
+			<Form>ФормаСпискаШаблонов</Form>
+			<Form>ФормаВыбораОперации</Form>
+		</ChildObjects>
+	</DocumentJournal>
+</MetaDataObject>

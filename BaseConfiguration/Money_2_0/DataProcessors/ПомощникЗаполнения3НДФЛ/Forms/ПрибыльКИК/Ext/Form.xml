@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Прибыль контролируемой иностранной компании</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКомандаОК" id="13">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаОК</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="ФормаКомандаОКРасширеннаяПодсказка" id="14"/>
+			</Button>
+			<Button name="ФормаОтмена" id="15">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="16"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ДекорацияЗаголовокФормы" id="10">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декларируется доход с прибыли свыше 10 млн. руб.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияЗаголовокФормыКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ДекорацияЗаголовокФормыРасширеннаяПодсказка" id="12"/>
+		</LabelDecoration>
+		<CheckBoxField name="РассчитыватьНалогФиксированнойСуммой" id="4">
+			<DataPath>РассчитыватьНалогФиксированнойСуммой</DataPath>
+			<CheckBoxType>Tumbler</CheckBoxType>
+			<EditFormat>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>БЛ='Суммы прибыли'; БИ='Фиксированная сумма'</v8:content>
+				</v8:item>
+			</EditFormat>
+			<ContextMenu name="РассчитыватьНалогФиксированнойСуммойКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="РассчитыватьНалогФиксированнойСуммойРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="OnChange">РассчитыватьНалогФиксированнойСуммойПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<LabelDecoration name="ДекорацияСуммаФиксированнойПрибыли" id="22">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фиксированная прибыль: 34 000 000 руб.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияСуммаФиксированнойПрибылиКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ДекорацияСуммаФиксированнойПрибылиРасширеннаяПодсказка" id="24"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаСуммаПрибыли" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма прибыли</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСуммаПрибылиРасширеннаяПодсказка" id="21"/>
+			<ChildItems>
+				<CheckBoxField name="ИСБОЮЛ" id="1">
+					<DataPath>ИСБОЮЛ</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ContextMenu name="ИСБОЮЛКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ИСБОЮЛРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ИСБОЮЛПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="НомерКИК" id="7">
+					<DataPath>НомерКИК</DataPath>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИО-00001</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="НомерКИККонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="НомерКИКРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<UsualGroup name="ГруппаСтранаИВалюта" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страна и валюта</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаСтранаИВалютаРасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<InputField name="СтранаИсточника" id="27">
+							<DataPath>Страна</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страна источника выплаты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="СтранаИсточникаКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="СтранаИсточникаРасширеннаяПодсказка" id="29"/>
+							<Events>
+								<Event name="OnChange">СтранаИсточникаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="ДекорацияИзбежаниеДвойногоНалогообложения" id="30">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>С этой страной заключено международное соглашение об избежании 
+двойного налогообложения.
+Налог, уплаченный за пределами РФ, будет зачтен в декларации 3-НДФЛ.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияИзбежаниеДвойногоНалогообложенияКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ДекорацияИзбежаниеДвойногоНалогообложенияРасширеннаяПодсказка" id="32"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаВалюты" id="33">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Валюты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа валюты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВалютыРасширеннаяПодсказка" id="34"/>
+							<ChildItems>
+								<InputField name="ВалютаДохода" id="35">
+									<DataPath>ВалютаДохода</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ВалютаДоходаКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ВалютаДоходаРасширеннаяПодсказка" id="37"/>
+									<Events>
+										<Event name="OnChange">ВалютаДоходаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Button name="Валюты" id="38">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ВсеВалюты</CommandName>
+									<ExtendedTooltip name="ВалютыРасширеннаяПодсказка" id="39"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="СтранаЗачисления" id="149">
+							<DataPath>СтранаЗачисления</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страна, в которой открыт счет зачисления выплаты.
+В случае, если доход получен в натуральной форме, поле не указывается.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<ContextMenu name="СтранаЗачисленияКонтекстноеМеню" id="150"/>
+							<ExtendedTooltip name="СтранаЗачисленияРасширеннаяПодсказка" id="151"/>
+						</InputField>
+						<UsualGroup name="ГруппаДоходИностранногоГосударства" id="54">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доход, полученный за пределами РФ</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<United>false</United>
+							<ExtendedTooltip name="ГруппаДоходИностранногоГосударстваРасширеннаяПодсказка" id="55"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаДоходовВВалюте" id="147">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доходов в валюте</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДоходовВВалютеРасширеннаяПодсказка" id="148"/>
+									<ChildItems>
+										<InputField name="СуммаДоходаВВалюте" id="43">
+											<DataPath>СуммаДоходаВВалюте</DataPath>
+											<Width>14</Width>
+											<ContextMenu name="СуммаДоходаВВалютеКонтекстноеМеню" id="44"/>
+											<ExtendedTooltip name="СуммаДоходаВВалютеРасширеннаяПодсказка" id="45"/>
+											<Events>
+												<Event name="OnChange">СуммаДоходаВВалютеПриИзменении</Event>
+											</Events>
+										</InputField>
+										<LabelField name="КодВалютыДоход" id="144">
+											<DataPath>ВалютаДохода.Description</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="КодВалютыДоходКонтекстноеМеню" id="145"/>
+											<ExtendedTooltip name="КодВалютыДоходРасширеннаяПодсказка" id="146"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="СреднийКурс" id="40">
+									<DataPath>СреднийКурс</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Средний курс рассчитывается как среднее арифметическое значение курса иностранной валюты к рублю за все дни периода, за который составлена финансовая отчетность</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>14</Width>
+									<ContextMenu name="СреднийКурсКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="СреднийКурсРасширеннаяПодсказка" id="42"/>
+								</InputField>
+								<UsualGroup name="ГруппаСуммаДоходаВРублях" id="46">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма дохода в рублях</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСуммаДоходаВРубляхРасширеннаяПодсказка" id="47"/>
+									<ChildItems>
+										<InputField name="СуммаДоходаВРублях" id="48">
+											<DataPath>СуммаДохода</DataPath>
+											<Width>14</Width>
+											<ChoiceButton>false</ChoiceButton>
+											<ContextMenu name="СуммаДоходаВРубляхКонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="СуммаДоходаВРубляхРасширеннаяПодсказка" id="50"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияДоходВРублях" id="51">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>руб.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияДоходВРубляхКонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="ДекорацияДоходВРубляхРасширеннаяПодсказка" id="53"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНалогИностранногоГосударства" id="115">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Налог, уплаченный за пределами РФ</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<United>false</United>
+							<ExtendedTooltip name="ГруппаНалогИностранногоГосударстваРасширеннаяПодсказка" id="116"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСуммаНалогВВалюте" id="117">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма налога в валюте</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСуммаНалогВВалютеРасширеннаяПодсказка" id="118"/>
+									<ChildItems>
+										<InputField name="СуммаНалогВВалюте" id="119">
+											<DataPath>СуммаНалогаВВалюте</DataPath>
+											<Width>14</Width>
+											<ChoiceButton>false</ChoiceButton>
+											<ContextMenu name="СуммаНалогВВалютеКонтекстноеМеню" id="120"/>
+											<ExtendedTooltip name="СуммаНалогВВалютеРасширеннаяПодсказка" id="121"/>
+											<Events>
+												<Event name="OnChange">СуммаНалогВВалютеПриИзменении</Event>
+											</Events>
+										</InputField>
+										<LabelField name="КодВалютыНалог" id="122">
+											<DataPath>ВалютаДохода.Description</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="КодВалютыНалогКонтекстноеМеню" id="123"/>
+											<ExtendedTooltip name="КодВалютыНалогРасширеннаяПодсказка" id="124"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="ДатаУплатыНалога" id="125">
+									<DataPath>ДатаУплатыНалога</DataPath>
+									<ContextMenu name="ДатаУплатыНалогаКонтекстноеМеню" id="126"/>
+									<ExtendedTooltip name="ДатаУплатыНалогаРасширеннаяПодсказка" id="127"/>
+									<Events>
+										<Event name="OnChange">ДатаУплатыНалогаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаКурсКратностьНаДатуУплатыНалога" id="128">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Курс кратность</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКурсКратностьНаДатуУплатыНалогаРасширеннаяПодсказка" id="129"/>
+									<ChildItems>
+										<InputField name="КурсНаДатуУплатыНалога" id="130">
+											<DataPath>КурсНаДатуУплатыНалога</DataPath>
+											<Width>14</Width>
+											<ChoiceButton>false</ChoiceButton>
+											<ContextMenu name="КурсНаДатуУплатыНалогаКонтекстноеМеню" id="131"/>
+											<ExtendedTooltip name="КурсНаДатуУплатыНалогаРасширеннаяПодсказка" id="132"/>
+											<Events>
+												<Event name="OnChange">КурсНаДатуУплатыНалогаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="КратностьКурсаНаДатуУплатыНалога" id="133">
+											<DataPath>КратностьКурсаНаДатуУплатыНалога</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<Width>3</Width>
+											<ContextMenu name="КратностьКурсаНаДатуУплатыНалогаКонтекстноеМеню" id="134"/>
+											<ExtendedTooltip name="КратностьКурсаНаДатуУплатыНалогаРасширеннаяПодсказка" id="135"/>
+											<Events>
+												<Event name="OnChange">КратностьКурсаНаДатуУплатыНалогаПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСуммаНалогаВРублях" id="136">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма налога в рублях</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСуммаНалогаВРубляхРасширеннаяПодсказка" id="137"/>
+									<ChildItems>
+										<InputField name="СуммаНалогаВРублях" id="138">
+											<DataPath>СуммаНалогаВРублях</DataPath>
+											<Width>14</Width>
+											<ChoiceButton>false</ChoiceButton>
+											<ContextMenu name="СуммаНалогаВРубляхКонтекстноеМеню" id="139"/>
+											<ExtendedTooltip name="СуммаНалогаВРубляхРасширеннаяПодсказка" id="140"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияСуммаНалогаВРублях" id="141">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>руб.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСуммаНалогаВРубляхКонтекстноеМеню" id="142"/>
+											<ExtendedTooltip name="ДекорацияСуммаНалогаВРубляхРасширеннаяПодсказка" id="143"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ИСБОЮЛ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Компания не является юридическим лицом</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РассчитыватьНалогФиксированнойСуммой" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчет налога от</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерКИК" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер КИК</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>8</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДатаПолученияДохода" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата получения дохода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаДохода" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма дохода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбраннаяФорма" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранная форма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВалютаДохода" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Страна" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтраныМира</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДействуетДоговорОбИзбежанииДвойногоНалогообложения" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действует договор об избежании двойного налогообложения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СреднийКурс" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средний курс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>4</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаДоходаВВалюте" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма дохода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="СуммаНалогаВВалюте" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма налога</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаНалогаВРублях" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма налога</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаУплатыНалога" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата уплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КратностьКурсаНаДатуУплатыНалога" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кратность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КурсНаДатуУплатыНалога" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Курс ЦБ РФ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>4</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВалютаРегламентированногоУчета" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта регламентированного учета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтранаЗачисления" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страна
+зачисления выплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтраныМира</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВсеВалюты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все валюты</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВсеВалюты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Декларация3НДФЛВыбраннаяФорма">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Период">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

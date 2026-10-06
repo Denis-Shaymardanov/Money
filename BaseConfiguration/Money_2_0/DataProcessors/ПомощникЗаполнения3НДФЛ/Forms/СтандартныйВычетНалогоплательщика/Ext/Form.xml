@@ -1,0 +1,1006 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="КомандаОК" id="26">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаОК</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="КомандаОКРасширеннаяПодсказка" id="27"/>
+			</Button>
+			<Button name="ФормаОтмена" id="28">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="29"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="СтандартныйВычетПояснение" id="45">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычет применяется к Героям РФ, инвалидам, "чернобыльцам" и другим.
+Полный список лиц, имеющих право на вычет перечислен &lt;link https://its.1c.ru/bmk/ndfl_deduction/std3000&gt;на ИТС&lt;/&gt;&lt;link https://its.1c.ru/db/taxndfl#content:727:hdoc&gt;
+
+&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="СтандартныйВычетПояснениеКонтекстноеМеню" id="46"/>
+			<ExtendedTooltip name="СтандартныйВычетПояснениеРасширеннаяПодсказка" id="47"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаПрименениеВычета" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применение вычета</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПрименениеВычетаРасширеннаяПодсказка" id="64"/>
+			<ChildItems>
+				<CheckBoxField name="ИспользоватьВычет" id="60">
+					<DataPath>ИспользоватьВычет</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ContextMenu name="ИспользоватьВычетКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ИспользоватьВычетРасширеннаяПодсказка" id="62"/>
+					<Events>
+						<Event name="OnChange">ИспользоватьВычетПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<RadioButtonField name="ВычетПрименяется" id="48">
+					<DataPath>ВычетПрименяется</DataPath>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Весь период</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Год</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Несколько месяцев</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">НесколькоМесяцевВГоду</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВычетПрименяетсяКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ВычетПрименяетсяРасширеннаяПодсказка" id="50"/>
+					<Events>
+						<Event name="OnChange">ВычетПрименяетсяПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="СтраницыПрименениеВычета" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы применение вычета</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыПрименениеВычетаРасширеннаяПодсказка" id="55"/>
+			<ChildItems>
+				<Page name="СтраницаВесьГод" id="56">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Весь год</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаВесьГодРасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<RadioButtonField name="РазмерВычета" id="51">
+							<DataPath>РазмерВычета</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>500 рублей</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Вычет500</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>3000 рублей</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Вычет3000</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="РазмерВычетаКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="РазмерВычетаРасширеннаяПодсказка" id="53"/>
+							<Events>
+								<Event name="OnChange">РазмерВычетаПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНесколькоМесяцевВГоду" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Несколько месяцев в году</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаНесколькоМесяцевВГодуРасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<Table name="СтандартныйВычет" id="1">
+							<Representation>List</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Width>50</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>9</MaxHeight>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<Header>false</Header>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<HorizontalStretch>false</HorizontalStretch>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СтандартныйВычет</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СтандартныйВычетКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="СтандартныйВычетКоманднаяПанель" id="3">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СтандартныйВычетРасширеннаяПодсказка" id="4"/>
+							<SearchStringAddition name="СтандартныйВычетСтрокаПоиска" id="5">
+								<AdditionSource>
+									<Item>СтандартныйВычет</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СтандартныйВычетСтрокаПоискаКонтекстноеМеню" id="6"/>
+								<ExtendedTooltip name="СтандартныйВычетСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СтандартныйВычетСостояниеПросмотра" id="8">
+								<AdditionSource>
+									<Item>СтандартныйВычет</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СтандартныйВычетСостояниеПросмотраКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="СтандартныйВычетСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СтандартныйВычетУправлениеПоиском" id="11">
+								<AdditionSource>
+									<Item>СтандартныйВычет</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СтандартныйВычетУправлениеПоискомКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="СтандартныйВычетУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnEditEnd">СтандартныйВычетПриОкончанииРедактирования</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СтандартныйВычетМесяц1" id="14">
+									<DataPath>СтандартныйВычет.Месяц1</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<Width>6</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СтандартныйВычетМесяц1КонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="СтандартныйВычетМесяц1РасширеннаяПодсказка" id="16"/>
+								</InputField>
+								<InputField name="СтандартныйВычетСуммаВычета1" id="17">
+									<DataPath>СтандартныйВычет.СуммаВычета1</DataPath>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<Width>8</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ListChoiceMode>true</ListChoiceMode>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧН='Нет вычета'; ЧГ=</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧН='Нет вычета'; ЧГ=</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:decimal">500</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:decimal">3000</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Нет вычета</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="СтандартныйВычетСуммаВычета1КонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="СтандартныйВычетСуммаВычета1РасширеннаяПодсказка" id="19"/>
+								</InputField>
+								<InputField name="СтандартныйВычетРеквизитОтступ" id="42">
+									<DataPath>СтандартныйВычет.РеквизитОтступ</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<Width>1</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СтандартныйВычетРеквизитОтступКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="СтандартныйВычетРеквизитОтступРасширеннаяПодсказка" id="44"/>
+								</InputField>
+								<InputField name="СтандартныйВычетМесяц2" id="20">
+									<DataPath>СтандартныйВычет.Месяц2</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<Width>6</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СтандартныйВычетМесяц2КонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="СтандартныйВычетМесяц2РасширеннаяПодсказка" id="22"/>
+								</InputField>
+								<InputField name="СтандартныйВычетСуммаВычета2" id="23">
+									<DataPath>СтандартныйВычет.СуммаВычета2</DataPath>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<Width>8</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ListChoiceMode>true</ListChoiceMode>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧН='Нет вычета'; ЧГ=</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧН='Нет вычета'; ЧГ=</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:decimal">500</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:decimal">3000</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Нет вычета</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="СтандартныйВычетСуммаВычета2КонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="СтандартныйВычетСуммаВычета2РасширеннаяПодсказка" id="25"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаВидДохода" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид дохода</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>DontUse</ThroughAlign>
+			<ExtendedTooltip name="ГруппаВидДоходаРасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<LabelField name="ОдинВидДохода" id="67">
+					<DataPath>РаспределениеПоДоходам[0].Доход</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вычет уменьшает доход</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>61</MaxWidth>
+					<Height>2</Height>
+					<ContextMenu name="ОдинВидДоходаКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ОдинВидДоходаРасширеннаяПодсказка" id="69"/>
+				</LabelField>
+				<UsualGroup name="ГруппаНесколькоДоходов" id="70">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Несколько доходов</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНесколькоДоходовРасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияСуммаВычета" id="113">
+							<Width>50</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вам полагается вычет в размере: 1 000 руб.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияСуммаВычетаКонтекстноеМеню" id="114"/>
+							<ExtendedTooltip name="ДекорацияСуммаВычетаРасширеннаяПодсказка" id="115"/>
+						</LabelDecoration>
+						<LabelDecoration name="ВариантРаспределенияВычетаНадпись" id="75">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вычет уменьшает:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВариантРаспределенияВычетаНадписьКонтекстноеМеню" id="76"/>
+							<ExtendedTooltip name="ВариантРаспределенияВычетаНадписьРасширеннаяПодсказка" id="77"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаВариантыРаспределенияВычета" id="78">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Варианты распределения вычета</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВариантыРаспределенияВычетаРасширеннаяПодсказка" id="79"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОдинДоход" id="80">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Один доход</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОдинДоходРасширеннаяПодсказка" id="81"/>
+									<ChildItems>
+										<RadioButtonField name="ВариантРаспределенияВычета_ОдинДоход" id="82">
+											<DataPath>ВариантРаспределенияВычета</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ColumnsCount>1</ColumnsCount>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Один доход</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ВариантРаспределенияВычета_ОдинДоходКонтекстноеМеню" id="83"/>
+											<ExtendedTooltip name="ВариантРаспределенияВычета_ОдинДоходРасширеннаяПодсказка" id="84"/>
+											<Events>
+												<Event name="OnChange">ВариантРаспределенияВычетаПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<InputField name="ВидДоходаВычета" id="85">
+											<DataPath>ВидДохода</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ContextMenu name="ВидДоходаВычетаКонтекстноеМеню" id="86"/>
+											<ExtendedTooltip name="ВидДоходаВычетаРасширеннаяПодсказка" id="87"/>
+											<Events>
+												<Event name="OnChange">ВидДоходаВычетаПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<RadioButtonField name="ВариантРаспределенияВычета" id="88">
+									<DataPath>ВариантРаспределенияВычета</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ColumnsCount>1</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Несколько доходов</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ВариантРаспределенияВычетаКонтекстноеМеню" id="89"/>
+									<ExtendedTooltip name="ВариантРаспределенияВычетаРасширеннаяПодсказка" id="90"/>
+									<Events>
+										<Event name="OnChange">ВариантРаспределенияВычетаПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="РаспределениеПоДоходам" id="91">
+					<Representation>List</Representation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<Width>50</Width>
+					<HeightControlVariant>UseContentHeight</HeightControlVariant>
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<Footer>true</Footer>
+					<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+					<HorizontalStretch>false</HorizontalStretch>
+					<DataPath>РаспределениеПоДоходам</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+					</CommandSet>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="РаспределениеПоДоходамКонтекстноеМеню" id="92"/>
+					<AutoCommandBar name="РаспределениеПоДоходамКоманднаяПанель" id="93">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="РаспределениеПоДоходамРасширеннаяПодсказка" id="94"/>
+					<SearchStringAddition name="РаспределениеПоДоходамСтрокаПоиска" id="95">
+						<AdditionSource>
+							<Item>РаспределениеПоДоходам</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РаспределениеПоДоходамСтрокаПоискаКонтекстноеМеню" id="96"/>
+						<ExtendedTooltip name="РаспределениеПоДоходамСтрокаПоискаРасширеннаяПодсказка" id="97"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="РаспределениеПоДоходамСостояниеПросмотра" id="98">
+						<AdditionSource>
+							<Item>РаспределениеПоДоходам</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РаспределениеПоДоходамСостояниеПросмотраКонтекстноеМеню" id="99"/>
+						<ExtendedTooltip name="РаспределениеПоДоходамСостояниеПросмотраРасширеннаяПодсказка" id="100"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="РаспределениеПоДоходамУправлениеПоиском" id="101">
+						<AdditionSource>
+							<Item>РаспределениеПоДоходам</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="РаспределениеПоДоходамУправлениеПоискомКонтекстноеМеню" id="102"/>
+						<ExtendedTooltip name="РаспределениеПоДоходамУправлениеПоискомРасширеннаяПодсказка" id="103"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnEditEnd">РаспределениеПоДоходамПриОкончанииРедактирования</Event>
+						<Event name="BeforeEditEnd">РаспределениеПоДоходамПередОкончаниемРедактирования</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="РаспределениеПоДоходамДоход" id="104">
+							<DataPath>РаспределениеПоДоходам.Доход</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="РаспределениеПоДоходамДоходКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="РаспределениеПоДоходамДоходРасширеннаяПодсказка" id="106"/>
+						</InputField>
+						<InputField name="РаспределениеПоДоходамСумма" id="107">
+							<DataPath>РаспределениеПоДоходам.НалоговаяБаза</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>Right</TitleLocation>
+							<FooterDataPath>НалоговаяБазаВсего</FooterDataPath>
+							<Width>10</Width>
+							<ContextMenu name="РаспределениеПоДоходамСуммаКонтекстноеМеню" id="108"/>
+							<ExtendedTooltip name="РаспределениеПоДоходамСуммаРасширеннаяПодсказка" id="109"/>
+						</InputField>
+						<InputField name="РаспределениеПоДоходамСуммаВычета" id="110">
+							<DataPath>РаспределениеПоДоходам.СуммаВычета</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<FooterDataPath>РаспределеноВычетаВсего</FooterDataPath>
+							<Width>10</Width>
+							<ContextMenu name="РаспределениеПоДоходамСуммаВычетаКонтекстноеМеню" id="111"/>
+							<ExtendedTooltip name="РаспределениеПоДоходамСуммаВычетаРасширеннаяПодсказка" id="112"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СтандартныйВычет" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стандартный вычет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Месяц1" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месяц1</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаВычета1" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма вычета1</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Месяц2" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месяц2</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаВычета2" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма вычета2</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="РеквизитОтступ" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизит отступ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерМесяца1" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер месяца1</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерМесяца2" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер месяца1</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РазмерВычета" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер вычета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВычетПрименяется" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычет применяется</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьВычет" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить вычет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбраннаяФорма" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранная форма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтекстныйВызов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекстный вызов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РаспределениеПоДоходам" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределение по доходам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Доход" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доход</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ИсточникиДоходовФизическихЛиц</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НалоговаяБаза" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Налоговая база</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаВычета" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вычет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВидДохода" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид дохода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ИсточникиДоходовФизическихЛиц</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаВычета" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вам полагается вычет в размере</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РаспределеноВычетаВсего" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределено вычета всего</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НалоговаяБазаВсего" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налоговая база всего</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантРаспределенияВычета" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант распределения вычета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="КонтекстныйВызов">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="НачалоПериода">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="КонецПериода">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ПрименятьВычет">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Декларация3НДФЛВыбраннаяФорма">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Период">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ДоступныеДоходы">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка облачного сервиса</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<ShowCommandBar>false</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСообщениеОЗапрете" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сообщение о запрете</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сообщение о запрете</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>HorizontalIfPossible</Group>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ДеньгиФонИнформационнойГруппы</BackColor>
+			<ExtendedTooltip name="ГруппаСообщениеОЗапретеРасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<LabelDecoration name="ТекстСостоянияСинхронизации" id="46">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;fontsize 12&gt;Использование облачного сервиса отключено&lt;/&gt;
+&lt;link e1c://ВключитьСинхронизацию&gt;Включить&lt;/&gt;.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТекстСостоянияСинхронизацииКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ТекстСостоянияСинхронизацииРасширеннаяПодсказка" id="48"/>
+					<Events>
+						<Event name="URLProcessing">ТекстСостоянияСинхронизацииОбработкаНавигационнойСсылки</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВыборПровайдера" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выбор провайдера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выбор провайдера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВыборПровайдераРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<InputField name="ИмяЭтойБазы" id="49">
+					<DataPath>ИмяЭтойБазы</DataPath>
+					<MarkRequiredComplete>true</MarkRequiredComplete>
+					<Width>25</Width>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Латинские символы без пробелов и знаков препинания</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ИмяЭтойБазыКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ИмяЭтойБазыРасширеннаяПодсказка" id="51"/>
+					<Events>
+						<Event name="OnChange">ИмяЭтойБазыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Провайдер" id="1">
+					<DataPath>Провайдер</DataPath>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Яндекс.Диск</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ТипыПровайдеровREST.EnumValue.Яндекс</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Dropbox</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ТипыПровайдеровREST.EnumValue.Dropbox</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Google Drive</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ТипыПровайдеровREST.EnumValue.Google</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ПровайдерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПровайдерРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ПровайдерПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelDecoration name="ИнформацияАвторизации" id="4">
+					<Width>50</Width>
+					<TextColor>style:ИнформационнаяНадписьЦвет</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приложение авторизовано пользователем: xxxxxxxxx@xxxxx.com</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИнформацияАвторизацииКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ИнформацияАвторизацииРасширеннаяПодсказка" id="6"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаКомандАвторизации" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команд авторизации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команд авторизации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКомандАвторизацииРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<Button name="Авторизация" id="9">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Авторизация</CommandName>
+							<ExtendedTooltip name="АвторизацияРасширеннаяПодсказка" id="10"/>
+						</Button>
+						<Button name="ОтменаАвторизации" id="11">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОтменаАвторизации</CommandName>
+							<ExtendedTooltip name="ОтменаАвторизацииРасширеннаяПодсказка" id="12"/>
+						</Button>
+						<Button name="ПроверкаСервиса" id="13">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПроверкаСервиса</CommandName>
+							<ExtendedTooltip name="ПроверкаСервисаРасширеннаяПодсказка" id="14"/>
+						</Button>
+						<UsualGroup name="Группа1" id="52">
+							<Group>HorizontalIfPossible</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="53"/>
+							<ChildItems>
+								<Button name="ЗапретитьОбмен" id="40">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Отключить</CommandName>
+									<ExtendedTooltip name="ЗапретитьОбменРасширеннаяПодсказка" id="41"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПараметрыОбмена" id="15">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметры обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>HorizontalIfPossible</Group>
+			<Representation>WeakSeparation</Representation>
+			<ExtendedTooltip name="ГруппаПараметрыОбменаРасширеннаяПодсказка" id="16"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРасписанияЯндексДиск" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка файлов по расписанию</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" kind="StyleItem"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа расписания каталог</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРасписанияЯндексДискРасширеннаяПодсказка" id="18">
+						<Height>2</Height>
+						<HorizontalStretch>true</HorizontalStretch>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Обратите внимание: это расписание будет выполняться только пока запущена программа 1С:Деньги.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<ChildItems>
+						<UsualGroup name="ГруппаВключенияРасписания" id="19">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа включения расписания</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа включения расписания каталог</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВключенияРасписанияРасширеннаяПодсказка" id="20"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьРасписаниеОблако" id="21">
+									<DataPath>ИспользоватьРасписаниеОблако</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<TitleHeight>1</TitleHeight>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ИспользоватьРасписаниеОблакоКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="ИспользоватьРасписаниеОблакоРасширеннаяПодсказка" id="23">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройте периодичность, с которой программа будет проверять каталог на Яндекс.Диске, загружать из него данные мобильных устройств и выгружать изменения для них.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьРасписаниеОблакоПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаТипРасписанияОтступ1" id="24">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа тип расписания отступ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа тип расписания отступ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТипРасписанияОтступ1РасширеннаяПодсказка" id="25"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияОтступРасписания4" id="26">
+											<ContextMenu name="ДекорацияОтступРасписания4КонтекстноеМеню" id="27"/>
+											<ExtendedTooltip name="ДекорацияОтступРасписания4РасширеннаяПодсказка" id="28"/>
+										</LabelDecoration>
+										<RadioButtonField name="ПредопределенноеРасписаниеОблако" id="29">
+											<DataPath>ПредопределенноеРасписаниеОблако</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ColumnsCount>2</ColumnsCount>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Каждые 15 минут</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">ЧетвертьЧаса</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Каждые 30 минут</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">ПолЧаса</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Каждый час</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Час</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Другое расписание</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Другое</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ПредопределенноеРасписаниеОблакоКонтекстноеМеню" id="30"/>
+											<ExtendedTooltip name="ПредопределенноеРасписаниеОблакоРасширеннаяПодсказка" id="31"/>
+											<Events>
+												<Event name="OnChange">ПредопределенноеРасписаниеПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаТиповогоРасписанияКаталог1" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа типового расписания каталог</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа включения расписания электронная почта</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТиповогоРасписанияКаталог1РасширеннаяПодсказка" id="33"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОтступРасписания5" id="34">
+									<Height>2</Height>
+									<ContextMenu name="ДекорацияОтступРасписания5КонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="ДекорацияОтступРасписания5РасширеннаяПодсказка" id="36"/>
+								</LabelDecoration>
+								<LabelDecoration name="НастроитьРасписаниеОблачногоСервиса" id="37">
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настроить...</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="НастроитьРасписаниеОблачногоСервисаКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="НастроитьРасписаниеОблачногоСервисаРасширеннаяПодсказка" id="39"/>
+									<Events>
+										<Event name="Click">НастроитьРасписаниеОблачногоСервисаНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.МониторСинхронизацииСМобильнымиУстройствами</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Провайдер" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Облачный сервис</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыПровайдеровREST</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СвойстваПровайдера" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойства провайдера</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СвойстваАккаунта" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойства аккаунта</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПредопределенноеРасписаниеОблако" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предопределенное расписание каталог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьРасписаниеОблако" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнять обмен по расписанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РасписаниеОблако" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание каталог</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СсылкаТранспортОблако" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка транспорт облако</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ТранспортыОбменаДанными</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗапретитьИспользование" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запретить использование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВключитьИспользованиеПриОткрытии" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить использование при открытии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяЭтойБазы" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя этой базы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрежнееИмяЭтойБазы" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прежнее имя этой базы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрежнийПровайдер" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Облачный сервис</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыПровайдеровREST</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Авторизация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизовать приложение на сервисе или изменить пользователя сервиса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Авторизация</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтменаАвторизации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена авторизации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить авторизацию пользователя на сервисе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменаАвторизации</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПроверкаСервиса" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить доступность сервиса и резрешеия, выданные приложению</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверкаСервиса</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отключить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить синхронизацию с помощью облачного сервиса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отключить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

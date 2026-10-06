@@ -1,0 +1,946 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Синхронизация с облаком</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<ShowCommandBar>false</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="213d1900-dcad-4616-9f20-3f077156a40f">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЦентрирования" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа центрирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа центрирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<Group>Vertical</Group>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<VerticalAlign>Center</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЦентрированияРасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРамкаФормы" id="45">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа рамка формы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа рамка формы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Group>Vertical</Group>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<VerticalAlign>Top</VerticalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРамкаФормыРасширеннаяПодсказка" id="46"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПараметрыСинхронизации" id="49">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа параметры синхронизации</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа параметры синхронизации</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>WeakSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПараметрыСинхронизацииРасширеннаяПодсказка" id="50"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаРезультатыСинхронизации" id="123">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Результаты синхронизации</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа результаты синхронизации</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>NormalSeparation</Representation>
+									<ExtendedTooltip name="ГруппаРезультатыСинхронизацииРасширеннаяПодсказка" id="124"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаСостояниеСтрока" id="64">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа состояние строка</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа состояние строка</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСостояниеСтрокаРасширеннаяПодсказка" id="65"/>
+											<ChildItems>
+												<PictureDecoration name="ДекорацияИндикатор" id="66">
+													<Width>7</Width>
+													<Height>2</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Декорация индикатор</v8:content>
+														</v8:item>
+													</Title>
+													<GroupVerticalAlign>Center</GroupVerticalAlign>
+													<Picture>
+														<xr:Ref>CommonPicture.СинхронизацияНетОбмена48</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="ДекорацияИндикаторКонтекстноеМеню" id="67"/>
+													<ExtendedTooltip name="ДекорацияИндикаторРасширеннаяПодсказка" id="68"/>
+												</PictureDecoration>
+												<UsualGroup name="ГруппаКолонкаНастроек" id="69">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа колонка настроек</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа колонка настроек</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаКолонкаНастроекРасширеннаяПодсказка" id="70"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаРезультатИСостояние" id="71">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа результат и состояние</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа результат и состояние</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаРезультатИСостояниеРасширеннаяПодсказка" id="72"/>
+															<ChildItems>
+																<UsualGroup name="Группа1" id="83">
+																	<Group>HorizontalIfPossible</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="84"/>
+																	<ChildItems>
+																		<LabelField name="РезультатПоследнейСинхронизации" id="13">
+																			<DataPath>РезультатПоследнейСинхронизации</DataPath>
+																			<ContextMenu name="РезультатПоследнейСинхронизацииКонтекстноеМеню" id="14"/>
+																			<ExtendedTooltip name="РезультатПоследнейСинхронизацииРасширеннаяПодсказка" id="15"/>
+																		</LabelField>
+																	</ChildItems>
+																</UsualGroup>
+																<LabelField name="ТекущееСостояниеСинхронизации" id="16">
+																	<DataPath>ТекущееСостояниеСинхронизации</DataPath>
+																	<TitleLocation>None</TitleLocation>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<ContextMenu name="ТекущееСостояниеСинхронизацииКонтекстноеМеню" id="17"/>
+																	<ExtendedTooltip name="ТекущееСостояниеСинхронизацииРасширеннаяПодсказка" id="18"/>
+																</LabelField>
+																<CommandBar name="ГруппаКомандыУправления" id="99">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Управление</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа команды управления</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<ExtendedTooltip name="ГруппаКомандыУправленияРасширеннаяПодсказка" id="100"/>
+																	<ChildItems>
+																		<Button name="ОбщаяКомандаСобытияПолучения" id="89">
+																			<Type>CommandBarHyperlink</Type>
+																			<CommandName>CommonCommand.СобытияПолучения</CommandName>
+																			<DataPath>ЦентральнаяБаза</DataPath>
+																			<ShapeRepresentation>WhenActive</ShapeRepresentation>
+																			<ExtendedTooltip name="ОбщаяКомандаСобытияПолученияРасширеннаяПодсказка" id="90"/>
+																		</Button>
+																		<Button name="ОбщаяКомандаСобытияОтправки" id="87">
+																			<Type>CommandBarHyperlink</Type>
+																			<CommandName>CommonCommand.СобытияОтправки</CommandName>
+																			<DataPath>ЦентральнаяБаза</DataPath>
+																			<ShapeRepresentation>WhenActive</ShapeRepresentation>
+																			<ExtendedTooltip name="ОбщаяКомандаСобытияОтправкиРасширеннаяПодсказка" id="88"/>
+																		</Button>
+																		<Button name="ПосмотретьИтоги" id="152">
+																			<Type>CommandBarHyperlink</Type>
+																			<CommandName>Form.Command.ПосмотретьИтоги</CommandName>
+																			<ExtendedTooltip name="ПосмотретьИтогиРасширеннаяПодсказка" id="153"/>
+																		</Button>
+																	</ChildItems>
+																</CommandBar>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСледующаяСинхронизация" id="125">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Следующая синхронизация</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа следующая синхронизация</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>NormalSeparation</Representation>
+									<ExtendedTooltip name="ГруппаСледующаяСинхронизацияРасширеннаяПодсказка" id="126"/>
+									<ChildItems>
+										<RadioButtonField name="СпособСинхронизации" id="127">
+											<DataPath>СпособСинхронизации</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Автоматическая синхронизация</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Синхронизация вручную</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="СпособСинхронизацииКонтекстноеМеню" id="128"/>
+											<ExtendedTooltip name="СпособСинхронизацииРасширеннаяПодсказка" id="129"/>
+											<Events>
+												<Event name="OnChange">ПриостановитьСинхронизациюПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<InputField name="СценарийСинхронизации" id="19">
+											<DataPath>СценарийСинхронизации</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сценарий</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Эта база обменяется изменениями с облаком</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<Width>40</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>40</MaxWidth>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChooseType>false</ChooseType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Синхронизировать изменения</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xr:DesignTimeRef">Enum.СценарииСинхронизацииАвтономныхКопий.EnumValue.ОбъединениеДанных</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Облако очистить и заполнить из этой базы</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xr:DesignTimeRef">Enum.СценарииСинхронизацииАвтономныхКопий.EnumValue.ЗаменитьВсеВЦентральнойБазе</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Эту базу очистить и заполнить из облака</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xr:DesignTimeRef">Enum.СценарииСинхронизацииАвтономныхКопий.EnumValue.ЗаменитьВсеВАвтономнойКопии</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="СценарийСинхронизацииКонтекстноеМеню" id="20"/>
+											<ExtendedTooltip name="СценарийСинхронизацииРасширеннаяПодсказка" id="21"/>
+											<Events>
+												<Event name="OnChange">СценарийСинхронизацииПриИзменении</Event>
+											</Events>
+										</InputField>
+										<UsualGroup name="Группа2" id="130">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>HorizontalIfPossible</Group>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="131"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация2" id="132">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>К отправке:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация2КонтекстноеМеню" id="133"/>
+													<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="134"/>
+												</LabelDecoration>
+												<Button name="ЗарегистрироватьВсе" id="105">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ЗарегистрироватьВсе</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отметить все в этой базе</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ЗарегистрироватьВсеРасширеннаяПодсказка" id="106"/>
+												</Button>
+												<Button name="ОбщаяКомандаСоставОтправляемыхДанных" id="85">
+													<Type>Hyperlink</Type>
+													<CommandName>CommonCommand.СоставОтправляемыхДанных</CommandName>
+													<DataPath>ЦентральнаяБаза</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отправляемые данные</v8:content>
+														</v8:item>
+													</Title>
+													<ShapeRepresentation>WhenActive</ShapeRepresentation>
+													<ExtendedTooltip name="ОбщаяКомандаСоставОтправляемыхДанныхРасширеннаяПодсказка" id="86"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="Группа3" id="139">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>HorizontalIfPossible</Group>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="140"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация4" id="141">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>К загрузке:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация4КонтекстноеМеню" id="142"/>
+													<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="143"/>
+												</LabelDecoration>
+												<Button name="ОтметитьДляЗагрузкиВсеЗаписиОблака" id="144">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ОтметитьДляЗагрузкиВсеЗаписиОблака</CommandName>
+													<ExtendedTooltip name="ОтметитьДляЗагрузкиВсеЗаписиОблакаРасширеннаяПодсказка" id="145"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="Группа4" id="146">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>HorizontalIfPossible</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="147"/>
+											<ChildItems>
+												<Button name="СинхронизироватьСейчас" id="91">
+													<Type>UsualButton</Type>
+													<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+													<CommandName>Form.Command.СинхронизироватьСейчас</CommandName>
+													<ExtendedTooltip name="СинхронизироватьСейчасРасширеннаяПодсказка" id="92"/>
+												</Button>
+												<CommandBar name="ГруппаКомандыФормы" id="75">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа команды формы</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа команды формы</v8:content>
+														</v8:item>
+													</ToolTip>
+													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+													<CommandSource>Form</CommandSource>
+													<ExtendedTooltip name="ГруппаКомандыФормыРасширеннаяПодсказка" id="76"/>
+													<ChildItems>
+														<Button name="Перечитать" id="107">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.Перечитать</CommandName>
+															<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+															<ExtendedTooltip name="ПеречитатьРасширеннаяПодсказка" id="108"/>
+														</Button>
+														<Button name="ФормаУправлениеПодписками" id="79">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.УправлениеПодписками</CommandName>
+															<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+															<ExtendedTooltip name="ФормаУправлениеПодпискамиРасширеннаяПодсказка" id="80"/>
+														</Button>
+														<ButtonGroup name="ФормаГруппа1" id="148">
+															<ExtendedTooltip name="ФормаГруппа1РасширеннаяПодсказка" id="149"/>
+															<ChildItems>
+																<Button name="ВыгрузитьВФайл" id="113">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Command.ВыгрузитьВФайл</CommandName>
+																	<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																	<ExtendedTooltip name="ВыгрузитьВФайлРасширеннаяПодсказка" id="114"/>
+																</Button>
+																<Button name="ЗагрузитьИзФайла" id="115">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Command.ЗагрузитьИзФайла</CommandName>
+																	<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																	<ExtendedTooltip name="ЗагрузитьИзФайлаРасширеннаяПодсказка" id="116"/>
+																</Button>
+															</ChildItems>
+														</ButtonGroup>
+														<Button name="ФормаПроверитьСинхронизированностьДанных" id="150">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ПроверитьСинхронизированностьДанных</CommandName>
+															<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+															<ExtendedTooltip name="ФормаПроверитьСинхронизированностьДанныхРасширеннаяПодсказка" id="151"/>
+														</Button>
+														<Button name="ОтправитьВПоддержку" id="30">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.ОтправитьВПоддержку</CommandName>
+															<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+															<ExtendedTooltip name="ОтправитьВПоддержкуРасширеннаяПодсказка" id="31"/>
+														</Button>
+														<Button name="ФормаСправка" id="35">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.StandardCommand.Help</CommandName>
+															<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+															<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="36"/>
+														</Button>
+														<Button name="ФормаЗакрыть" id="37">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.StandardCommand.Close</CommandName>
+															<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+															<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="38"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.МониторСинхронизацииССервисом</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ЦентральнаяБаза" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Центральная база</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ExchangePlanRef.СинхронизацияАвтономныхКопий</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатПоследнейСинхронизации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Последняя синхронизация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущееСостояниеСинхронизации" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее состояние</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИмяФайлаВыгрузки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ИмяФайлаВыгрузки</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПриостановитьСинхронизацию" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приостановить автоматическую синхронизацию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Режим" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СценарийСинхронизации" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сценарий синхронизации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СценарииСинхронизацииАвтономныхКопий</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИдентификаторЗаданияСинхронизации" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания синхронизации</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ТекущееПриостановитьСинхронизацию" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее приостановить синхронизацию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗакрыватьФормуПослеСинхронизации" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрывать форму после синхронизации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтоматическоеДействие" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматическое действие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособСинхронизации" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ синхронизации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыгрузитьВФайл" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить в файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить изменения в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьВФайл</Action>
+		</Command>
+		<Command name="ЗагрузитьИзФайла" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить изменения из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьИзФайла</Action>
+		</Command>
+		<Command name="ОтправитьВПоддержку" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщить о проблеме</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить в поддержку</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="ПрименитьИЗакрыть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрименитьИЗакрыть</Action>
+		</Command>
+		<Command name="Записать" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Записать</Action>
+		</Command>
+		<Command name="Перечитать" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Reread</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Перечитать</Action>
+		</Command>
+		<Command name="СинхронизироватьСейчас" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать сейчас</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать сейчас</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СинхронизацияДанныхВыполнение</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>СинхронизироватьСейчас</Action>
+		</Command>
+		<Command name="УправлениеПодписками" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление подписками</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление подписками</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УправлениеПодписками</Action>
+		</Command>
+		<Command name="УзелЦентральнойБазы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Узел центральной базы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Узел центральной базы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExchangePlan</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УзелЦентральнойБазы</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОтметитьДляЗагрузкиВсеЗаписиОблака" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все в облаке</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помечает все записи в облаке для загрузки в эту базу при очередной синхронизации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтметитьДляЗагрузкиВсеЗаписиОблака</Action>
+		</Command>
+		<Command name="ЗарегистрироватьВсе" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить к отправке все данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать к отправке все данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗарегистрироватьВсе</Action>
+		</Command>
+		<Command name="ПроверитьСинхронизированностьДанных" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить синхронизированность данных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить синхронизированность данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьСинхронизированностьДанных</Action>
+		</Command>
+		<Command name="ПосмотретьИтоги" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итоги</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посмотреть итоги</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПосмотретьИтоги</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>CommonCommand.СобытияОтправки</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.СобытияПолучения</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.СценарииСинхронизации</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

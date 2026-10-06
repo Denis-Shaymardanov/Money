@@ -1,6 +1,6 @@
 """
 Обработка сырых транзакций: категоризация, разделение на приход/расход,
-нормализация, дедупликация и сортировка.
+нормализация и сортировка.
 """
 import pandas as pd
 from .utils import normalize_text
@@ -22,7 +22,8 @@ class TransactionProcessor:
         2. Раскидывает сумму в колонки 'income' и 'expense'
         3. Парсит описание (магазин, тип транзакции)
         4. Нормализует строки и округляет числа
-        5. Удаляет дубликаты (в т.ч. по хэшу ключевых полей)
+        5. Сохраняет все строки: решение о повторном импорте и сопоставлении
+           с существующими операциями выполняется на стороне 1С
         6. Сортирует по дате и времени
         """
         df = pd.DataFrame(raw_records)
@@ -54,16 +55,7 @@ class TransactionProcessor:
         for col in ['income', 'expense', 'balance']:
             df[col] = pd.to_numeric(df[col], errors='coerce').round(2)
 
-        # --- 5. Дедупликация ---
-        # Сначала удаляем полные дубликаты
-        df = df.drop_duplicates()
-
-        # Затем удаляем дубликаты по ключевым полям (без описания и остатка)
-        key_cols = ['date', 'time', 'category', 'income', 'expense', 'shop', 'transaction_type']
-        if all(c in df.columns for c in key_cols):
-            df = df.drop_duplicates(subset=key_cols, keep='first')
-
-        # --- 6. Сортировка по дате и времени ---
+        # --- 5. Сортировка по дате и времени ---
         df['_datetime'] = pd.to_datetime(df['date'] + ' ' + df['time'],
                                          format='%d.%m.%Y %H:%M', errors='coerce')
         df.sort_values('_datetime', inplace=True)

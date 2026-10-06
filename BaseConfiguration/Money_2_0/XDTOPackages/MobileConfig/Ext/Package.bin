@@ -1,0 +1,709 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://v8.1c.ru/Money/MobileConfig">
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<valueType name="ARef" base="xs:string"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogRef.Валюты" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogRef.ВариантыБюджетов" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogRef.ГрафыБюджета" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogRef.Долги" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogRef.Имущество" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogRef.Контакты" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogRef.КошелькиИСчета" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogRef.Пользователи" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogRef.РазделыУчета" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogRef.СтатьиДоходов" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogRef.СтатьиРасходов" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogRef.ФинансовыеЦели" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogRef.ПрикрепленныеФайлы" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentRef.ВводИзменениеОстатка" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentRef.Доход" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentRef.МыВернулиДолг" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentRef.МыВзялиВДолг" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentRef.МыДалиВДолг" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentRef.НамВернулиДолг" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentRef.ОбменВалюты" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentRef.Перемещение" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentRef.Расход" base="d2p1:ARef" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentRef.УниверсальнаяОперация" base="d2p1:ARef" variety="Atomic"/>
+	<valueType name="EnumRef.ТипыДолгов" base="xs:string" variety="Atomic">
+		<enumeration/>
+		<enumeration>ВыданныйДолг</enumeration>
+		<enumeration>ВзятыйДолг</enumeration>
+		<enumeration>ВзаимныйРасчет</enumeration>
+	</valueType>
+	<valueType name="EnumRef.ТипыПроводок" base="xs:string" variety="Atomic">
+		<enumeration/>
+		<enumeration>Доход</enumeration>
+		<enumeration>Расход</enumeration>
+		<enumeration>Перевод</enumeration>
+	</valueType>
+	<valueType name="EnumRef.ТипыСчетов" base="xs:string" variety="Atomic">
+		<enumeration/>
+		<enumeration>Наличность</enumeration>
+		<enumeration>БанковскаяКартаДебетовая</enumeration>
+		<enumeration>БанковскаяКартаКредитная</enumeration>
+		<enumeration>БанковскаяКартаУниверсальная</enumeration>
+		<enumeration>БанковскийСчет</enumeration>
+		<enumeration>ЭлектронныйКошелек</enumeration>
+		<enumeration>Прочее</enumeration>
+	</valueType>
+	<valueType name="EnumRef.УдалитьАктивПассив" base="xs:string" variety="Atomic">
+		<enumeration/>
+		<enumeration>Актив</enumeration>
+		<enumeration>Пассив</enumeration>
+	</valueType>
+	<valueType name="EnumRef.СпособыПовторовСобытий" base="xs:string" variety="Atomic">
+		<enumeration/>
+		<enumeration xsi:type="xs:string">НеИспользовать</enumeration>
+		<enumeration xsi:type="xs:string">Ежедневно</enumeration>
+		<enumeration xsi:type="xs:string">Еженедельно</enumeration>
+		<enumeration xsi:type="xs:string">ЕжемесячноПоЧислам</enumeration>
+		<enumeration xsi:type="xs:string">ЕжемесячноПоДнямНедели</enumeration>
+		<enumeration xsi:type="xs:string">ЕжегодноПоЧислам</enumeration>
+		<enumeration xsi:type="xs:string">ЕжегодноПоДнямНедели</enumeration>
+		<enumeration xsi:type="xs:string">ВУказанныеДаты</enumeration>
+	</valueType>
+	<valueType name="EnumRef.СпособыПогашенияКредита" base="xs:string" variety="Atomic">
+		<enumeration/>
+		<enumeration xsi:type="xs:string">РазовыйПлатеж</enumeration>
+		<enumeration xsi:type="xs:string">Аннуитет</enumeration>
+		<enumeration xsi:type="xs:string">ДифференцированныеПлатежи</enumeration>
+		<enumeration xsi:type="xs:string">Вручную</enumeration>
+	</valueType>
+	<valueType name="EnumRef.ТипыПровайдеровREST" base="xs:string" variety="Atomic">
+		<enumeration/>
+		<enumeration xsi:type="xs:string">Яндекс</enumeration>
+		<enumeration xsi:type="xs:string">DropBox</enumeration>
+	</valueType>
+	<valueType name="EnumRef.РежимыСинхронизацииДанных" base="xs:string" variety="Atomic">
+		<enumeration/>
+		<enumeration xsi:type="xs:string">Вручную</enumeration>
+		<enumeration xsi:type="xs:string">ПриСтартеПриложения</enumeration>
+		<enumeration xsi:type="xs:string">ПриЗавершенииПриложения</enumeration>
+	</valueType>
+	<valueType name="EnumRef.СпособОткрытияПрикрепленногоФайла" base="xs:string" variety="Atomic">
+		<enumeration/>
+		<enumeration xsi:type="xs:string">СредствамиОС</enumeration>
+		<enumeration xsi:type="xs:string">КакИзображение</enumeration>
+		<enumeration xsi:type="xs:string">КакАудиоФайл</enumeration>
+		<enumeration xsi:type="xs:string">КакВидеоЗапись</enumeration>
+		<enumeration xsi:type="xs:string">КакТекст</enumeration>
+		<enumeration xsi:type="xs:string">КакДокументПлатформы</enumeration>
+		<enumeration xsi:type="xs:string">КакHTML</enumeration>
+	</valueType>
+	<valueType name="EnumRef.ТипыБюджетныхПоказателей" base="xs:string" variety="Atomic">
+		<enumeration/>
+		<enumeration xsi:type="xs:string">Поступление</enumeration>
+		<enumeration xsi:type="xs:string">Списание</enumeration>
+		<enumeration xsi:type="xs:string">Перемещение</enumeration>
+	</valueType>
+	<valueType name="EnumRef.ПериодичностьПланирования" base="xs:string" variety="Atomic">
+		<enumeration/>
+		<enumeration xsi:type="xs:string">Произвольно</enumeration>
+		<enumeration xsi:type="xs:string">День</enumeration>
+		<enumeration xsi:type="xs:string">Неделя</enumeration>
+		<enumeration xsi:type="xs:string">Месяц</enumeration>
+		<enumeration xsi:type="xs:string">Квартал</enumeration>
+		<enumeration xsi:type="xs:string">Год</enumeration>
+	</valueType>
+	<objectType name="Settings">
+		<property name="IDMainAPP" type="xs:string"/>
+		<property name="NumPeriods" type="xs:integer"/>
+		<property name="PeriodType" type="xs:string"/>
+		<property name="LimitWallets" type="xs:boolean" nillable="true"/>
+		<property name="WalletList" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="http://v8.1c.ru/Money/MobileConfig" name="Wallet" type="d5p1:CatalogObject.КошелькиИСчета" lowerBound="0" upperBound="-1" nillable="true"/>
+			</typeDef>
+		</property>
+		<property name="Script" type="xs:string"/>
+		<property name="DateOfSending" type="xs:dateTime"/>
+		<property name="VersionExchange" type="xs:string"/>
+		<property name="Name" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="CatalogList">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Objects" type="d3p1:CatalogObject" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="CatalogObject">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Ref" type="d3p1:ARef"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="PredefinedDataName" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Description" type="xs:string"/>
+		<property name="Активность" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogObject.Валюты" base="d2p1:CatalogObject">
+		<property name="Code" type="xs:string"/>
+		<property name="НаименованиеПолное" type="xs:string" nillable="true"/>
+		<property name="ЗагружаетсяИзИнтернета" type="xs:boolean" nillable="true"/>
+		<property name="ПараметрыПрописиНаРусском" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ПараметрыПрописи" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="НаименованиеВоМножественномЧисле" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogObject.ВариантыБюджетов" base="d2p1:CatalogObject">
+		<property name="НачалоПланирования" type="xs:dateTime" nillable="true"/>
+		<property name="ДетальностьПланирования" type="d2p1:EnumRef.ПериодичностьПланирования" nillable="true"/>
+		<property name="Валюта" type="d2p1:CatalogRef.Валюты"/>
+		<property name="ЧислоМесяца" type="xs:decimal" nillable="true"/>
+		<property name="НомерМесяца" type="xs:decimal" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogObject.ГрафыБюджета" base="d2p1:CatalogObject">
+		<property name="Code" type="xs:string" nillable="true"/>
+		<property name="Parent" type="d2p1:CatalogRef.ГрафыБюджета" nillable="true"/>
+		<property name="ТипПоказателя" type="d2p1:EnumRef.ТипыБюджетныхПоказателей" nillable="true"/>
+		<property name="ПорядокПоУмолчанию" type="xs:decimal" lowerBound="0"/>
+		<property name="ТипСтатьи" type="xs:string" nillable="true"/>
+		<property name="ОтношениеКНакоплениям" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogObject.Долги" base="d2p1:CatalogObject">
+		<property name="Контакт" type="d2p1:CatalogRef.Контакты" nillable="true"/>
+		<property name="ИспользоватьДляУчетаВзятыхДолгов" type="xs:boolean" nillable="true"/>
+		<property name="ИспользоватьДляУчетаВыданныхДолгов" type="xs:boolean" nillable="true"/>
+		<property name="Валюта" type="d2p1:CatalogRef.Валюты"/>
+		<property name="Комментарий" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogObject.Имущество" base="d2p1:CatalogObject">
+		<property name="IsFolder" type="xs:boolean"/>
+		<property name="Parent" type="d2p1:CatalogRef.Имущество" nillable="true"/>
+		<property name="Валюта" type="d2p1:CatalogRef.Валюты" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogObject.Контакты" base="d2p1:CatalogObject">
+		<property name="IsFolder" type="xs:boolean"/>
+		<property name="Parent" type="d2p1:CatalogRef.Контакты" nillable="true"/>
+		<property name="Телефоны" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Адрес" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="АдресЭлектроннойПочты" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ВебАдрес" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ДеньРождения" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="НапоминатьОДнеРождения" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogObject.КошелькиИСчета" base="d2p1:CatalogObject">
+		<property name="IsFolder" type="xs:boolean"/>
+		<property name="Parent" type="d2p1:CatalogRef.КошелькиИСчета" nillable="true"/>
+		<property name="ТипСчета" type="d2p1:EnumRef.ТипыСчетов" lowerBound="0" nillable="true"/>
+		<property name="Валюта" type="d2p1:CatalogRef.Валюты" lowerBound="0" nillable="true"/>
+		<property name="ИспользоватьДляНакоплений" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="Картинка" type="d3p1:ValueStorage" lowerBound="0" nillable="true"/>
+		<property name="КредитныйЛимит" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" nillable="true"/>
+		<property name="СинхронизироватьОстаткиИОперации" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogObject.Пользователи" base="d2p1:CatalogObject">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ИдентификаторПользователяИБ" type="d3p1:UUID" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ИдентификаторПользователяСервиса" type="d3p1:UUID" nillable="true"/>
+		<property name="Недействителен" type="xs:boolean" nillable="true"/>
+		<property name="Служебный" type="xs:boolean" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogObject.ПрикрепленныеФайлы" base="d2p1:CatalogObject">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ДанныеФайла" type="d3p1:ValueStorage" nillable="true"/>
+		<property name="ДатаСоздания" type="xs:dateTime" nillable="true"/>
+		<property name="РазмерФайла" type="xs:decimal" nillable="true"/>
+		<property name="СпособОткрытияФайла" type="d2p1:EnumRef.СпособОткрытияПрикрепленногоФайла"/>
+		<property name="Комментарий" type="xs:string" nillable="true"/>
+		<property name="РасширениеФайла" type="xs:string" nillable="true"/>
+		<property name="ИсходноеИмяФайла" type="xs:string" nillable="true"/>
+		<property name="НеСинхронизировать" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogObject.РазделыУчета" base="d2p1:CatalogObject">
+		<property name="Parent" type="d2p1:CatalogRef.РазделыУчета"/>
+		<property name="Code" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogObject.СтатьиДоходов" base="d2p1:CatalogObject">
+		<property name="Parent" type="d2p1:CatalogRef.СтатьиДоходов" nillable="true"/>
+		<property name="Комментарий" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogObject.СтатьиРасходов" base="d2p1:CatalogObject">
+		<property name="Parent" type="d2p1:CatalogRef.СтатьиРасходов" nillable="true"/>
+		<property name="Комментарий" type="xs:string" nillable="true"/>
+		<property name="КоличественныйУчет" type="xs:boolean" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="CatalogObject.ФинансовыеЦели" base="d2p1:CatalogObject">
+		<property name="РеквизитДопУпорядочивания" type="xs:decimal" nillable="true"/>
+		<property name="Сумма" type="xs:decimal" nillable="true"/>
+		<property name="Валюта" type="d2p1:CatalogRef.Валюты" nillable="true"/>
+		<property name="Срок" type="xs:dateTime" nillable="true"/>
+		<property name="Комментарий" type="xs:string" nillable="true"/>
+		<property name="ШаблонНакопления" type="xs:anyType" nillable="true"/>
+	</objectType>
+	<objectType name="ConstantList">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Objects" type="d3p1:ConstantObject" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="ConstantObject"/>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="ConstantValueManager.ВалютаУчета" base="d2p1:ConstantObject">
+		<property name="Value" type="d2p1:CatalogRef.Валюты"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="ConstantValueManager.НомерВерсииКонфигурации" base="d2p1:ConstantObject">
+		<property name="Value" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="ConstantValueManager.ОсновнойКошелек" base="d2p1:ConstantObject">
+		<property name="Value" type="d2p1:CatalogRef.КошелькиИСчета"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="ConstantValueManager.ОсновнойВариантБюджета" base="d2p1:ConstantObject">
+		<property name="Value" type="d2p1:CatalogRef.ВариантыБюджетов"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="ConstantValueManager.ПараметрыОбменаВДомашнейСети" base="d2p1:ConstantObject">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="Value" type="d3p1:ValueStorage" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="ConstantValueManager.ПараметрыОбменаДляЭтогоУзла" base="d2p1:ConstantObject">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="Value" type="d3p1:ValueStorage" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="ConstantValueManager.ПараметрыОбменаПоЭлектроннойПочте" base="d2p1:ConstantObject">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="Value" type="d3p1:ValueStorage" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="ConstantValueManager.ПараметрыОбменаФайлами" base="d2p1:ConstantObject">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="Value" type="d3p1:ValueStorage" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="ConstantValueManager.ПараметрыОбменаЯндексДиск" base="d2p1:ConstantObject">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="Value" type="d3p1:ValueStorage" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="ConstantValueManager.ПарольДляВхода" base="d2p1:ConstantObject">
+		<property name="Value" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="ConstantValueManager.ПределПланирования" base="d2p1:ConstantObject">
+		<property name="Value" type="xs:dateTime"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="ConstantValueManager.ПараметрыОбменаDropBox" base="d2p1:ConstantObject">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="Value" type="d3p1:ValueStorage" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="ConstantValueManager.ПараметрыОбменаВОблаке" base="d2p1:ConstantObject">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="Value" type="d3p1:ValueStorage" nillable="true"/>
+	</objectType>
+	<objectType name="DocumentList">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Objects" type="d3p1:DocumentObject" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="DocumentObject">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Ref" type="d3p1:ARef"/>
+		<property name="DeletionMark" type="xs:boolean"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Posted" type="xs:boolean"/>
+		<property name="ЭтоШаблон" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Пользователь" type="d3p1:CatalogRef.Пользователи" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ОписаниеОперации" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentObject.ВводИзменениеОстатка" base="d2p1:DocumentObject">
+		<property name="РазделУчета" type="d2p1:CatalogRef.РазделыУчета"/>
+		<property name="ОбъектУчета" type="xs:anyType" nillable="true"/>
+		<property name="ФинансоваяЦель" type="d2p1:CatalogRef.ФинансовыеЦели"/>
+		<property name="ВалютаОперации" type="d2p1:CatalogRef.Валюты"/>
+		<property name="СуммаНовогоОстатка" type="xs:decimal" nillable="true"/>
+		<property name="СуммаНовогоОстаткаПроцентов" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="СуммаДохода" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="СуммаРасхода" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="ПредставлениеОбъектаУчета" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ТипОперацииСтрокой" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ЭтоСинхронизацияОстатков" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentObject.Доход" base="d2p1:DocumentObject">
+		<property name="СуммаОперации" type="xs:decimal"/>
+		<property name="ВалютаОперации" type="d2p1:CatalogRef.Валюты"/>
+		<property name="СтатьиДоходовСКомментариями" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ПредставлениеКошельков" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ТипОперацииСтрокой" type="xs:string" lowerBound="0"/>
+		<property name="Доходы" type="d2p1:DocumentTabularSectionRow.Доход.Доходы" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentObject.МыВернулиДолг" base="d2p1:DocumentObject">
+		<property name="Кредитор" type="d2p1:CatalogRef.Контакты"/>
+		<property name="Кредит" type="d2p1:CatalogRef.Долги"/>
+		<property name="Кошелек" type="d2p1:CatalogRef.КошелькиИСчета"/>
+		<property name="ФинансоваяЦель" type="d2p1:CatalogRef.ФинансовыеЦели"/>
+		<property name="ВалютаКошелька" type="d2p1:CatalogRef.Валюты"/>
+		<property name="ВыплаченоКредита" type="xs:decimal"/>
+		<property name="ВыплаченоПроцентов" type="xs:decimal"/>
+		<property name="ВыплаченоКомиссии" type="xs:decimal"/>
+		<property name="ВалютаКредита" type="d2p1:CatalogRef.Валюты"/>
+		<property name="СуммаКредитаВВалютеКредита" type="xs:decimal"/>
+		<property name="СуммаПроцентовВВалютеКредита" type="xs:decimal"/>
+		<property name="СписаноКредита" type="xs:decimal"/>
+		<property name="СтатьяРасходовПоПроцентам" type="d2p1:CatalogRef.СтатьиРасходов"/>
+		<property name="СтатьяРасходовПоКомиссии" type="d2p1:CatalogRef.СтатьиРасходов"/>
+		<property name="СтатьяСписания" type="d2p1:CatalogRef.СтатьиДоходов"/>
+		<property name="СуммаДополнительныхРасходов" type="xs:decimal"/>
+		<property name="СуммаОперации" type="xs:decimal"/>
+		<property name="ПредставлениеДолга" type="xs:string" lowerBound="0"/>
+		<property name="ПредставлениеКошелька" type="xs:string" lowerBound="0"/>
+		<property name="ТипОперацииСтрокой" type="xs:string" lowerBound="0"/>
+		<property name="ДополнительныеРасходы" type="d2p1:DocumentTabularSectionRow.МыВернулиДолг.ДополнительныеРасходы" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentObject.МыВзялиВДолг" base="d2p1:DocumentObject">
+		<property name="Кредитор" type="d2p1:CatalogRef.Контакты"/>
+		<property name="Кредит" type="d2p1:CatalogRef.Долги"/>
+		<property name="Кошелек" type="d2p1:CatalogRef.КошелькиИСчета"/>
+		<property name="ФинансоваяЦель" type="d2p1:CatalogRef.ФинансовыеЦели"/>
+		<property name="ВалютаПолучено" type="d2p1:CatalogRef.Валюты"/>
+		<property name="СуммаПолучено" type="xs:decimal"/>
+		<property name="ВалютаКредита" type="d2p1:CatalogRef.Валюты"/>
+		<property name="СуммаКредита" type="xs:decimal"/>
+		<property name="СуммаДополнительныхРасходов" type="xs:decimal"/>
+		<property name="ПредставлениеДолга" type="xs:string" lowerBound="0"/>
+		<property name="ПредставлениеКошелька" type="xs:string" lowerBound="0"/>
+		<property name="ТипОперацииСтрокой" type="xs:string" lowerBound="0"/>
+		<property name="ДополнительныеРасходы" type="d2p1:DocumentTabularSectionRow.МыВзялиВДолг.ДополнительныеРасходы" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentObject.МыДалиВДолг" base="d2p1:DocumentObject">
+		<property name="Контакт" type="d2p1:CatalogRef.Контакты"/>
+		<property name="Долг" type="d2p1:CatalogRef.Долги"/>
+		<property name="Кошелек" type="d2p1:CatalogRef.КошелькиИСчета"/>
+		<property name="ФинансоваяЦель" type="d2p1:CatalogRef.ФинансовыеЦели"/>
+		<property name="ВалютаВыдано" type="d2p1:CatalogRef.Валюты"/>
+		<property name="СуммаВыдано" type="xs:decimal"/>
+		<property name="ВалютаЗайма" type="d2p1:CatalogRef.Валюты"/>
+		<property name="СуммаЗайма" type="xs:decimal"/>
+		<property name="СуммаДополнительныхРасходов" type="xs:decimal"/>
+		<property name="ВсегоРасход" type="xs:decimal"/>
+		<property name="ПредставлениеДолга" type="xs:string" lowerBound="0"/>
+		<property name="ПредставлениеКошелька" type="xs:string" lowerBound="0"/>
+		<property name="ТипОперацииСтрокой" type="xs:string" lowerBound="0"/>
+		<property name="ДополнительныеРасходы" type="d2p1:DocumentTabularSectionRow.МыДалиВДолг.ДополнительныеРасходы" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentObject.НамВернулиДолг" base="d2p1:DocumentObject">
+		<property name="Контакт" type="d2p1:CatalogRef.Контакты"/>
+		<property name="Долг" type="d2p1:CatalogRef.Долги"/>
+		<property name="Кошелек" type="d2p1:CatalogRef.КошелькиИСчета"/>
+		<property name="ФинансоваяЦель" type="d2p1:CatalogRef.ФинансовыеЦели"/>
+		<property name="ВалютаПолучено" type="d2p1:CatalogRef.Валюты"/>
+		<property name="СуммаПолучено" type="xs:decimal"/>
+		<property name="СуммаПроцентов" type="xs:decimal"/>
+		<property name="ВалютаДолга" type="d2p1:CatalogRef.Валюты"/>
+		<property name="СуммаВозвратаДолга" type="xs:decimal"/>
+		<property name="СуммаПроцентовВВалютеДолга" type="xs:decimal"/>
+		<property name="СуммаСписания" type="xs:decimal"/>
+		<property name="СтатьяДоходовПоПроцентам" type="d2p1:CatalogRef.СтатьиДоходов"/>
+		<property name="СтатьяСписания" type="d2p1:CatalogRef.СтатьиРасходов"/>
+		<property name="СуммаДополнительныхРасходов" type="xs:decimal"/>
+		<property name="ВсегоСуммаПоступления" type="xs:decimal"/>
+		<property name="ПредставлениеДолга" type="xs:string" lowerBound="0"/>
+		<property name="ПредставлениеКошелька" type="xs:string" lowerBound="0"/>
+		<property name="ТипОперацииСтрокой" type="xs:string" lowerBound="0"/>
+		<property name="ДополнительныеРасходы" type="d2p1:DocumentTabularSectionRow.НамВернулиДолг.ДополнительныеРасходы" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentObject.ОбменВалюты" base="d2p1:DocumentObject">
+		<property name="КошелекОткуда" type="d2p1:CatalogRef.КошелькиИСчета"/>
+		<property name="ФинансоваяЦельОткуда" type="d2p1:CatalogRef.ФинансовыеЦели"/>
+		<property name="СуммаСписания" type="xs:decimal"/>
+		<property name="ВалютаСписания" type="d2p1:CatalogRef.Валюты"/>
+		<property name="КошелекКуда" type="d2p1:CatalogRef.КошелькиИСчета"/>
+		<property name="ФинансоваяЦельКуда" type="d2p1:CatalogRef.ФинансовыеЦели"/>
+		<property name="СуммаПоступления" type="xs:decimal"/>
+		<property name="ВалютаПоступления" type="d2p1:CatalogRef.Валюты"/>
+		<property name="РасходыИзКошелькаПоступления" type="xs:decimal"/>
+		<property name="РасходыИзКошелькаСписания" type="xs:decimal"/>
+		<property name="СписаноСУчетомРасходов" type="xs:decimal"/>
+		<property name="ПолученоСУчетомРасходов" type="xs:decimal"/>
+		<property name="ПредставлениеКошелькаОткуда" type="xs:string" lowerBound="0"/>
+		<property name="ПредставлениеКошелькаКуда" type="xs:string" lowerBound="0"/>
+		<property name="ТипОперацииСтрокой" type="xs:string" lowerBound="0"/>
+		<property name="ДополнительныеРасходы" type="d2p1:DocumentTabularSectionRow.ОбменВалюты.ДополнительныеРасходы" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentObject.Перемещение" base="d2p1:DocumentObject">
+		<property name="КошелекОткуда" type="d2p1:CatalogRef.КошелькиИСчета"/>
+		<property name="ФинансоваяЦельОткуда" type="d2p1:CatalogRef.ФинансовыеЦели"/>
+		<property name="КошелекКуда" type="d2p1:CatalogRef.КошелькиИСчета"/>
+		<property name="ФинансоваяЦельКуда" type="d2p1:CatalogRef.ФинансовыеЦели"/>
+		<property name="СуммаОперации" type="xs:decimal"/>
+		<property name="РасходыИзКошелькаПоступления" type="xs:decimal"/>
+		<property name="РасходыИзКошелькаСписания" type="xs:decimal"/>
+		<property name="ВалютаОперации" type="d2p1:CatalogRef.Валюты"/>
+		<property name="СписаноСУчетомРасходов" type="xs:decimal"/>
+		<property name="ПолученоСУчетомРасходов" type="xs:decimal"/>
+		<property name="ПредставлениеКошелькаОткуда" type="xs:string" lowerBound="0"/>
+		<property name="ПредставлениеКошелькаКуда" type="xs:string" lowerBound="0"/>
+		<property name="ТипОперацииСтрокой" type="xs:string" lowerBound="0"/>
+		<property name="ДополнительныеРасходы" type="d2p1:DocumentTabularSectionRow.Перемещение.ДополнительныеРасходы" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentObject.Расход" base="d2p1:DocumentObject">
+		<property name="КошелекДолг" type="xs:anyType" nillable="true"/>
+		<property name="ВалютаОперации" type="d2p1:CatalogRef.Валюты"/>
+		<property name="СуммаОплаты" type="xs:decimal"/>
+		<property name="СтоимостьИмущества" type="xs:decimal"/>
+		<property name="СуммаСкидки" type="xs:decimal"/>
+		<property name="СуммаЧека" type="xs:decimal"/>
+		<property name="СтатьиРасходовСКомментариями" type="xs:string" lowerBound="0"/>
+		<property name="ПредставлениеКошелькаДолга" type="xs:string" lowerBound="0"/>
+		<property name="ТипОперацииСтрокой" type="xs:string" lowerBound="0"/>
+		<property name="СловаДляПоиска" type="xs:string" lowerBound="0"/>
+		<property name="ФинансоваяЦельОткуда" type="d2p1:CatalogRef.ФинансовыеЦели" lowerBound="0" nillable="true"/>
+		<property name="Расходы" type="d2p1:DocumentTabularSectionRow.Расход.Расходы" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://v8.1c.ru/Money/MobileConfig" name="DocumentObject.УниверсальнаяОперация" base="d2p1:DocumentObject">
+		<property name="СуммаДоходовОперации" type="xs:decimal"/>
+		<property name="ВалютаДоходовОперации" type="d2p1:CatalogRef.Валюты"/>
+		<property name="СуммаРасходовОперации" type="xs:decimal"/>
+		<property name="ВалютаРасходовОперации" type="d2p1:CatalogRef.Валюты"/>
+		<property name="ТипОперацииСтрокой" type="xs:string" lowerBound="0"/>
+		<property name="Проводки" type="d2p1:DocumentTabularSectionRow.УниверсальнаяОперация.Проводки" lowerBound="0" upperBound="99999"/>
+		<property name="Доходы" type="d2p1:DocumentTabularSectionRow.УниверсальнаяОперация.Доходы" lowerBound="0" upperBound="99999"/>
+		<property name="Расходы" type="d2p1:DocumentTabularSectionRow.УниверсальнаяОперация.Расходы" lowerBound="0" upperBound="99999"/>
+		<property name="Перемещения" type="d2p1:DocumentTabularSectionRow.УниверсальнаяОперация.Перемещения" lowerBound="0" upperBound="99999"/>
+		<property name="Накопления" type="d2p1:DocumentTabularSectionRow.УниверсальнаяОперация.Накопления" lowerBound="0" upperBound="99999"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.Доход.Доходы">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Кошелек" type="d3p1:CatalogRef.КошелькиИСчета"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦель" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="СтатьяДохода" type="d3p1:CatalogRef.СтатьиДоходов"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="СуммаВВалютеОперации" type="xs:decimal"/>
+		<property name="Курс" type="xs:decimal"/>
+		<property name="Кратность" type="xs:decimal"/>
+		<property name="КомментарийСтроки" type="xs:string"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.МыВернулиДолг.ДополнительныеРасходы">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="КошелекРасхода" type="d3p1:CatalogRef.КошелькиИСчета"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="СтатьяРасхода" type="d3p1:CatalogRef.СтатьиРасходов"/>
+		<property name="СуммаРасхода" type="xs:decimal"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦель" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.МыВзялиВДолг.ДополнительныеРасходы">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="КошелекРасхода" type="d3p1:CatalogRef.КошелькиИСчета"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="СтатьяРасхода" type="d3p1:CatalogRef.СтатьиРасходов"/>
+		<property name="СуммаРасхода" type="xs:decimal"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦель" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.МыДалиВДолг.ДополнительныеРасходы">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="КошелекРасхода" type="d3p1:CatalogRef.КошелькиИСчета"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="СтатьяРасхода" type="d3p1:CatalogRef.СтатьиРасходов"/>
+		<property name="СуммаРасхода" type="xs:decimal"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦель" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.НамВернулиДолг.ДополнительныеРасходы">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="КошелекРасхода" type="d3p1:CatalogRef.КошелькиИСчета"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="СтатьяРасхода" type="d3p1:CatalogRef.СтатьиРасходов"/>
+		<property name="СуммаРасхода" type="xs:decimal"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦель" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.ОбменВалюты.ДополнительныеРасходы">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Кошелек" type="d3p1:CatalogRef.КошелькиИСчета"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦель" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="СтатьяРасхода" type="d3p1:CatalogRef.СтатьиРасходов"/>
+		<property name="СуммаРасхода" type="xs:decimal"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.Перемещение.ДополнительныеРасходы">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Кошелек" type="d3p1:CatalogRef.КошелькиИСчета"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦель" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="СтатьяРасхода" type="d3p1:CatalogRef.СтатьиРасходов"/>
+		<property name="СуммаРасхода" type="xs:decimal"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.Расход.Расходы">
+		<property name="СтатьяРасходаИмущество" type="xs:anyType" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦель" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="СкидкаВведенаВручную" type="xs:boolean"/>
+		<property name="Скидка" type="xs:decimal"/>
+		<property name="КомментарийСтроки" type="xs:string"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.УниверсальнаяОперация.Доходы">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="СтатьяДохода" type="d3p1:CatalogRef.СтатьиДоходов"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="РазделУчета" type="d3p1:CatalogRef.РазделыУчета"/>
+		<property name="ОбъектУчета" type="xs:anyType" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦель" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Валюта" type="d3p1:CatalogRef.Валюты"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="КомментарийСтроки" type="xs:string"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.УниверсальнаяОперация.Накопления">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦель" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Валюта" type="d3p1:CatalogRef.Валюты"/>
+		<property name="ИспользованоНакоплений" type="xs:decimal"/>
+		<property name="ИспользованоСвободныхСредств" type="xs:decimal"/>
+		<property name="КомментарийСтроки" type="xs:string"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.УниверсальнаяОперация.Перемещения">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="РазделУчетаДт" type="d3p1:CatalogRef.РазделыУчета"/>
+		<property name="ОбъектУчетаДт" type="xs:anyType" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦельДт" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="РазделУчетаКт" type="d3p1:CatalogRef.РазделыУчета"/>
+		<property name="ОбъектУчетаКт" type="xs:anyType" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦельКт" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Валюта" type="d3p1:CatalogRef.Валюты"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="КомментарийСтроки" type="xs:string"/>
+		<property name="СуммаКт" type="xs:decimal"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ВалютаКт" type="d3p1:CatalogRef.Валюты"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.УниверсальнаяОперация.Проводки">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ТипПроводки" type="d3p1:EnumRef.ТипыПроводок"/>
+		<property name="СубконтоКт1" type="xs:anyType" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦельКт" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+		<property name="СубконтоДт1" type="xs:anyType" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦельДт" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+		<property name="СуммаКт" type="xs:decimal"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ВалютаКт" type="d3p1:CatalogRef.Валюты"/>
+		<property name="КоличествоДт" type="xs:decimal"/>
+		<property name="СуммаДт" type="xs:decimal"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ВалютаДт" type="d3p1:CatalogRef.Валюты"/>
+		<property name="КомментарийСтроки" type="xs:string"/>
+	</objectType>
+	<objectType name="DocumentTabularSectionRow.УниверсальнаяОперация.Расходы">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="СтатьяРасхода" type="d3p1:CatalogRef.СтатьиРасходов"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="РазделУчета" type="d3p1:CatalogRef.РазделыУчета"/>
+		<property name="ОбъектУчета" type="xs:anyType" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦель" type="d3p1:CatalogRef.ФинансовыеЦели"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Валюта" type="d3p1:CatalogRef.Валюты"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="КомментарийСтроки" type="xs:string"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ФинансоваяЦельОткуда" type="d3p1:CatalogRef.ФинансовыеЦели" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="InformationRegisterList">
+		<property name="Objects" type="xs:anyType" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord.КурсыВалют">
+		<property name="Period" type="xs:dateTime"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Валюта" type="d3p1:CatalogRef.Валюты"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="БазоваяВалюта" type="d3p1:CatalogRef.Валюты"/>
+		<property name="Курс" type="xs:decimal"/>
+		<property name="Кратность" type="xs:decimal"/>
+	</objectType>
+	<objectType name="InformationRegisterRecordKey.КурсыВалют">
+		<property name="Period" type="xs:dateTime" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Валюта" type="d3p1:CatalogRef.Валюты" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="БазоваяВалюта" type="d3p1:CatalogRef.Валюты" lowerBound="0"/>
+	</objectType>
+	<objectType name="InformationRegisterRecordSet.КурсыВалют">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Filter" type="d3p1:InformationRegisterRecordKey.КурсыВалют"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Record" type="d3p1:InformationRegisterRecord.КурсыВалют" lowerBound="0" upperBound="999999999"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord.ОбщиеНастройки">
+		<property name="КлючОбъекта" type="xs:string" nillable="true"/>
+		<property name="КлючНастроек" type="xs:string" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="Настройки" type="d3p1:ValueStorage" nillable="true"/>
+		<property name="Представление" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="InformationRegisterRecordKey.ОбщиеНастройки">
+		<property name="КлючОбъекта" type="xs:string" nillable="true"/>
+		<property name="КлючНастроек" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="InformationRegisterRecordSet.ОбщиеНастройки">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Filter" type="d3p1:InformationRegisterRecordKey.ОбщиеНастройки"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Record" type="d3p1:InformationRegisterRecord.ОбщиеНастройки" lowerBound="0" upperBound="999999999"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord.Расписания">
+		<property name="ВладелецРасписания" type="xs:anyType" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ВалютаДохода" type="d3p1:CatalogRef.Валюты" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ВалютаРасхода" type="d3p1:CatalogRef.Валюты" nillable="true"/>
+		<property name="ДатаНачалаРасписания" type="xs:dateTime" nillable="true"/>
+		<property name="ДатаОкончанияРасписания" type="xs:dateTime" nillable="true"/>
+		<property name="КоличествоПовторов" type="xs:double" nillable="true"/>
+		<property name="НеИспользовать" type="xs:boolean" nillable="true"/>
+		<property name="ОписаниеРасписания" type="xs:string" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Периодичность" type="d3p1:EnumRef.СпособыПовторовСобытий" nillable="true"/>
+		<property name="ПорядокДнейНедели" type="xs:double" nillable="true"/>
+		<property name="ПорядокПериодов" type="xs:double" nillable="true"/>
+		<property name="СуммаДолга" type="xs:decimal" nillable="true"/>
+		<property name="СуммаДохода" type="xs:decimal" nillable="true"/>
+		<property name="СуммаКомиссии" type="xs:decimal" nillable="true"/>
+		<property name="СуммаПроцентов" type="xs:decimal" nillable="true"/>
+		<property name="СуммаРасхода" type="xs:decimal" nillable="true"/>
+		<property name="ШаблонДнейНедели" type="xs:string" nillable="true"/>
+		<property name="ШаблонНомеровМесяцев" type="xs:string" nillable="true"/>
+		<property name="ШаблонЧиселМесяца" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="InformationRegisterRecordKey.Расписания">
+		<property name="ВладелецРасписания" type="xs:anyType" nillable="true"/>
+	</objectType>
+	<objectType name="InformationRegisterRecordSet.Расписания">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Filter" type="d3p1:InformationRegisterRecordKey.Расписания"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Record" type="d3p1:InformationRegisterRecord.Расписания" lowerBound="0" upperBound="999999999"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord.ДатыРасписаний">
+		<property name="ВладелецРасписания" type="xs:anyType" nillable="true"/>
+		<property name="ПлановаяДата" type="xs:dateTime" nillable="true"/>
+		<property name="АктуальнаяДата" type="xs:dateTime" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ВалютаДохода" type="d3p1:CatalogRef.Валюты" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ВалютаРасхода" type="d3p1:CatalogRef.Валюты" nillable="true"/>
+		<property name="Выполнено" type="xs:boolean" nillable="true"/>
+		<property name="ПлановаяОперация" type="xs:anyType" nillable="true"/>
+		<property name="Пропустить" type="xs:boolean" nillable="true"/>
+		<property name="СуммаДолга" type="xs:decimal" nillable="true"/>
+		<property name="СуммаДохода" type="xs:decimal" nillable="true"/>
+		<property name="СуммаКомиссии" type="xs:decimal" nillable="true"/>
+		<property name="СуммаПроцентов" type="xs:decimal" nillable="true"/>
+		<property name="СуммаРасхода" type="xs:decimal" nillable="true"/>
+	</objectType>
+	<objectType name="InformationRegisterRecordKey.ДатыРасписаний">
+		<property name="ВладелецРасписания" type="xs:anyType" nillable="true"/>
+		<property name="ПлановаяДата" type="xs:dateTime" nillable="true"/>
+	</objectType>
+	<objectType name="InformationRegisterRecordSet.ДатыРасписаний">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Filter" type="d3p1:InformationRegisterRecordKey.ДатыРасписаний"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Record" type="d3p1:InformationRegisterRecord.ДатыРасписаний" lowerBound="0" upperBound="999999999"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord.ПринадлежностьФайлов">
+		<property name="ВладелецФайла" type="xs:anyType" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ПрикрепленныйФайл" type="d3p1:CatalogRef.ПрикрепленныеФайлы" nillable="false"/>
+	</objectType>
+	<objectType name="InformationRegisterRecordKey.ПринадлежностьФайлов">
+		<property name="ВладелецФайла" type="xs:anyType" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ПрикрепленныйФайл" type="d3p1:CatalogRef.ПрикрепленныеФайлы" nillable="false"/>
+	</objectType>
+	<objectType name="InformationRegisterRecordSet.ПринадлежностьФайлов">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Filter" type="d3p1:InformationRegisterRecordKey.ПринадлежностьФайлов"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Record" type="d3p1:InformationRegisterRecord.ПринадлежностьФайлов" lowerBound="0" upperBound="999999999"/>
+	</objectType>
+	<objectType name="ObjectDeletionList">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Objects" type="d3p1:ObjectDeletion" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="ObjectDeletion">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Ref" type="d3p1:ARef"/>
+		<property name="MetaDataName" type="xs:string"/>
+	</objectType>
+	<objectType name="ErrorList">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Errors" type="d3p1:Error" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="Error">
+		<property name="Code" type="xs:string" nillable="true"/>
+		<property name="Description" type="xs:string" nillable="true"/>
+		<property name="TechInfo" type="xs:string" nillable="true"/>
+		<property name="HelpInfo" type="xs:string" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Ref" type="d3p1:ARef" nillable="true"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord.ПоказателиБюджета" open="true">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ВариантБюджета" type="d3p1:CatalogRef.ВариантыБюджетов" nillable="true"/>
+		<property name="НачалоПериода" type="xs:dateTime" nillable="false"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="РазделБюджета" type="d3p1:CatalogRef.ФинансовыеЦели" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ГрафаБюджета" type="d3p1:CatalogRef.ГрафыБюджета" nillable="true"/>
+		<property name="СтатьяБюджета" type="xs:anyType" nillable="true"/>
+		<property name="Сумма" type="xs:decimal" nillable="true"/>
+		<property name="Порядок" type="xs:decimal" nillable="true"/>
+		<property name="Комментарий" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="InformationRegisterRecordKey.ПоказателиБюджета" open="true">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ВариантБюджета" type="d3p1:CatalogRef.ВариантыБюджетов" nillable="true"/>
+		<property name="НачалоПериода" type="xs:dateTime" lowerBound="0" nillable="false"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="РазделБюджета" type="d3p1:CatalogRef.ФинансовыеЦели" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ГрафаБюджета" type="d3p1:CatalogRef.ГрафыБюджета" lowerBound="0" nillable="true"/>
+		<property name="СтатьяБюджета" type="xs:anyType" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="InformationRegisterRecordSet.ПоказателиБюджета">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Filter" type="d3p1:InformationRegisterRecordKey.ПоказателиБюджета"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Record" type="d3p1:InformationRegisterRecord.ПоказателиБюджета" lowerBound="0" upperBound="999999999"/>
+	</objectType>
+	<objectType name="InformationRegisterRecord.ПоказателиПлановыхОпераций" open="true">
+		<property name="ВладелецРасписания" type="xs:anyType" nillable="false"/>
+		<property name="ПлановаяДата" type="xs:dateTime" nillable="false"/>
+		<property name="АктуальнаяДата" type="xs:dateTime" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="РазделБюджета" type="d3p1:CatalogRef.ФинансовыеЦели" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ГрафаБюджета" type="d3p1:CatalogRef.ГрафыБюджета" nillable="true"/>
+		<property name="СтатьяБюджета" type="xs:anyType" nillable="true"/>
+		<property name="ОткудаКуда" type="xs:anyType" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Валюта" type="d3p1:CatalogRef.Валюты" nillable="true"/>
+		<property name="Сумма" type="xs:decimal" nillable="true"/>
+		<property name="ПлановаяОперация" type="xs:anyType" nillable="true"/>
+		<property name="Комментарий" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="InformationRegisterRecordKey.ПоказателиПлановыхОпераций" open="true">
+		<property name="ВладелецРасписания" type="xs:anyType" nillable="false"/>
+		<property name="ПлановаяДата" type="xs:dateTime" nillable="false"/>
+		<property name="АктуальнаяДата" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="РазделБюджета" type="d3p1:CatalogRef.ФинансовыеЦели" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="ГрафаБюджета" type="d3p1:CatalogRef.ГрафыБюджета" lowerBound="0" nillable="true"/>
+		<property name="СтатьяБюджета" type="xs:anyType" lowerBound="0" nillable="true"/>
+		<property name="ОткудаКуда" type="xs:anyType" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Валюта" type="d3p1:CatalogRef.Валюты" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="InformationRegisterRecordSet.ПоказателиПлановыхОпераций">
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Filter" type="d3p1:InformationRegisterRecordKey.ПоказателиПлановыхОпераций"/>
+		<property xmlns:d3p1="http://v8.1c.ru/Money/MobileConfig" name="Record" type="d3p1:InformationRegisterRecord.ПоказателиПлановыхОпераций" lowerBound="0" upperBound="999999999"/>
+	</objectType>
+</package>

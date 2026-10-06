@@ -1,0 +1,876 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<Group>Vertical</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ShowCommandBar>false</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаБыстрыеОтборы" id="83">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые отборы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые отборы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>#FFFFD9</BackColor>
+			<ExtendedTooltip name="ГруппаБыстрыеОтборыРасширеннаяПодсказка" id="84"/>
+			<ChildItems>
+				<RadioButtonField name="Актуальность" id="85">
+					<DataPath>Актуальность</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<EqualColumnsWidth>false</EqualColumnsWidth>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Актуальные</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Неактуальные</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">-1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Все цели</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<Font ref="sys:DefaultGUIFont" kind="WindowsFont" scale="100"/>
+					<ContextMenu name="АктуальностьКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="АктуальностьРасширеннаяПодсказка" id="87"/>
+					<Events>
+						<Event name="OnChange">АктуальностьПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="135">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пользовательских настроек</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>WeakSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="136"/>
+				</UsualGroup>
+				<LabelDecoration name="ДекорацияОтступ" id="137">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>1</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Font ref="sys:DefaultGUIFont" kind="WindowsFont" scale="100"/>
+					<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="138"/>
+					<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="139"/>
+				</LabelDecoration>
+				<Button name="НастройкаСписка1" id="140">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Item.Список.StandardCommand.ListSettings</CommandName>
+					<Font ref="sys:DefaultGUIFont" kind="WindowsFont" scale="100"/>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки...</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НастройкаСписка1РасширеннаяПодсказка" id="141"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="ГруппаКоманднаяПанельФормы" id="53">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельФормыРасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<Button name="Создать" id="96">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Create</CommandName>
+					<ExtendedTooltip name="СоздатьРасширеннаяПодсказка" id="97"/>
+				</Button>
+				<Button name="Скопировать" id="98">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Copy</CommandName>
+					<ExtendedTooltip name="СкопироватьРасширеннаяПодсказка" id="99"/>
+				</Button>
+				<Button name="Изменить" id="100">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Change</CommandName>
+					<ExtendedTooltip name="ИзменитьРасширеннаяПодсказка" id="101"/>
+				</Button>
+				<Button name="УстановитьПометкуУдаления" id="102">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.SetDeletionMark</CommandName>
+					<ExtendedTooltip name="УстановитьПометкуУдаленияРасширеннаяПодсказка" id="103"/>
+				</Button>
+				<Button name="Обновить" id="104">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Refresh</CommandName>
+					<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="105"/>
+				</Button>
+				<Button name="Найти" id="106">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Find</CommandName>
+					<ExtendedTooltip name="НайтиРасширеннаяПодсказка" id="107"/>
+				</Button>
+				<Button name="ОтменитьПоиск" id="108">
+					<Type>CommandBarButton</Type>
+					<Representation>Picture</Representation>
+					<CommandName>Form.StandardCommand.CancelSearch</CommandName>
+					<ExtendedTooltip name="ОтменитьПоискРасширеннаяПодсказка" id="109"/>
+				</Button>
+				<Button name="НастройкаСписка" id="110">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.ListSettings</CommandName>
+					<ExtendedTooltip name="НастройкаСпискаРасширеннаяПодсказка" id="111"/>
+				</Button>
+				<Button name="ЗагрузитьНастройкиДинамическогоСписка" id="112">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.LoadDynamicListSettings</CommandName>
+					<ExtendedTooltip name="ЗагрузитьНастройкиДинамическогоСпискаРасширеннаяПодсказка" id="113"/>
+				</Button>
+				<Button name="СохранитьНастройкиДинамическогоСписка" id="114">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.SaveDynamicListSettings</CommandName>
+					<ExtendedTooltip name="СохранитьНастройкиДинамическогоСпискаРасширеннаяПодсказка" id="115"/>
+				</Button>
+				<Button name="СтандартныеНастройкиДинамическогоСписка" id="116">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.DynamicListStandardSettings</CommandName>
+					<ExtendedTooltip name="СтандартныеНастройкиДинамическогоСпискаРасширеннаяПодсказка" id="117"/>
+				</Button>
+				<Button name="ВывестиСписок" id="118">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.OutputList</CommandName>
+					<ExtendedTooltip name="ВывестиСписокРасширеннаяПодсказка" id="119"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<DefaultItem>true</DefaultItem>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>true</AutoRefresh>
+			<AutoRefreshPeriod>30</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<ChildItems>
+					<Button name="Справка" id="120">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Help</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="121"/>
+					</Button>
+					<Button name="ИзменитьФорму" id="122">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ИзменитьФормуРасширеннаяПодсказка" id="123"/>
+					</Button>
+					<Button name="Закрыть" id="124">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Close</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="125"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="64"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="126">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="127"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="128"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="129">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="130"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="131"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="132">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="133"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="134"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeDeleteRow">СписокПередУдалением</Event>
+				<Event name="OnLoadUserSettingsAtServer">СписокПриЗагрузкеПользовательскихНастроекНаСервере</Event>
+				<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+				<Event name="BeforeRowChange">СписокПередНачаломИзменения</Event>
+				<Event name="OnUpdateUserSettingSetAtServer">СписокПриОбновленииСоставаПользовательскихНастроекНаСервере</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Ссылка" id="22">
+					<DataPath>Список.Ссылка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СсылкаExtendedTooltip" id="65"/>
+				</LabelField>
+				<LabelField name="Приоритет" id="24">
+					<DataPath>Список.РеквизитДопУпорядочивания</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приоритет</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>1</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПриоритетКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ПриоритетExtendedTooltip" id="66"/>
+				</LabelField>
+				<CheckBoxField name="Активность" id="6">
+					<DataPath>Список.Активность</DataPath>
+					<ContextMenu name="АктивностьКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="АктивностьExtendedTooltip" id="67"/>
+				</CheckBoxField>
+				<LabelField name="Наименование" id="4">
+					<DataPath>Список.Наименование</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="68"/>
+				</LabelField>
+				<LabelField name="Срок" id="14">
+					<DataPath>Список.Срок</DataPath>
+					<Width>10</Width>
+					<ContextMenu name="СрокКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СрокExtendedTooltip" id="69"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаСуммаВалюта" id="26">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма, валюта</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаСуммаВалютаExtendedTooltip" id="70"/>
+					<ChildItems>
+						<LabelField name="Сумма" id="10">
+							<DataPath>Список.Сумма</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма цели</v8:content>
+								</v8:item>
+							</Title>
+							<Width>10</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="СуммаКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="СуммаExtendedTooltip" id="71"/>
+						</LabelField>
+						<LabelField name="Валюта" id="12">
+							<DataPath>Список.Валюта</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>4</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ВалютаКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="ВалютаExtendedTooltip" id="72"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="Комментарий" id="51">
+					<DataPath>Список.Комментарий</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<AutoCellHeight>true</AutoCellHeight>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="КомментарийExtendedTooltip" id="73"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаНакопленоСуммаВалюта" id="27">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Накоплено, валюта</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаНакопленоСуммаВалютаExtendedTooltip" id="74"/>
+					<ChildItems>
+						<LabelField name="ТекущиеНакопления" id="16">
+							<DataPath>Список.ТекущиеНакопления</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В кошельках</v8:content>
+								</v8:item>
+							</Title>
+							<Width>10</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ТекущиеНакопленияКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ТекущиеНакопленияExtendedTooltip" id="75"/>
+						</LabelField>
+						<LabelField name="Валюта1" id="29">
+							<DataPath>Список.Валюта</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>1</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="Валюта1КонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="Валюта1ExtendedTooltip" id="76"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаИспользованоСуммаВалюта" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Потрачено, валюта</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаИспользованоСуммаВалютаExtendedTooltip" id="77"/>
+					<ChildItems>
+						<LabelField name="ВсегоИспользовано" id="18">
+							<DataPath>Список.ВсегоИспользовано</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Потрачено</v8:content>
+								</v8:item>
+							</Title>
+							<Width>10</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2; ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ВсегоИспользованоКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="ВсегоИспользованоРасширеннаяПодсказка" id="78"/>
+						</LabelField>
+						<LabelField name="Валюта2" id="31">
+							<DataPath>Список.Валюта</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>1</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="Валюта2КонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="Валюта2ExtendedTooltip" id="79"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаОсталосьНакопитьВалюта" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Осталось накопить, валюта</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаОсталосьНакопитьВалютаExtendedTooltip" id="80"/>
+					<ChildItems>
+						<LabelField name="ОсталосьНакопить" id="47">
+							<DataPath>Список.ОсталосьНакопить</DataPath>
+							<Width>10</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ОсталосьНакопитьКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="ОсталосьНакопитьExtendedTooltip" id="81"/>
+						</LabelField>
+						<LabelField name="Валюта3" id="49">
+							<DataPath>Список.Валюта</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>1</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="Валюта3КонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="Валюта3ExtendedTooltip" id="82"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Активность</Field>
+				<Field>Список.Валюта</Field>
+				<Field>Список.ВерсияДанных</Field>
+				<Field>Список.ВсегоИспользовано</Field>
+				<Field>Список.ОсталосьНакопить</Field>
+				<Field>Список.ПометкаУдаления</Field>
+				<Field>Список.Предопределенный</Field>
+				<Field>Список.РеквизитДопУпорядочивания</Field>
+				<Field>Список.Срок</Field>
+				<Field>Список.Ссылка</Field>
+				<Field>Список.Сумма</Field>
+				<Field>Список.ТекущиеНакопления</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ФинансовыеЦели.Ссылка КАК Ссылка,
+	ФинансовыеЦели.ВерсияДанных КАК ВерсияДанных,
+	ФинансовыеЦели.ПометкаУдаления КАК ПометкаУдаления,
+	ФинансовыеЦели.Наименование КАК Наименование,
+	ВЫБОР
+		КОГДА ФинансовыеЦели.Предопределенный
+			ТОГДА ИСТИНА
+		ИНАЧЕ ФинансовыеЦели.Активность
+	КОНЕЦ КАК Активность,
+	ФинансовыеЦели.РеквизитДопУпорядочивания КАК РеквизитДопУпорядочивания,
+	ФинансовыеЦели.Комментарий КАК Комментарий,
+	ФинансовыеЦели.Сумма КАК Сумма,
+	ФинансовыеЦели.Валюта КАК Валюта,
+	ФинансовыеЦели.Срок КАК Срок,
+	ФинансовыеЦели.ШаблонНакопления КАК ШаблонНакопления,
+	ФинансовыеЦели.Предопределенный КАК Предопределенный,
+	ВЫРАЗИТЬ(ПодЗапрос.ОстатокНакоплений КАК ЧИСЛО(14, 2)) КАК ТекущиеНакопления,
+	ВЫРАЗИТЬ(ЕСТЬNULL(ПодЗапрос.ИспользованоНакоплений, 0) КАК ЧИСЛО(14, 2)) КАК ИспользованоНакоплений,
+	ВЫРАЗИТЬ(ЕСТЬNULL(ПодЗапрос.ИспользованоСвободныхСредств, 0) КАК ЧИСЛО(14, 2)) КАК ИспользованоСвободныхСредств,
+	(ВЫРАЗИТЬ(ЕСТЬNULL(ПодЗапрос.ИспользованоНакоплений, 0) КАК ЧИСЛО(14, 2))) + ЕСТЬNULL(ПодЗапрос.ИспользованоСвободныхСредств, 0) КАК ВсегоИспользовано,
+	ВЫРАЗИТЬ(ВЫБОР
+			КОГДА ФинансовыеЦели.Сумма &lt;&gt; 0
+				ТОГДА ФинансовыеЦели.Сумма - ЕСТЬNULL(ПодЗапрос.ИспользованоСвободныхСредств, 0) - ЕСТЬNULL(ПодЗапрос.ИспользованоНакоплений, 0) - ЕСТЬNULL(ПодЗапрос.ОстатокНакоплений, 0)
+			ИНАЧЕ 0
+		КОНЕЦ КАК ЧИСЛО(14, 2)) КАК ОсталосьНакопить
+{ВЫБРАТЬ
+	Ссылка.*,
+	ВерсияДанных,
+	ПометкаУдаления,
+	Наименование,
+	Активность,
+	РеквизитДопУпорядочивания,
+	Комментарий,
+	Сумма,
+	Валюта.*,
+	Срок,
+	ШаблонНакопления.*,
+	Предопределенный,
+	ТекущиеНакопления,
+	ИспользованоНакоплений,
+	ИспользованоСвободныхСредств,
+	ВсегоИспользовано,
+	ОсталосьНакопить}
+ИЗ
+	Справочник.ФинансовыеЦели КАК ФинансовыеЦели
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ОстаткиНакоплений.Ссылка КАК Ссылка,
+			ОстаткиНакоплений.ОстатокНакоплений КАК ОстатокНакоплений,
+			СУММА(ЕСТЬNULL(РасходыНаЦели.ИспользованоНакопленийОборот, 0) * ЕСТЬNULL(КурсыРасходов.Курс, 0) * ЕСТЬNULL(ОстаткиНакоплений.КратностьЦели, 0) / (ЕСТЬNULL(ОстаткиНакоплений.КурсЦели, 1) * ЕСТЬNULL(КурсыРасходов.Кратность, 1))) КАК ИспользованоНакоплений,
+			СУММА(ЕСТЬNULL(РасходыНаЦели.ИспользованоСвободныхСредствОборот, 0) * ЕСТЬNULL(КурсыРасходов.Курс, 0) * ЕСТЬNULL(ОстаткиНакоплений.КратностьЦели, 0) / (ЕСТЬNULL(ОстаткиНакоплений.КурсЦели, 1) * ЕСТЬNULL(КурсыРасходов.Кратность, 1))) КАК ИспользованоСвободныхСредств
+		ИЗ
+			(ВЫБРАТЬ
+				ФинансовыеЦели.Ссылка КАК Ссылка,
+				СУММА(ЕСТЬNULL(жОстатки.ВалютнаяСуммаОстаток, 0) * ЕСТЬNULL(КурсыКошельков.Курс, 0) * ЕСТЬNULL(КурсыЦелей.Кратность, 0) / (ЕСТЬNULL(КурсыЦелей.Курс, 1) * ЕСТЬNULL(КурсыКошельков.Кратность, 1))) КАК ОстатокНакоплений,
+				КурсыЦелей.Курс КАК КурсЦели,
+				КурсыЦелей.Кратность КАК КратностьЦели
+			ИЗ
+				Справочник.ФинансовыеЦели КАК ФинансовыеЦели
+					ЛЕВОЕ СОЕДИНЕНИЕ РегистрБухгалтерии.ЖурналОпераций.Остатки(
+							,
+							Счет = ЗНАЧЕНИЕ(ПланСчетов.РазделыУчета.Накопления),
+							,
+							&amp;Кошелек = ""
+								ИЛИ Субконто1 В ИЕРАРХИИ (&amp;Кошелек)) КАК жОстатки
+						ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют.СрезПоследних(, БазоваяВалюта = &amp;ВалютаУчета) КАК КурсыКошельков
+						ПО жОстатки.Валюта = КурсыКошельков.Валюта
+					ПО ФинансовыеЦели.Ссылка = жОстатки.Субконто2
+					ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют.СрезПоследних(, БазоваяВалюта = &amp;ВалютаУчета) КАК КурсыЦелей
+					ПО ФинансовыеЦели.Валюта = КурсыЦелей.Валюта
+			
+			СГРУППИРОВАТЬ ПО
+				ФинансовыеЦели.Ссылка,
+				КурсыЦелей.Курс,
+				КурсыЦелей.Кратность) КАК ОстаткиНакоплений
+				ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ИспользованиеСуммФинансовыхЦелей.Обороты(, , Период, ) КАК РасходыНаЦели
+					ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют.СрезПоследних(, БазоваяВалюта = &amp;ВалютаУчета) КАК КурсыРасходов
+					ПО РасходыНаЦели.Валюта = КурсыРасходов.Валюта
+				ПО ОстаткиНакоплений.Ссылка = РасходыНаЦели.ФинансоваяЦель
+		
+		СГРУППИРОВАТЬ ПО
+			ОстаткиНакоплений.ОстатокНакоплений,
+			ОстаткиНакоплений.Ссылка) КАК ПодЗапрос
+		ПО ФинансовыеЦели.Ссылка = ПодЗапрос.Ссылка
+{ГДЕ
+	ФинансовыеЦели.Ссылка.*,
+	ФинансовыеЦели.ПометкаУдаления,
+	ФинансовыеЦели.Наименование,
+	ФинансовыеЦели.Активность,
+	ФинансовыеЦели.РеквизитДопУпорядочивания,
+	ФинансовыеЦели.Комментарий,
+	ФинансовыеЦели.Валюта.*,
+	ФинансовыеЦели.Срок}</QueryText>
+				<MainTable>Catalog.ФинансовыеЦели</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>РеквизитДопУпорядочивания</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВалютаУчета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта учета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Актуальность" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Актуальность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>Актуальность</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОписаниеОтбора" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Активность</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:BorderColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Сумма</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Сумма</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;без суммы&gt;</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Валюта</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Сумма</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Валюта1</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТекущиеНакопления</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.ТекущиеНакопления</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Валюта2</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>Потрачено</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.ВсегоИспользовано</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Срок</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Срок</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="v8:StandardBeginningDate">
+							<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+							<v8:date>0001-01-01T00:00:00</v8:date>
+						</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;без срока&gt;</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Валюта3</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОсталосьНакопить</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.ОсталосьНакопить</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОсталосьНакопить</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Сумма</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>-</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

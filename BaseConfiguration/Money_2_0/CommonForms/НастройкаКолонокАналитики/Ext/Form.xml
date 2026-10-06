@@ -1,0 +1,1332 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка заполнения аналитики</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ГруппаКомандыФормы" id="78">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды формы</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ГруппаКомандыФормыExtendedTooltip" id="82"/>
+				<ChildItems>
+					<Popup name="ФормаГруппаЗаписатьПоУмолчанию" id="80">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Записать по умолчанию</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Форма группа записать по умолчанию</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Picture>
+							<xr:Ref>StdPicture.SaveReportSettings</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаГруппаЗаписатьПоУмолчаниюExtendedTooltip" id="83"/>
+						<ChildItems>
+							<Button name="ФормаЗаписатьПоУмолчанию" id="28">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаписатьПоУмолчанию</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Для операций вида «Расход из кошелька»</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ФормаЗаписатьПоУмолчаниюExtendedTooltip" id="84"/>
+							</Button>
+							<Button name="ФормаЗаписатьПоУмолчаниюДляВсехОпераций" id="81">
+								<Type>CommandBarButton</Type>
+								<Visible>false</Visible>
+								<Enabled>false</Enabled>
+								<CommandName>Form.Command.ЗаписатьПоУмолчаниюДляВсехОпераций</CommandName>
+								<ExtendedTooltip name="ФормаЗаписатьПоУмолчаниюДляВсехОперацийExtendedTooltip" id="85"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКолонкиФормы" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонки формы</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКолонкиФормыExtendedTooltip" id="86"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаДоступныеАналитики" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступные аналитики</v8:content>
+						</v8:item>
+					</Title>
+					<Width>25</Width>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДоступныеАналитикиExtendedTooltip" id="87"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПодзаголовок2" id="44">
+							<TextColor>#B38000</TextColor>
+							<Font ref="sys:DefaultGUIFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доступные аналитики</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПодзаголовок2КонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ДекорацияПодзаголовок2ExtendedTooltip" id="88"/>
+						</LabelDecoration>
+						<Table name="СписокДоступнойАналитики" id="38">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<Header>false</Header>
+							<HorizontalLinesBWA>false</HorizontalLinesBWA>
+							<VerticalLinesBWA>false</VerticalLinesBWA>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СписокДоступнойАналитики</DataPath>
+							<RowPictureDataPath>СписокДоступнойАналитики.Picture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Pickup</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="СписокДоступнойАналитикиКонтекстноеМеню" id="39">
+								<ChildItems>
+									<ButtonGroup name="СписокДоступнойАналитикиКонтекстноеМенюГруппаКнопокДобавитьВ" id="76">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа кнопок Добавить в...</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СписокДоступнойАналитикиКонтекстноеМенюГруппаКнопокДобавитьВExtendedTooltip" id="89"/>
+										<ChildItems>
+											<Button name="СписокДоступнойАналитикиКонтекстноеМенюДобавитьВШапку" id="75">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьВШапку</CommandName>
+												<ExtendedTooltip name="СписокДоступнойАналитикиКонтекстноеМенюДобавитьВШапкуExtendedTooltip" id="90"/>
+											</Button>
+											<Button name="СписокДоступнойАналитикиКонтекстноеМенюДобавитьВТаблицу" id="74">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьВТаблицу</CommandName>
+												<ExtendedTooltip name="СписокДоступнойАналитикиКонтекстноеМенюДобавитьВТаблицуExtendedTooltip" id="91"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="СписокДоступнойАналитикиКонтекстноеМенюПеречитатьДоступныеАналитики" id="79">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПеречитатьДоступныеАналитики</CommandName>
+										<ExtendedTooltip name="СписокДоступнойАналитикиКонтекстноеМенюПеречитатьДоступныеАналитикиExtendedTooltip" id="92"/>
+									</Button>
+									<Button name="ПланВидовХарактеристикВидыАналитикОткрытьСписок" id="73">
+										<Type>CommandBarButton</Type>
+										<CommandName>0</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Открыть список Аналитика статей</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ПланВидовХарактеристикВидыАналитикОткрытьСписокExtendedTooltip" id="93"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="СписокДоступнойАналитикиКоманднаяПанель" id="40"/>
+							<ExtendedTooltip name="СписокДоступнойАналитикиExtendedTooltip" id="94"/>
+							<SearchStringAddition name="СписокДоступнойАналитикиСтрокаПоиска" id="143">
+								<AdditionSource>
+									<Item>СписокДоступнойАналитики</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДоступнойАналитикиСтрокаПоискаКонтекстноеМеню" id="144"/>
+								<ExtendedTooltip name="СписокДоступнойАналитикиСтрокаПоискаРасширеннаяПодсказка" id="145"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокДоступнойАналитикиСостояниеПросмотра" id="146">
+								<AdditionSource>
+									<Item>СписокДоступнойАналитики</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДоступнойАналитикиСостояниеПросмотраКонтекстноеМеню" id="147"/>
+								<ExtendedTooltip name="СписокДоступнойАналитикиСостояниеПросмотраРасширеннаяПодсказка" id="148"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокДоступнойАналитикиУправлениеПоиском" id="149">
+								<AdditionSource>
+									<Item>СписокДоступнойАналитики</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДоступнойАналитикиУправлениеПоискомКонтекстноеМеню" id="150"/>
+								<ExtendedTooltip name="СписокДоступнойАналитикиУправлениеПоискомРасширеннаяПодсказка" id="151"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="DragCheck">СписокДоступнойАналитикиПроверкаПеретаскивания</Event>
+								<Event name="Selection">СписокДоступнойАналитикиВыбор</Event>
+								<Event name="DragStart">СписокДоступнойАналитикиНачалоПеретаскивания</Event>
+								<Event name="Drag">СписокДоступнойАналитикиПеретаскивание</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СписокДоступнойАналитикиЗначение" id="41">
+									<DataPath>СписокДоступнойАналитики.Value</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="СписокДоступнойАналитикиЗначениеКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="СписокДоступнойАналитикиЗначениеExtendedTooltip" id="95"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСпискиВыбора" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа списки выбора</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа списки выбора</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСпискиВыбораExtendedTooltip" id="96"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКнопкиСписокВерхний" id="56">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кнопки, список верхний</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкиСписокВерхнийExtendedTooltip" id="97"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКнопкиПеремещенияЭлементовСписков1" id="46">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки перемещения элементов списков1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки перемещения элементов списков1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКнопкиПеремещенияЭлементовСписков1ExtendedTooltip" id="98"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация4" id="48">
+											<Height>1</Height>
+											<ContextMenu name="Декорация4КонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="Декорация4ExtendedTooltip" id="99"/>
+										</LabelDecoration>
+										<CommandBar name="ГруппаДобавитьВШапку" id="62">
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Добавить в шапку</v8:content>
+												</v8:item>
+											</Title>
+											<Width>3</Width>
+											<ExtendedTooltip name="ГруппаДобавитьВШапкуExtendedTooltip" id="100"/>
+											<ChildItems>
+												<Button name="ДобавитьВШапку" id="47">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ДобавитьВШапку</CommandName>
+													<ExtendedTooltip name="ДобавитьВШапкуExtendedTooltip" id="101"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
+										<CommandBar name="ГруппаДобавитьВШапкуВсе" id="63">
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Добавить в шапку все</v8:content>
+												</v8:item>
+											</Title>
+											<Width>3</Width>
+											<ExtendedTooltip name="ГруппаДобавитьВШапкуВсеExtendedTooltip" id="102"/>
+											<ChildItems>
+												<Button name="ДобавитьВШапкуВсе" id="58">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ДобавитьВШапкуВсе</CommandName>
+													<ExtendedTooltip name="ДобавитьВШапкуВсеExtendedTooltip" id="103"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
+										<CommandBar name="ГруппаУдалитьИзШапки" id="64">
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Удалить из шапки</v8:content>
+												</v8:item>
+											</Title>
+											<Width>3</Width>
+											<ExtendedTooltip name="ГруппаУдалитьИзШапкиExtendedTooltip" id="104"/>
+											<ChildItems>
+												<Button name="УдалитьИзШапки" id="50">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.УдалитьИзШапки</CommandName>
+													<ExtendedTooltip name="УдалитьИзШапкиExtendedTooltip" id="105"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
+										<CommandBar name="ГруппаУдалитьИзШапкиВсе" id="65">
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Удалить из шапки все</v8:content>
+												</v8:item>
+											</Title>
+											<Width>3</Width>
+											<ExtendedTooltip name="ГруппаУдалитьИзШапкиВсеExtendedTooltip" id="106"/>
+											<ChildItems>
+												<Button name="УдалитьИзШапкиВсе" id="59">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.УдалитьИзШапкиВсе</CommandName>
+													<ExtendedTooltip name="УдалитьИзШапкиВсеExtendedTooltip" id="107"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСписокВерхний" id="22">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа список верхний</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа список верхний</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСписокВерхнийExtendedTooltip" id="108"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияПодзаголовок1" id="24">
+											<TextColor>#B38000</TextColor>
+											<Font ref="sys:DefaultGUIFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Аналитика, заполняемая в шапке одним значением для всей операции</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПодзаголовок1КонтекстноеМеню" id="25"/>
+											<ExtendedTooltip name="ДекорацияПодзаголовок1ExtendedTooltip" id="109"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаСписокАналитикиШапки" id="30">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа список аналитики шапки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа список аналитики колонок</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСписокАналитикиШапкиExtendedTooltip" id="110"/>
+											<ChildItems>
+												<Table name="СписокАналитикиШапки" id="7">
+													<Representation>List</Representation>
+													<CommandBarLocation>None</CommandBarLocation>
+													<ChangeRowSet>false</ChangeRowSet>
+													<Width>30</Width>
+													<HeightInTableRows>4</HeightInTableRows>
+													<RowSelectionMode>Cell</RowSelectionMode>
+													<Header>false</Header>
+													<HorizontalLinesBWA>false</HorizontalLinesBWA>
+													<VerticalLinesBWA>false</VerticalLinesBWA>
+													<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>СписокАналитикиШапки</DataPath>
+													<RowPictureDataPath>СписокАналитикиШапки.Picture</RowPictureDataPath>
+													<CommandSet>
+														<ExcludedCommand>Change</ExcludedCommand>
+														<ExcludedCommand>Pickup</ExcludedCommand>
+													</CommandSet>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<ContextMenu name="СписокАналитикиШапкиКонтекстноеМеню" id="8"/>
+													<AutoCommandBar name="СписокАналитикиШапкиКоманднаяПанель" id="9"/>
+													<ExtendedTooltip name="СписокАналитикиШапкиExtendedTooltip" id="111"/>
+													<SearchStringAddition name="СписокАналитикиШапкиСтрокаПоиска" id="152">
+														<AdditionSource>
+															<Item>СписокАналитикиШапки</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="СписокАналитикиШапкиСтрокаПоискаКонтекстноеМеню" id="153"/>
+														<ExtendedTooltip name="СписокАналитикиШапкиСтрокаПоискаРасширеннаяПодсказка" id="154"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="СписокАналитикиШапкиСостояниеПросмотра" id="155">
+														<AdditionSource>
+															<Item>СписокАналитикиШапки</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="СписокАналитикиШапкиСостояниеПросмотраКонтекстноеМеню" id="156"/>
+														<ExtendedTooltip name="СписокАналитикиШапкиСостояниеПросмотраРасширеннаяПодсказка" id="157"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="СписокАналитикиШапкиУправлениеПоиском" id="158">
+														<AdditionSource>
+															<Item>СписокАналитикиШапки</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="СписокАналитикиШапкиУправлениеПоискомКонтекстноеМеню" id="159"/>
+														<ExtendedTooltip name="СписокАналитикиШапкиУправлениеПоискомРасширеннаяПодсказка" id="160"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="DragCheck">СписокАналитикиШапкиПроверкаПеретаскивания</Event>
+														<Event name="Selection">СписокАналитикиШапкиВыбор</Event>
+														<Event name="DragStart">СписокАналитикиШапкиНачалоПеретаскивания</Event>
+														<Event name="Drag">СписокАналитикиШапкиПеретаскивание</Event>
+													</Events>
+													<ChildItems>
+														<InputField name="СписокАналитикиШапкиЗначение" id="10">
+															<DataPath>СписокАналитикиШапки.Value</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="СписокАналитикиШапкиЗначениеКонтекстноеМеню" id="11"/>
+															<ExtendedTooltip name="СписокАналитикиШапкиЗначениеExtendedTooltip" id="112"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+												<UsualGroup name="ГруппаКартинкаАналитикиВШапке" id="36">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Образец аналитики в шапке</v8:content>
+														</v8:item>
+													</Title>
+													<TitleTextColor>style:FormTextColor</TitleTextColor>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ExtendedTooltip name="ГруппаКартинкаАналитикиВШапкеExtendedTooltip" id="113"/>
+													<ChildItems>
+														<PictureDecoration name="Декорация2" id="31">
+															<Width>45</Width>
+															<Height>3</Height>
+															<HorizontalStretch>false</HorizontalStretch>
+															<PictureSize>AutoSize</PictureSize>
+															<Picture>
+																<xr:Abs>Picture.png</xr:Abs>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="Декорация2КонтекстноеМеню" id="32"/>
+															<ExtendedTooltip name="Декорация2ExtendedTooltip" id="114"/>
+														</PictureDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКнопкиПеремещенияЭлементовСписков" id="12">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки перемещения элементов списков</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкиПеремещенияЭлементовСписковExtendedTooltip" id="115"/>
+							<ChildItems>
+								<UsualGroup name="Группа1" id="19">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа1ExtendedTooltip" id="116"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация1" id="26">
+											<Width>10</Width>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="27"/>
+											<ExtendedTooltip name="Декорация1ExtendedTooltip" id="117"/>
+										</LabelDecoration>
+										<Button name="ПереместитьВверх" id="15">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПереместитьВверх</CommandName>
+											<ExtendedTooltip name="ПереместитьВверхExtendedTooltip" id="118"/>
+										</Button>
+										<Button name="ПереместитьВверхВсеЭлементы" id="16">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПереместитьВверхВсеЭлементы</CommandName>
+											<ExtendedTooltip name="ПереместитьВверхВсеЭлементыExtendedTooltip" id="119"/>
+										</Button>
+										<Button name="ПереместитьВниз" id="17">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПереместитьВниз</CommandName>
+											<ExtendedTooltip name="ПереместитьВнизExtendedTooltip" id="120"/>
+										</Button>
+										<Button name="ПереместитьВнизВсеЭлементы" id="18">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПереместитьВнизВсеЭлементы</CommandName>
+											<ExtendedTooltip name="ПереместитьВнизВсеЭлементыExtendedTooltip" id="121"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКнопкиСписокНижний" id="57">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кнопки, список нижний</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкиСписокНижнийExtendedTooltip" id="122"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКнопкиПеремещенияЭлементовСписков2" id="51">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки перемещения элементов списков1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки перемещения элементов списков1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКнопкиПеремещенияЭлементовСписков2ExtendedTooltip" id="123"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация5" id="52">
+											<Height>1</Height>
+											<ContextMenu name="Декорация5КонтекстноеМеню" id="53"/>
+											<ExtendedTooltip name="Декорация5ExtendedTooltip" id="124"/>
+										</LabelDecoration>
+										<CommandBar name="ГруппаДобавитьВТаблицу" id="66">
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Добавить в таблицу</v8:content>
+												</v8:item>
+											</Title>
+											<Width>3</Width>
+											<ExtendedTooltip name="ГруппаДобавитьВТаблицуExtendedTooltip" id="125"/>
+											<ChildItems>
+												<Button name="ДобавитьВТаблицу" id="54">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ДобавитьВТаблицу</CommandName>
+													<ExtendedTooltip name="ДобавитьВТаблицуExtendedTooltip" id="126"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
+										<CommandBar name="ГруппаДобавитьВТаблицуВсе" id="68">
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Добавить в таблицу все</v8:content>
+												</v8:item>
+											</Title>
+											<Width>3</Width>
+											<ExtendedTooltip name="ГруппаДобавитьВТаблицуВсеExtendedTooltip" id="127"/>
+											<ChildItems>
+												<Button name="ДобавитьВТаблицуВсе" id="61">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ДобавитьВТаблицуВсе</CommandName>
+													<ExtendedTooltip name="ДобавитьВТаблицуВсеExtendedTooltip" id="128"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
+										<CommandBar name="ГруппаУдалитьИзТаблицы" id="70">
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Удалить из таблицы</v8:content>
+												</v8:item>
+											</Title>
+											<Width>3</Width>
+											<ExtendedTooltip name="ГруппаУдалитьИзТаблицыExtendedTooltip" id="129"/>
+											<ChildItems>
+												<Button name="УдалитьИзТаблицы" id="55">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.УдалитьИзТаблицы</CommandName>
+													<ExtendedTooltip name="УдалитьИзТаблицыExtendedTooltip" id="130"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
+										<CommandBar name="ГруппаУдалитьИзТаблицыВсе" id="72">
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Удалить из таблицы все</v8:content>
+												</v8:item>
+											</Title>
+											<Width>3</Width>
+											<ExtendedTooltip name="ГруппаУдалитьИзТаблицыВсеExtendedTooltip" id="131"/>
+											<ChildItems>
+												<Button name="УдалитьИзТаблицыВсе" id="60">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.УдалитьИзТаблицыВсе</CommandName>
+													<ExtendedTooltip name="УдалитьИзТаблицыВсеExtendedTooltip" id="132"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСписокНижний" id="23">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа список нижний</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа список нижний</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСписокНижнийExtendedTooltip" id="133"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияПодзаголовок" id="13">
+											<TextColor>#B38000</TextColor>
+											<Font ref="sys:DefaultGUIFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Аналитика, заполняемая в колонках таблицы построчно</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПодзаголовокКонтекстноеМеню" id="14"/>
+											<ExtendedTooltip name="ДекорацияПодзаголовокExtendedTooltip" id="134"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаСписокАналитикиКолонок" id="29">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа список аналитики колонок</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа список аналитики колонок</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСписокАналитикиКолонокExtendedTooltip" id="135"/>
+											<ChildItems>
+												<Table name="СписокАналитикиСтрок" id="1">
+													<Representation>List</Representation>
+													<CommandBarLocation>None</CommandBarLocation>
+													<DefaultItem>true</DefaultItem>
+													<ChangeRowSet>false</ChangeRowSet>
+													<Width>30</Width>
+													<HeightInTableRows>4</HeightInTableRows>
+													<RowSelectionMode>Cell</RowSelectionMode>
+													<Header>false</Header>
+													<HorizontalLinesBWA>false</HorizontalLinesBWA>
+													<VerticalLinesBWA>false</VerticalLinesBWA>
+													<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>СписокАналитикиСтрок</DataPath>
+													<RowPictureDataPath>СписокАналитикиСтрок.Picture</RowPictureDataPath>
+													<CommandSet>
+														<ExcludedCommand>Change</ExcludedCommand>
+														<ExcludedCommand>Pickup</ExcludedCommand>
+													</CommandSet>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<ContextMenu name="СписокАналитикиСтрокКонтекстноеМеню" id="2"/>
+													<AutoCommandBar name="СписокАналитикиСтрокКоманднаяПанель" id="3"/>
+													<ExtendedTooltip name="СписокАналитикиСтрокExtendedTooltip" id="136"/>
+													<SearchStringAddition name="СписокАналитикиСтрокСтрокаПоиска" id="161">
+														<AdditionSource>
+															<Item>СписокАналитикиСтрок</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="СписокАналитикиСтрокСтрокаПоискаКонтекстноеМеню" id="162"/>
+														<ExtendedTooltip name="СписокАналитикиСтрокСтрокаПоискаРасширеннаяПодсказка" id="163"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="СписокАналитикиСтрокСостояниеПросмотра" id="164">
+														<AdditionSource>
+															<Item>СписокАналитикиСтрок</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="СписокАналитикиСтрокСостояниеПросмотраКонтекстноеМеню" id="165"/>
+														<ExtendedTooltip name="СписокАналитикиСтрокСостояниеПросмотраРасширеннаяПодсказка" id="166"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="СписокАналитикиСтрокУправлениеПоиском" id="167">
+														<AdditionSource>
+															<Item>СписокАналитикиСтрок</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="СписокАналитикиСтрокУправлениеПоискомКонтекстноеМеню" id="168"/>
+														<ExtendedTooltip name="СписокАналитикиСтрокУправлениеПоискомРасширеннаяПодсказка" id="169"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="DragCheck">СписокАналитикиСтрокПроверкаПеретаскивания</Event>
+														<Event name="Selection">СписокАналитикиСтрокВыбор</Event>
+														<Event name="DragStart">СписокАналитикиСтрокНачалоПеретаскивания</Event>
+														<Event name="Drag">СписокАналитикиСтрокПеретаскивание</Event>
+													</Events>
+													<ChildItems>
+														<InputField name="СписокАналитикиСтрокЗначение" id="4">
+															<DataPath>СписокАналитикиСтрок.Value</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="СписокАналитикиСтрокЗначениеКонтекстноеМеню" id="5"/>
+															<ExtendedTooltip name="СписокАналитикиСтрокЗначениеExtendedTooltip" id="137"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+												<UsualGroup name="ГруппаКартинкаАналитикиВКолонках" id="35">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Образец аналитики в колонках таблицы</v8:content>
+														</v8:item>
+													</Title>
+													<TitleTextColor>style:FormTextColor</TitleTextColor>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ExtendedTooltip name="ГруппаКартинкаАналитикиВКолонкахExtendedTooltip" id="138"/>
+													<ChildItems>
+														<PictureDecoration name="Декорация3" id="33">
+															<Width>45</Width>
+															<Height>3</Height>
+															<HorizontalStretch>false</HorizontalStretch>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Образец заполнения аналитики в колонках таблицы</v8:content>
+																</v8:item>
+															</Title>
+															<PictureSize>AutoSize</PictureSize>
+															<Picture>
+																<xr:Abs>Picture.png</xr:Abs>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="Декорация3КонтекстноеМеню" id="34"/>
+															<ExtendedTooltip name="Декорация3ExtendedTooltip" id="139"/>
+														</PictureDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="ГруппаОсновныеКомандыФормы" id="77">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основные команды формы</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаОсновныеКомандыФормыExtendedTooltip" id="140"/>
+			<ChildItems>
+				<Button name="ФормаКомандаОк" id="20">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаОК</CommandName>
+					<ButtonImportance>Main</ButtonImportance>
+					<ExtendedTooltip name="ФормаКомандаОкExtendedTooltip" id="141"/>
+				</Button>
+				<Button name="ФормаЗакрыть" id="21">
+					<Type>CommandBarButton</Type>
+					<Representation>Text</Representation>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ФормаЗакрытьExtendedTooltip" id="142"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокАналитикиСтрок" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика с разными значениями в строках</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ВидыАналитик</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокАналитикиШапки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика с единым значением на документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ВидыАналитик</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="НаборАналитики" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор аналитики</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВидАналитики" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид аналитики</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.ВидыАналитик</v8:Type>
+					</Type>
+				</Column>
+				<Column name="РедактироватьВШапке" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Редактировать в шапке</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИспользоватьДляДохода" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать для дохода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИспользоватьДляРасхода" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать для расхода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="РасширенныеНастройкиДляДохода" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расширенные настройки для дохода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="РасширенныеНастройкиДляРасхода" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расширенные настройки для расхода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЭтоРасход" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это расход</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяВидаДокумента" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя вида документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокДоступнойАналитики" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список доступной аналитики</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ВидыАналитик</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="КартинкаЭлементСЗамком" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Картинка элемент с замком</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Picture</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПереместитьВверх" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВверх</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВверх</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПереместитьВверхВсеЭлементы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх все элементы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх все элементы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВверхВсе</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВверхВсеЭлементы</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПереместитьВниз" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВниз</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВниз</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПереместитьВнизВсеЭлементы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз все элементы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз все элементы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВнизВсе</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВнизВсеЭлементы</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="КомандаОК" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить настройки и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаОК</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="ЗаписатьПоУмолчанию" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать как настройки по умолчанию для операций данного вида</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьПоУмолчанию</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ДобавитьВШапку" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в шапку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в шапку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВправо</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВШапку</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьИзШапки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить из шапки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить из шапки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВлево</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьИзШапки</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ДобавитьВТаблицу" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в таблицу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в таблицу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВправо</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВТаблицу</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьИзТаблицы" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить из таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить из таблицы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВлево</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьИзТаблицы</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ДобавитьВШапкуВсе" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в шапку все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в шапку все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВправоВсе</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВШапкуВсе</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьИзШапкиВсе" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить из шапки все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить из шапки все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВлевоВсе</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьИзШапкиВсе</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ДобавитьВТаблицуВсе" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в таблицу все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в таблицу все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВправоВсе</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВТаблицуВсе</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьИзТаблицыВсе" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить из таблицы все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить из таблицы все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьВлевоВсе</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьИзТаблицыВсе</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПеречитатьДоступныеАналитики" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать доступные аналитики</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать доступные аналитики</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПеречитатьДоступныеАналитики</Action>
+		</Command>
+		<Command name="ЗаписатьПоУмолчаниюДляВсехОпераций" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для операций всех видов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать по умолчанию для всех операций</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ИмяВидаДокумента">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

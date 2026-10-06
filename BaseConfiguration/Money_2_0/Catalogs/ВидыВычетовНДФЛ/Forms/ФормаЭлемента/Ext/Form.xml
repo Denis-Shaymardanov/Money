@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+	</CommandSet>
+	<ShowCommandBar>false</ShowCommandBar>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодExtendedTooltip" id="18"/>
+		</InputField>
+		<InputField name="ПолноеНаименование" id="32">
+			<DataPath>Объект.ПолноеНаименование</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ПолноеНаименованиеКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="ПолноеНаименованиеРасширеннаяПодсказка" id="34"/>
+		</InputField>
+		<InputField name="ГруппаВычета" id="8">
+			<DataPath>Объект.ГруппаВычета</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="ГруппаВычетаКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="ГруппаВычетаExtendedTooltip" id="24"/>
+		</InputField>
+		<UsualGroup name="ГруппаВычетовКДоходам" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычетов к доходам</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВычетовКДоходамРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<CheckBoxField name="ВычетКДоходу" id="10">
+					<DataPath>Объект.ВычетКДоходу</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это - вычет к доходу</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ContextMenu name="ВычетКДоходуКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ВычетКДоходуExtendedTooltip" id="25"/>
+				</CheckBoxField>
+				<CheckBoxField name="НеПредоставляетсяНерезидентам" id="35">
+					<DataPath>Объект.НеПредоставляетсяНерезидентам</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ContextMenu name="НеПредоставляетсяНерезидентамКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="НеПредоставляетсяНерезидентамРасширеннаяПодсказка" id="37"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="КодыПрименяемыеВНалоговойОтчетности" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление в налоговой отчетности</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="КодыПрименяемыеВНалоговойОтчетностиExtendedTooltip" id="19"/>
+			<ChildItems>
+				<InputField name="КодПрименяемыйВНалоговойОтчетностиС2016Года" id="29">
+					<DataPath>Объект.КодПрименяемыйВНалоговойОтчетностиС2016Года</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>с 2016 года</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КодПрименяемыйВНалоговойОтчетностиС2016ГодаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="КодПрименяемыйВНалоговойОтчетностиС2016ГодаРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="КодПрименяемыйВНалоговойОтчетностиС2015Года" id="26">
+					<DataPath>Объект.КодПрименяемыйВНалоговойОтчетностиС2015Года</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>за 2015 год</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КодПрименяемыйВНалоговойОтчетностиС2015ГодаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="КодПрименяемыйВНалоговойОтчетностиС2015ГодаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="КодПрименяемыйВНалоговойОтчетностиС2011Года" id="12">
+					<DataPath>Объект.КодПрименяемыйВНалоговойОтчетностиС2011Года</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>с 2011 по 2014  год</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КодПрименяемыйВНалоговойОтчетностиС2011ГодаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="КодПрименяемыйВНалоговойОтчетностиС2011ГодаExtendedTooltip" id="21"/>
+				</InputField>
+				<InputField name="КодПрименяемыйВНалоговойОтчетностиС2010Года" id="5">
+					<DataPath>Объект.КодПрименяемыйВНалоговойОтчетностиС2010Года</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>за 2010 год</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="КодПрименяемыйВНалоговойОтчетностиС2010ГодаКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="КодПрименяемыйВНалоговойОтчетностиС2010ГодаExtendedTooltip" id="22"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ВидыВычетовНДФЛ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<Customizable>false</Customizable>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="СтатьяБюджета" id="1">
+			<DataPath>Запись.СтатьяБюджета</DataPath>
+			<ContextMenu name="СтатьяБюджетаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="СтатьяБюджетаРасширеннаяПодсказка" id="3"/>
+		</LabelField>
+		<LabelField name="ТипСтатьи" id="4">
+			<DataPath>Запись.ТипСтатьи</DataPath>
+			<ContextMenu name="ТипСтатьиКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ТипСтатьиРасширеннаяПодсказка" id="6"/>
+		</LabelField>
+		<LabelField name="РодительскаяСтатья" id="7">
+			<DataPath>Запись.РодительскаяСтатья</DataPath>
+			<ContextMenu name="РодительскаяСтатьяКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РодительскаяСтатьяРасширеннаяПодсказка" id="9"/>
+		</LabelField>
+		<LabelField name="РодительскаяСтатьяВБюджете" id="16">
+			<DataPath>Запись.РодительскаяСтатьяВБюджете</DataPath>
+			<ContextMenu name="РодительскаяСтатьяВБюджетеКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="РодительскаяСтатьяВБюджетеРасширеннаяПодсказка" id="18"/>
+		</LabelField>
+		<LabelField name="Код" id="10">
+			<DataPath>Запись.Код</DataPath>
+			<ContextMenu name="КодКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="12"/>
+		</LabelField>
+		<LabelField name="Ключ" id="13">
+			<DataPath>Запись.Ключ</DataPath>
+			<ContextMenu name="КлючКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КлючРасширеннаяПодсказка" id="15"/>
+		</LabelField>
+		<CheckBoxField name="ИсключатьИзБюджета" id="19">
+			<DataPath>Запись.ИсключатьИзБюджета</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ContextMenu name="ИсключатьИзБюджетаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ИсключатьИзБюджетаРасширеннаяПодсказка" id="21"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.КлючиСтатей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

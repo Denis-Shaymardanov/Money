@@ -1,0 +1,834 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор периода</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОк" id="10">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Ок</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="ФормаОкРасширеннаяПодсказка" id="11"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="12">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отмена</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="13"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПараметрыВарианта" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметры варианта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметры варианта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПараметрыВариантаРасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<LabelField name="ОписаниеВариантаБюджета" id="67">
+					<DataPath>ОписаниеВариантаБюджета</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<ContextMenu name="ОписаниеВариантаБюджетаКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ОписаниеВариантаБюджетаРасширеннаяПодсказка" id="69"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="СтраницыВыбораПериода" id="70">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы выбора периода</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы выбора периода</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыВыбораПериодаРасширеннаяПодсказка" id="71"/>
+			<ChildItems>
+				<Page name="СтраницаПериод" id="74">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница период</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница неделя</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаПериодРасширеннаяПодсказка" id="75"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияЗаголовок1" id="126">
+							<Visible>false</Visible>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>с</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияЗаголовок1КонтекстноеМеню" id="127"/>
+							<ExtendedTooltip name="ДекорацияЗаголовок1РасширеннаяПодсказка" id="128"/>
+						</LabelDecoration>
+						<InputField name="НачалоПериода" id="82">
+							<DataPath>НачалоПериода</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>С</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<Width>12</Width>
+							<SpinButton>true</SpinButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<MinValue xsi:type="xs:decimal">-1</MinValue>
+							<MaxValue xsi:type="xs:decimal">13</MaxValue>
+							<ContextMenu name="НачалоПериодаКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="НачалоПериодаРасширеннаяПодсказка" id="84"/>
+							<Events>
+								<Event name="OnChange">НачалоПериодаПриИзменении</Event>
+								<Event name="Tuning">НачалоПериодаРегулирование</Event>
+							</Events>
+						</InputField>
+						<InputField name="НачалоПериодаГод" id="85">
+							<DataPath>НачалоПериодаГод</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<SpinButton>true</SpinButton>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=; ЧГ=</v8:content>
+								</v8:item>
+							</EditFormat>
+							<MinValue xsi:type="xs:decimal">2000</MinValue>
+							<ContextMenu name="НачалоПериодаГодКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="НачалоПериодаГодРасширеннаяПодсказка" id="87"/>
+							<Events>
+								<Event name="OnChange">НачалоПериодаГодПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="ДекорацияЗаголовок2" id="129">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>-</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<ContextMenu name="ДекорацияЗаголовок2КонтекстноеМеню" id="130"/>
+							<ExtendedTooltip name="ДекорацияЗаголовок2РасширеннаяПодсказка" id="131"/>
+						</LabelDecoration>
+						<InputField name="КонецПериода" id="88">
+							<DataPath>КонецПериода</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<Width>12</Width>
+							<SpinButton>true</SpinButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<MinValue xsi:type="xs:decimal">-1</MinValue>
+							<MaxValue xsi:type="xs:decimal">13</MaxValue>
+							<ContextMenu name="КонецПериодаКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="КонецПериодаРасширеннаяПодсказка" id="90"/>
+							<Events>
+								<Event name="OnChange">КонецПериодаПриИзменении</Event>
+								<Event name="Tuning">КонецПериодаРегулирование</Event>
+							</Events>
+						</InputField>
+						<InputField name="КонецПериодаГод" id="91">
+							<DataPath>КонецПериодаГод</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<SpinButton>true</SpinButton>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=; ЧГ=</v8:content>
+								</v8:item>
+							</EditFormat>
+							<MinValue xsi:type="xs:decimal">2000</MinValue>
+							<ContextMenu name="КонецПериодаГодКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="КонецПериодаГодРасширеннаяПодсказка" id="93"/>
+							<Events>
+								<Event name="OnChange">КонецПериодаГодПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelField name="ПредставлениеКоличестваПериодов" id="117">
+							<DataPath>ПредставлениеКоличестваПериодов</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>10</Width>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ПредставлениеКоличестваПериодовКонтекстноеМеню" id="118"/>
+							<ExtendedTooltip name="ПредставлениеКоличестваПериодовРасширеннаяПодсказка" id="119"/>
+						</LabelField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаГод" id="94">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница год</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница год</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаГодРасширеннаяПодсказка" id="95"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияЗаголовок3" id="132">
+							<Visible>false</Visible>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>с</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияЗаголовок3КонтекстноеМеню" id="133"/>
+							<ExtendedTooltip name="ДекорацияЗаголовок3РасширеннаяПодсказка" id="134"/>
+						</LabelDecoration>
+						<InputField name="НачалоПериодаГод1" id="96">
+							<DataPath>НачалоПериодаГод</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>С</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalStretch>true</HorizontalStretch>
+							<SpinButton>true</SpinButton>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=; ЧГ=</v8:content>
+								</v8:item>
+							</EditFormat>
+							<MinValue xsi:type="xs:decimal">2000</MinValue>
+							<ContextMenu name="НачалоПериодаГод1КонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="НачалоПериодаГод1РасширеннаяПодсказка" id="98"/>
+							<Events>
+								<Event name="OnChange">НачалоПериодаГод1ПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="ДекорацияЗаголовок4" id="135">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>-</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<ContextMenu name="ДекорацияЗаголовок4КонтекстноеМеню" id="136"/>
+							<ExtendedTooltip name="ДекорацияЗаголовок4РасширеннаяПодсказка" id="137"/>
+						</LabelDecoration>
+						<InputField name="КонецПериодаГод1" id="99">
+							<DataPath>КонецПериодаГод</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>По</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalStretch>true</HorizontalStretch>
+							<SpinButton>true</SpinButton>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=; ЧГ=</v8:content>
+								</v8:item>
+							</EditFormat>
+							<MinValue xsi:type="xs:decimal">2000</MinValue>
+							<ContextMenu name="КонецПериодаГод1КонтекстноеМеню" id="100"/>
+							<ExtendedTooltip name="КонецПериодаГод1РасширеннаяПодсказка" id="101"/>
+							<Events>
+								<Event name="OnChange">КонецПериодаГод1ПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelField name="ПредставлениеКоличестваПериодов1" id="120">
+							<DataPath>ПредставлениеКоличестваПериодов</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>10</Width>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ПредставлениеКоличестваПериодов1КонтекстноеМеню" id="121"/>
+							<ExtendedTooltip name="ПредставлениеКоличестваПериодов1РасширеннаяПодсказка" id="122"/>
+						</LabelField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНеделя" id="72">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница неделя</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница неделя</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="СтраницаНеделяРасширеннаяПодсказка" id="73"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияЗаголовок5" id="138">
+							<Visible>false</Visible>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>с</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияЗаголовок5КонтекстноеМеню" id="139"/>
+							<ExtendedTooltip name="ДекорацияЗаголовок5РасширеннаяПодсказка" id="140"/>
+						</LabelDecoration>
+						<InputField name="НачалоПериодаНеделя" id="76">
+							<DataPath>НачалоПериодаНеделя</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="НачалоПериодаНеделяКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="НачалоПериодаНеделяРасширеннаяПодсказка" id="78"/>
+							<Events>
+								<Event name="OnChange">НачалоПериодаНеделяПриИзменении</Event>
+								<Event name="StartChoice">НачалоПериодаНеделяНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="ДекорацияЗаголовок6" id="141">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>-</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<ContextMenu name="ДекорацияЗаголовок6КонтекстноеМеню" id="142"/>
+							<ExtendedTooltip name="ДекорацияЗаголовок6РасширеннаяПодсказка" id="143"/>
+						</LabelDecoration>
+						<InputField name="КонецПериодаНеделя" id="79">
+							<DataPath>КонецПериодаНеделя</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="КонецПериодаНеделяКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="КонецПериодаНеделяРасширеннаяПодсказка" id="81"/>
+							<Events>
+								<Event name="OnChange">КонецПериодаНеделяПриИзменении</Event>
+								<Event name="StartChoice">КонецПериодаНеделяНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<LabelField name="ПредставлениеКоличестваПериодов2" id="123">
+							<DataPath>ПредставлениеКоличестваПериодов</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>10</Width>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ПредставлениеКоличестваПериодов2КонтекстноеМеню" id="124"/>
+							<ExtendedTooltip name="ПредставлениеКоличестваПериодов2РасширеннаяПодсказка" id="125"/>
+						</LabelField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаКомандПериодов" id="148">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команд периодов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа колонка1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандПериодовРасширеннаяПодсказка" id="149"/>
+			<ChildItems>
+				<Button name="ЭтаНеделя" id="150">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ЭтаНеделя</CommandName>
+					<ExtendedTooltip name="ЭтаНеделяРасширеннаяПодсказка" id="151"/>
+				</Button>
+				<Button name="ЭтотМесяц" id="156">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ЭтотМесяц</CommandName>
+					<ExtendedTooltip name="ЭтотМесяцРасширеннаяПодсказка" id="157"/>
+				</Button>
+				<Button name="ЭтотКвартал" id="154">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ЭтотКвартал</CommandName>
+					<ExtendedTooltip name="ЭтотКварталРасширеннаяПодсказка" id="155"/>
+				</Button>
+				<Button name="ЭтотГод" id="152">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ЭтотГод</CommandName>
+					<ExtendedTooltip name="ЭтотГодРасширеннаяПодсказка" id="153"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<LabelField name="ТекстСообщенияОбОшибке" id="108">
+			<DataPath>ТекстСообщенияОбОшибке</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<HorizontalAlign>Left</HorizontalAlign>
+			<VerticalAlign>Top</VerticalAlign>
+			<Height>2</Height>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="ТекстСообщенияОбОшибкеКонтекстноеМеню" id="109"/>
+			<ExtendedTooltip name="ТекстСообщенияОбОшибкеРасширеннаяПодсказка" id="110"/>
+			<Events>
+				<Event name="URLProcessing">ТекстКоличестваИтоговОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РазделБюджет</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="КоличествоПериодовСтатистики" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итоги за</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоПериодовПросмотра" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество периодов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодПросмотра" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период просмотра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантБюджета" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант бюджета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВариантыБюджетов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ГодПериода" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МесяцПериода" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДопРеквизитыФормы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доп реквизиты формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ОписаниеВариантаБюджета" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание варианта бюджета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстСообщенияОбОшибке" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст сообщения об ошибке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НачалоПериодаНеделя" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонецПериодаНеделя" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>по</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачалоПериода" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачалоПериодаГод" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонецПериода" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конец периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонецПериодаГод" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конец периода год</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МаксимальноеКоличествоПериодов" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальное количество периодов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОповеститьОВыборе" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оповестить о выборе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеКоличестваПериодов" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление количества периодов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодПланирования" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период планирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Ок" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Ок</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЭтаНеделя" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Эта неделя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Эта неделя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЭтаНеделя</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЭтотМесяц" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этот месяц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этот месяц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЭтотМесяц</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЭтотКвартал" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этот квартал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этот квартал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЭтотКвартал</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЭтотГод" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этот год</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этот год</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЭтотГод</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ВариантБюджета">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВариантыБюджетов</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ПериодПросмотра">
+			<Type/>
+		</Parameter>
+		<Parameter name="КоличествоПериодовПросмотра">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="МаксимальноеКоличествоПериодов">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ОповеститьОВыборе">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ПериодПланирования">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

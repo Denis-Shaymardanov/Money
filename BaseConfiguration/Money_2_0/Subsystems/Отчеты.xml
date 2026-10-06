@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Subsystem uuid="920e05a3-91d6-40fa-97b6-fd6ddf4418eb">
+		<Properties>
+			<Name>Отчеты</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчеты</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.ПодсистемаОтчеты</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОтчетыКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОтчетыВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОтчетыКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Сумма16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОтчетыСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаОтчетаДеньги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПодсистемаУчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоДолгам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоИмуществу</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоКошелькам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоПоступлениямДенег</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДинамикаДоходовИРасходов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетОбИзмененииФинансовогоСостояния</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоСкидкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоСписаниямДенег</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоФинансовымЦелям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РегламентированныйОтчет3НДФЛ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СверкаСВыпискойБанка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СравнениеДоходовИРасходовЗа2Периода</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СтруктураДоходов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СтруктураРасходов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоКурсамВалют</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОткрытьРегламентированныеОтчеты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыборПериодовБюджета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоБюджету</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОтчетыСервис</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

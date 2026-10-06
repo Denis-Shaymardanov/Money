@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Subsystem uuid="bdd89780-8976-4df2-830d-95d3c11aa05b">
+		<Properties>
+			<Name>СервисыХраненияФайлов</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервисы хранения файлов</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПарсерJSON</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">53d0a0a9-94bc-46cd-b028-03db0dca6cc0</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">f43b6915-4121-41a6-8e0e-3972871ebca1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.МониторСинхронизацииСМобильнымиУстройствами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">9728923c-47f5-4a66-8a85-56c0cad545db</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.RESTКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">a907dcac-44f2-4df5-82a6-a519b3df07c8</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УведомленияКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТранспортыОбменаДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменМобильноеПриложение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.АвторизацияREST</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыПровайдеровREST</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеАвторизациямиСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">367e4c1c-3c65-4445-817b-371b33ad2898</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИндивидуальныеНастройкиОбменаREST</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыТранспортаСообщенийОбмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">d04038cc-0b02-46ad-8b9f-f84d1f944632</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.RESTВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.RESTСлужебныйВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.RESTGoogleКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.RESTDropboxКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.RESTЯндексКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.АвторизацияOAUTH</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СинхронизацияGoogleDrive16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СинхронизацияGoogleDrive48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СинхронизацияЯндексДиск48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СинхронизацияЯндексДиск16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СинхронизацияDropBox16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СинхронизацияDropBox48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УдалитьТранспортСообщенийОбменаОблачныйФайловыйСервис</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

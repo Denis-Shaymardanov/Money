@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование правила</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ТипЗагружаемогоДокумента" id="4">
+			<DataPath>Объект.ТипЗагружаемогоДокумента</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="ТипЗагружаемогоДокументаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ТипЗагружаемогоДокументаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="ПоказателиДокумента" id="7">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ПоказателиДокумента</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПоказателиДокументаКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ПоказателиДокументаКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ПоказателиДокументаРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ПоказателиДокументаСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ПоказателиДокумента</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоказателиДокументаСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ПоказателиДокументаСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПоказателиДокументаСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>ПоказателиДокумента</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоказателиДокументаСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ПоказателиДокументаСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПоказателиДокументаУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>ПоказателиДокумента</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоказателиДокументаУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ПоказателиДокументаУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПоказателиДокументаНомерСтроки" id="20">
+					<DataPath>Объект.ПоказателиДокумента.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="ПоказателиДокументаНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПоказателиДокументаНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="ПоказателиДокументаКлючПоказателя" id="23">
+					<DataPath>Объект.ПоказателиДокумента.КлючПоказателя</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="ПоказателиДокументаКлючПоказателяКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПоказателиДокументаКлючПоказателяРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ПоказателиДокументаПоложение" id="26">
+					<DataPath>Объект.ПоказателиДокумента.ПоложениеПоказателя</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Положение в табличном документе</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ПоказателиДокументаПоложениеКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПоказателиДокументаПоложениеРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПравилаЧтенияТабличныхДокументов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

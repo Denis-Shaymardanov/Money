@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="58">
+			<CommandBarLocation>None</CommandBarLocation>
+			<ChoiceMode>true</ChoiceMode>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="59"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="60"/>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="93"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="107">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="108"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="109"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="110">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="111"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="112"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="113">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="114"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="115"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СписокШаблоновСсылка" id="69">
+					<DataPath>Список.Ссылка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СписокШаблоновСсылкаКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="СписокШаблоновСсылкаExtendedTooltip" id="94"/>
+				</LabelField>
+				<LabelField name="СписокШаблоновОписаниеОперации" id="81">
+					<DataPath>Список.ОписаниеОперации</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание шаблона</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СписокШаблоновОписаниеОперацииКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="СписокШаблоновОписаниеОперацииExtendedTooltip" id="95"/>
+				</LabelField>
+				<LabelField name="СписокШаблоновКредитор" id="79">
+					<DataPath>Список.Кредитор</DataPath>
+					<ContextMenu name="СписокШаблоновКредиторКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="СписокШаблоновКредиторExtendedTooltip" id="96"/>
+				</LabelField>
+				<LabelField name="СписокШаблоновКредит" id="77">
+					<DataPath>Список.Кредит</DataPath>
+					<ContextMenu name="СписокШаблоновКредитКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="СписокШаблоновКредитExtendedTooltip" id="97"/>
+				</LabelField>
+				<ColumnGroup name="СписокШаблоновГруппаСуммаВалюта" id="89">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список шаблонов группа сумма валюта</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список шаблонов группа сумма валюта</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="СписокШаблоновГруппаСуммаВалютаExtendedTooltip" id="99"/>
+					<ChildItems>
+						<LabelField name="СписокШаблоновСуммаКредита" id="85">
+							<DataPath>Список.СуммаКредитаВВалютеКредита</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основной долг</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СписокШаблоновСуммаКредитаКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="СписокШаблоновСуммаКредитаExtendedTooltip" id="100"/>
+						</LabelField>
+						<LabelField name="СписокШаблоновВалютаКредита" id="71">
+							<DataPath>Список.ВалютаКредита</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>4</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="СписокШаблоновВалютаКредитаКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="СписокШаблоновВалютаКредитаExtendedTooltip" id="101"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="СписокШаблоновГруппаСуммаПроцентовВалюта" id="90">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список шаблонов группа сумма процентов валюта</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список шаблонов группа сумма процентов валюта</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="СписокШаблоновГруппаСуммаПроцентовВалютаExtendedTooltip" id="102"/>
+					<ChildItems>
+						<LabelField name="СписокШаблоновСуммаПроцентов" id="87">
+							<DataPath>Список.СуммаПроцентовВВалютеКредита</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проценты</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СписокШаблоновСуммаПроцентовКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="СписокШаблоновСуммаПроцентовExtendedTooltip" id="103"/>
+						</LabelField>
+						<LabelField name="СписокШаблоновВалютаКредита1" id="91">
+							<DataPath>Список.ВалютаКредита</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>4</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="СписокШаблоновВалютаКредита1КонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="СписокШаблоновВалютаКредита1ExtendedTooltip" id="104"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="СписокШаблоновКошелек" id="75">
+					<DataPath>Список.Кошелек</DataPath>
+					<ContextMenu name="СписокШаблоновКошелекКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="СписокШаблоновКошелекExtendedTooltip" id="98"/>
+				</LabelField>
+				<LabelField name="СписокШаблоновКомментарий" id="73">
+					<DataPath>Список.Комментарий</DataPath>
+					<ContextMenu name="СписокШаблоновКомментарийКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="СписокШаблоновКомментарийExtendedTooltip" id="106"/>
+				</LabelField>
+				<LabelField name="СписокШаблоновПользователь" id="83">
+					<DataPath>Список.Пользователь</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СписокШаблоновПользовательКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="СписокШаблоновПользовательExtendedTooltip" id="105"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументМыВернулиКредит.Ссылка КАК Ссылка,
+	ВЫРАЗИТЬ(ДокументМыВернулиКредит.ОписаниеОперации КАК СТРОКА(1000)) КАК ОписаниеОперации,
+	ДокументМыВернулиКредит.ЭтоШаблон КАК ЭтоШаблон,
+	ДокументМыВернулиКредит.ВерсияДанных,
+	ДокументМыВернулиКредит.ПометкаУдаления,
+	ДокументМыВернулиКредит.Кредитор,
+	ДокументМыВернулиКредит.Кредит,
+	ДокументМыВернулиКредит.ВалютаКредита,
+	ДокументМыВернулиКредит.СуммаКредитаВВалютеКредита,
+	ДокументМыВернулиКредит.СуммаПроцентовВВалютеКредита,
+	ДокументМыВернулиКредит.Кошелек,
+	ДокументМыВернулиКредит.СуммаОперации,
+	ДокументМыВернулиКредит.Пользователь,
+	ДокументМыВернулиКредит.Комментарий,
+	ДокументМыВернулиКредит.МоментВремени
+ИЗ
+	Документ.МыВернулиДолг КАК ДокументМыВернулиКредит
+</QueryText>
+				<MainTable>Document.МыВернулиДолг</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтоШаблон</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ОписаниеОперации</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокШаблоновВалютаКредита</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.СуммаКредитаВВалютеКредита</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокШаблоновВалютаКредита1</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.СуммаПроцентовВВалютеКредита</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

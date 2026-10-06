@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выберите месяц</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ShowCommandBar>false</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа5" id="21">
+			<EnableContentChange>true</EnableContentChange>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация1" id="19">
+					<Width>13</Width>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="23"/>
+				</LabelDecoration>
+				<InputField name="Год" id="1">
+					<DataPath>Год</DataPath>
+					<SpinButton>true</SpinButton>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=0; ЧГ=</v8:content>
+						</v8:item>
+					</EditFormat>
+					<MinValue xsi:type="xs:decimal">1900</MinValue>
+					<MaxValue xsi:type="xs:decimal">9999</MaxValue>
+					<ContextMenu name="ГодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ГодРасширеннаяПодсказка" id="24"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="3">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<Button name="Месяц1" id="7">
+					<Type>UsualButton</Type>
+					<Width>12</Width>
+					<CommandName>Form.Command.Месяц1</CommandName>
+					<ExtendedTooltip name="Месяц1РасширеннаяПодсказка" id="26"/>
+				</Button>
+				<Button name="Месяц2" id="8">
+					<Type>UsualButton</Type>
+					<Width>12</Width>
+					<CommandName>Form.Command.Месяц2</CommandName>
+					<ExtendedTooltip name="Месяц2РасширеннаяПодсказка" id="27"/>
+				</Button>
+				<Button name="Месяц3" id="9">
+					<Type>UsualButton</Type>
+					<Width>12</Width>
+					<CommandName>Form.Command.Месяц3</CommandName>
+					<ExtendedTooltip name="Месяц3РасширеннаяПодсказка" id="28"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="4">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Button name="Месяц4" id="10">
+					<Type>UsualButton</Type>
+					<Width>12</Width>
+					<CommandName>Form.Command.Месяц4</CommandName>
+					<ExtendedTooltip name="Месяц4РасширеннаяПодсказка" id="30"/>
+				</Button>
+				<Button name="Месяц5" id="11">
+					<Type>UsualButton</Type>
+					<Width>12</Width>
+					<CommandName>Form.Command.Месяц5</CommandName>
+					<ExtendedTooltip name="Месяц5РасширеннаяПодсказка" id="31"/>
+				</Button>
+				<Button name="Месяц6" id="12">
+					<Type>UsualButton</Type>
+					<Width>12</Width>
+					<CommandName>Form.Command.Месяц6</CommandName>
+					<ExtendedTooltip name="Месяц6РасширеннаяПодсказка" id="32"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="5">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<Button name="Месяц7" id="13">
+					<Type>UsualButton</Type>
+					<Width>12</Width>
+					<CommandName>Form.Command.Месяц7</CommandName>
+					<ExtendedTooltip name="Месяц7РасширеннаяПодсказка" id="34"/>
+				</Button>
+				<Button name="Месяц8" id="14">
+					<Type>UsualButton</Type>
+					<Width>12</Width>
+					<CommandName>Form.Command.Месяц8</CommandName>
+					<ExtendedTooltip name="Месяц8РасширеннаяПодсказка" id="35"/>
+				</Button>
+				<Button name="Месяц9" id="15">
+					<Type>UsualButton</Type>
+					<Width>12</Width>
+					<CommandName>Form.Command.Месяц9</CommandName>
+					<ExtendedTooltip name="Месяц9РасширеннаяПодсказка" id="36"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа4" id="6">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="37"/>
+			<ChildItems>
+				<Button name="Месяц10" id="16">
+					<Type>UsualButton</Type>
+					<Width>12</Width>
+					<CommandName>Form.Command.Месяц10</CommandName>
+					<ExtendedTooltip name="Месяц10РасширеннаяПодсказка" id="38"/>
+				</Button>
+				<Button name="Месяц11" id="17">
+					<Type>UsualButton</Type>
+					<Width>12</Width>
+					<CommandName>Form.Command.Месяц11</CommandName>
+					<ExtendedTooltip name="Месяц11РасширеннаяПодсказка" id="39"/>
+				</Button>
+				<Button name="Месяц12" id="18">
+					<Type>UsualButton</Type>
+					<Width>12</Width>
+					<CommandName>Form.Command.Месяц12</CommandName>
+					<ExtendedTooltip name="Месяц12РасширеннаяПодсказка" id="40"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПлановыеОперации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Месяц" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Год" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Месяц1" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Январь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Месяц1</Action>
+		</Command>
+		<Command name="Месяц2" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Февраль</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Месяц1</Action>
+		</Command>
+		<Command name="Месяц3" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Март</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Месяц1</Action>
+		</Command>
+		<Command name="Месяц4" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Апрель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Месяц1</Action>
+		</Command>
+		<Command name="Месяц5" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Май</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Месяц1</Action>
+		</Command>
+		<Command name="Месяц6" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Июнь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Месяц1</Action>
+		</Command>
+		<Command name="Месяц7" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Июль</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Месяц1</Action>
+		</Command>
+		<Command name="Месяц8" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Август</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Месяц1</Action>
+		</Command>
+		<Command name="Месяц9" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сентябрь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Месяц1</Action>
+		</Command>
+		<Command name="Месяц10" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Октябрь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Месяц1</Action>
+		</Command>
+		<Command name="Месяц11" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ноябрь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Месяц1</Action>
+		</Command>
+		<Command name="Месяц12" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декабрь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Месяц1</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ДатаПериода">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

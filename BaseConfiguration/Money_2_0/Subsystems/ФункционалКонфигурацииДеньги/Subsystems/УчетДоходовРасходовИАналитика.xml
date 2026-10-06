@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Subsystem uuid="980561e1-edf4-4326-8162-52cef2bc3cbb">
+		<Properties>
+			<Name>УчетДоходовРасходовИАналитика</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет доходов расходов и аналитика</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЗначенияСубконтоАналитика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfCharacteristicTypes.ВидыАналитик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиАналитикиПоСтатьям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиАналитикиВДокументахПоУмолчанию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.НастройкаКолонокАналитики</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтатьиДоходов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтатьиРасходов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Доход</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДинамикаДоходовИРасходов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СравнениеДоходовИРасходовЗа2Периода</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СтруктураДоходов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СтруктураРасходов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СтатьиДоходов16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СтатьиРасходов16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.УниверсальнаяОперация16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.КоличественныеОборотыПоСтатьямРасходов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АналитикаСтатей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АналитикаСтатейКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьАналитикуСтатей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.КоличественноЦеновойУчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Расход</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.НастройкиАналитикиСтатей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.РазделОперации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОткрытьРазделОперации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьАналитикуСтатей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ДобавитьВлево</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ДобавитьВлевоВсе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ДобавитьВправо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ДобавитьВправоВсе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИконкаЗакладки16х16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияРасходаПоЧеку</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

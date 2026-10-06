@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<FilterCriterion uuid="febed06a-66a0-4853-ab50-3d6cb52bdcbf">
+		<InternalInfo>
+			<xr:GeneratedType name="FilterCriterionManager.ДополнительнаяАналитика" category="Manager">
+				<xr:TypeId>5ca29e8c-6b83-4fb2-b41d-621f9129fb81</xr:TypeId>
+				<xr:ValueId>9df10738-7022-42c1-9d45-c89e4ab88537</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="FilterCriterionList.ДополнительнаяАналитика" category="List">
+				<xr:TypeId>c3fe8542-a160-4729-bd91-f4c86a8dbc50</xr:TypeId>
+				<xr:ValueId>28685983-b962-42bb-a27e-f2636923b2db</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ДополнительнаяАналитика</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительная аналитика</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗначенияСубконтоАналитика</v8:Type>
+			</Type>
+			<UseStandardCommands>true</UseStandardCommands>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Доход.TabularSection.Доходы.Attribute.АналитикаСтатьи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыВернулиДолг.Attribute.АналитикаСтатьиРасходовПоКомиссии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыВернулиДолг.Attribute.АналитикаСтатьиРасходовПоПроцентам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыВернулиДолг.Attribute.АналитикаСтатьиСписания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыВернулиДолг.TabularSection.ДополнительныеРасходы.Attribute.АналитикаСтатьи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыВзялиВДолг.TabularSection.ДополнительныеРасходы.Attribute.АналитикаСтатьи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыДалиВДолг.TabularSection.ДополнительныеРасходы.Attribute.АналитикаСтатьи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг.Attribute.АналитикаСтатьиДоходовПоПроцентам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг.Attribute.АналитикаСтатьиСписания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг.TabularSection.ДополнительныеРасходы.Attribute.АналитикаСтатьи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОбменВалюты.TabularSection.ДополнительныеРасходы.Attribute.АналитикаСтатьи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Перемещение.TabularSection.ДополнительныеРасходы.Attribute.АналитикаСтатьи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Расход.Attribute.КошелекДолг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Расход.TabularSection.Расходы.Attribute.АналитикаСтатьи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация.TabularSection.Доходы.Attribute.АналитикаСтатьиДохода</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация.TabularSection.Расходы.Attribute.АналитикаСтатьиРасхода</xr:Item>
+			</Content>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects/>
+	</FilterCriterion>
+</MetaDataObject>

@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<HTTPService uuid="53b57279-4b22-4695-88af-aee1a62d9672">
+		<Properties>
+			<Name>ДеньгиСинхронизация</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Деньги синхронизация</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<RootURL>moneysynch</RootURL>
+			<ReuseSessions>DontUse</ReuseSessions>
+			<SessionMaxAge>10</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<URLTemplate uuid="15a7e027-28a6-4969-8a64-f4496b9174f9">
+				<Properties>
+					<Name>Версии</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версии</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Возвращает номера версий конфигурации и форматов</Comment>
+					<Template>/version</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="9aad9c1a-4d16-4632-ad19-7f3c10d11d3c">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ВерсииGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="d7c91117-b0ca-456a-ae53-c07879da835c">
+				<Properties>
+					<Name>execute</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Execute</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>выполняет заданный в параметрах метод</Comment>
+					<Template>/execute</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="c3770a02-edeb-4d0e-bca9-8f85905d3525">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>executePOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="1d8e6f99-1b87-4f7a-a983-4f454ba89268">
+				<Properties>
+					<Name>ПроверкаВозможностиСинхронизации</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка возможности синхронизации</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/allowed/{DBID}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="8781d49b-bddf-49be-8e0f-c544474ab05d">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПроверкаВозможностиСинхронизацииGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="6de69af3-b522-4472-98a9-a62edf7e8a5d">
+				<Properties>
+					<Name>СостояниеСинхронизацииНаСервере</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние синхронизации на сервере</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/status/{DBID}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="ed94ec03-5ff4-4d4e-9660-6fb5b9245b50">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>СостояниеGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="14d917b7-f9f2-4c7b-9d59-74d549aee571">
+				<Properties>
+					<Name>СборсСостоянияСинхронизацииНаСервере</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сборс состояния синхронизации на сервере</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/resetstatus/{DBID}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="caef1bb6-d697-4f79-9abf-05dae2c608dc">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>СборсСостоянияСинхронизацииНаСервереPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="976e3cdd-6de0-42b2-afb1-fd7cdffc4555">
+				<Properties>
+					<Name>ЗагрузкаПакетаОтКлиента</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка пакета от клиента</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/upload/{DBID}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="1bf1373c-9ec4-4138-8283-96ad6d233a6d">
+						<Properties>
+							<Name>PUT</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>PUT</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PUT</HTTPMethod>
+							<Handler>ЗагрузитьНаСерверPOST</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="cc145ae9-49e6-489e-a8e5-6441e06ffcc4">
+						<Properties>
+							<Name>Delete</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Delete</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>DELETE</HTTPMethod>
+							<Handler>ЗагрузитьНаСерверDelete</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="c042bfa4-0b9b-4f21-8409-b359bf29c7f5">
+				<Properties>
+					<Name>ЧтениеЗагруженногоПакета</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чтение загруженного пакета</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/read/{DBID}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="98d32768-bb96-4c14-9607-f44f4fcaffb5">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment>Запускает чтение из загруженного пакета или проверяет завершение чтения. </Comment>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ЧтениеЗагруженногоПакетаPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="d81db19c-49c4-4da0-99e6-6a9bf51c70e6">
+				<Properties>
+					<Name>ВыгрузкаПакетаДляКлиента</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выгрузка пакета для клиента</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/download/{DBID}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="1d7a9ca7-cb2b-4ab4-b8f6-75fb3b57ab48">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment>Запуск выгрузки изменений и проверка состояния выгрузки</Comment>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ВыгрузкаПакетаДляКлиентаPOST</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="494aa252-ac41-4fa0-b0aa-701d213a528f">
+						<Properties>
+							<Name>DELETE</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>DELETE</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment>Удаление выгруженных пакетов с указанным номером</Comment>
+							<HTTPMethod>DELETE</HTTPMethod>
+							<Handler>ВыгрузкаПакетаДляКлиентаDELETE</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="a7a9b175-f4df-42fe-9a1b-7c535fd96ede">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment>Получение отдельной части выгруженного пакета</Comment>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ВыгрузкаПакетаДляКлиентаGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="e6d9f164-c771-4054-940c-0b8f162fb7f8">
+				<Properties>
+					<Name>ОтметкаОПолученииПакета</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отметка о получении пакета</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/markdownload/{DBID}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="88d53ec2-5811-443b-a145-0b06e3122559">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment>Отмечает получение части пакета</Comment>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ОтметкаОПолученииПакетаPOST</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="598caf43-bd21-4d4a-bdd1-9a8b39424d55">
+						<Properties>
+							<Name>DELETE</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>DELETE</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment>Снимает отметку о получении части пакета</Comment>
+							<HTTPMethod>DELETE</HTTPMethod>
+							<Handler>ОтметкаОПолученииПакетаDELETE</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="48f91548-8275-49f9-85f0-8271a64a9912">
+				<Properties>
+					<Name>РегистрацияИзменений</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрация изменений</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Регисрирует на сервере изменения для указанного узла</Comment>
+					<Template>/registerchanges/{DBID}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="64aee81a-1279-4106-98a8-bbe004b9d71b">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>РегистрацияИзмененийPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="c8a3b310-ff0c-4931-a554-2ba4277f1419">
+				<Properties>
+					<Name>ОбработкаНастроекСинхронизации</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обработка настроек синхронизации</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Проверяет и обрабатывает настройки (сценарий, срок хранения и т.д.)</Comment>
+					<Template>/settings/{DBID}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="dfa78080-be7f-4607-bd51-be5e7074601c">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ОбработкаНастроекСинхронизацииPOST</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="9730aded-2c22-4da4-86bd-08f7d51470bf">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ОбработкаНастроекСинхронизацииGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="953f3378-369c-4ea7-86d8-e9c46a28a7e7">
+				<Properties>
+					<Name>GetInfo</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Get info</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Возвращает информацию запрошенного типа</Comment>
+					<Template>/getinfo/{DBID}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="5e88407e-245d-4bb6-a22c-51a4b0e8532a">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>GetInfoPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="40559e7c-40e5-488e-a782-5b59bd853de4">
+				<Properties>
+					<Name>УзелПланаОбмена</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Узел плана обмена</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Операции с узлом плана обмена (регистрация, обновление, запрет и т.д.)</Comment>
+					<Template>/node/{DBID}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="3bb5d150-3041-4e1a-81fb-8acff151c253">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>УзелПланаОбменаPOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+		</ChildObjects>
+	</HTTPService>
+</MetaDataObject>

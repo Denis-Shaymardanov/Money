@@ -1,0 +1,1404 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКомандаОК" id="4">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаОК</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="ФормаКомандаОКРасширеннаяПодсказка" id="5"/>
+			</Button>
+			<Button name="ФормаОтмена" id="6">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="7"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ТекстПояснение" id="1">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предоставляется в сумме расходов на приобретение или строительство жилья, но не более 2 000 000 рублей.
+При приобретении или строительстве жилья в кредит, также предоставляется вычет в сумме расходов на 
+погашение процентов по кредиту.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ТекстПояснениеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ТекстПояснениеРасширеннаяПодсказка" id="3"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаОбъектНедвижимости" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект недвижимости</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбъектНедвижимостиРасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<InputField name="ОбъектНедвижимости" id="8">
+					<DataPath>ОбъектНедвижимости</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>34</MaxWidth>
+					<ListChoiceMode>true</ListChoiceMode>
+					<TextEdit>false</TextEdit>
+					<MinValue xsi:type="xs:decimal">1</MinValue>
+					<MaxValue xsi:type="xs:decimal">8</MaxValue>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Квартира</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Квартира</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Комната</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Комната</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Жилой дом</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ЖилойДом</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Доля в доме, квартире, комнате</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ДоляВКвартире</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Земельный участок под строительство жилого дома</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ЗемельныйУчастокПодСтроительство</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Земельный участок с расположенным на нем домом</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ЗемельныйУчасток</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Дом с земельным участком</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ЖилойДомСЗемельнымУчастком</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Доля в земельном участке</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ДоляВЗемельномУчастке</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ОбъектНедвижимостиКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ОбъектНедвижимостиРасширеннаяПодсказка" id="10"/>
+					<Events>
+						<Event name="OnChange">ОбъектНедвижимостиПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаФормаСобственности" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма собственности</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаФормаСобственностиРасширеннаяПодсказка" id="18"/>
+			<ChildItems>
+				<InputField name="ФормаСобственности" id="11">
+					<DataPath>ФормаСобственности</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>34</MaxWidth>
+					<ListChoiceMode>true</ListChoiceMode>
+					<TextEdit>false</TextEdit>
+					<MinValue xsi:type="xs:decimal">1</MinValue>
+					<MaxValue xsi:type="xs:decimal">4</MaxValue>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Индивидуальная</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Общая долевая</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Общая совместная</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Несовершеннолетнего ребенка</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">4</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ФормаСобственностиКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ФормаСобственностиРасширеннаяПодсказка" id="13"/>
+					<Events>
+						<Event name="OnChange">ФормаСобственностиПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="ГруппаЭтоСобственностьСупруга" id="160">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это собственность супруга</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<HorizontalSpacing>Half</HorizontalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЭтоСобственностьСупругаРасширеннаяПодсказка" id="161"/>
+					<ChildItems>
+						<CheckBoxField name="СобственностьСупруга" id="14">
+							<DataPath>СобственностьСупруга</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Собственность супруга</v8:content>
+								</v8:item>
+							</Title>
+							<TitleTextColor>style:FormBackColor</TitleTextColor>
+							<ContextMenu name="СобственностьСупругаКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="СобственностьСупругаРасширеннаяПодсказка" id="16"/>
+						</CheckBoxField>
+						<LabelField name="СобственностьСупругаПредставление" id="245">
+							<DataPath>СобственностьСупругаПредставление</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="СобственностьСупругаПредставлениеКонтекстноеМеню" id="246"/>
+							<ExtendedTooltip name="СобственностьСупругаПредставлениеРасширеннаяПодсказка" id="247"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНомерОбъекта" id="149">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадастровый номер объекта и адрес</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаНомерОбъектаРасширеннаяПодсказка" id="150"/>
+			<ChildItems>
+				<InputField name="КодНомераОбъекта" id="151">
+					<DataPath>КодНомераОбъекта</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер объекта</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<Width>13</Width>
+					<MaxWidth>15</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ListChoiceMode>true</ListChoiceMode>
+					<TextEdit>false</TextEdit>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Кадастровый номер</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Условный номер</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Инвентарный номер</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Адрес</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">4</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="КодНомераОбъектаКонтекстноеМеню" id="152"/>
+					<ExtendedTooltip name="КодНомераОбъектаРасширеннаяПодсказка" id="153"/>
+					<Events>
+						<Event name="OnChange">КодНомераОбъектаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="КадастровыйНомер" id="154">
+					<DataPath>КадастровыйНомер</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>34</MaxWidth>
+					<ContextMenu name="КадастровыйНомерКонтекстноеМеню" id="155"/>
+					<ExtendedTooltip name="КадастровыйНомерРасширеннаяПодсказка" id="156"/>
+				</InputField>
+				<InputField name="АдресОбъектаНедвижимости" id="157">
+					<DataPath>АдресОбъектаНедвижимости</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Указывается при отсутствии кадастрового, условного и инвентарного номера</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="АдресОбъектаНедвижимостиКонтекстноеМеню" id="158"/>
+					<ExtendedTooltip name="АдресОбъектаНедвижимостиРасширеннаяПодсказка" id="159"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<RadioButtonField name="СпособПриобретенияНедвижимости" id="248">
+			<DataPath>СпособПриобретенияНедвижимости</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ приобретения</v8:content>
+				</v8:item>
+			</Title>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Покупка</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Покупка</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Договор долевого участия</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ДоговорДолевогоУчастия</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Строительство</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Строительство</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="СпособПриобретенияНедвижимостиКонтекстноеМеню" id="249"/>
+			<ExtendedTooltip name="СпособПриобретенияНедвижимостиРасширеннаяПодсказка" id="250"/>
+			<Events>
+				<Event name="OnChange">СпособПриобретенияНедвижимостиПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<InputField name="ДатаРегистрацииПраваСобственности" id="19">
+			<DataPath>ДатаРегистрацииПраваСобственности</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация права собственности на жилье</v8:content>
+				</v8:item>
+			</Title>
+			<TitleHeight>2</TitleHeight>
+			<ContextMenu name="ДатаРегистрацииПраваСобственностиКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ДатаРегистрацииПраваСобственностиРасширеннаяПодсказка" id="21"/>
+			<Events>
+				<Event name="OnChange">ДатаРегистрацииПраваСобственностиПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ДатаАктаПередачиПрав" id="40">
+			<DataPath>ДатаАктаПередачиПрав</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Акт приема-передачи</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДатаАктаПередачиПравКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="ДатаАктаПередачиПравРасширеннаяПодсказка" id="42">
+				<Title formatted="true">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>При покупке недвижимости по договору долевого участия в строительстве,
+имущественный вычет можно заявить с даты подписания акта приема-передачи
+с застройщиком.</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+			<Events>
+				<Event name="OnChange">ДатаАктаПередачиПравПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ДатаРегистрацииПраваНаЗемлю" id="34">
+			<DataPath>ДатаРегистрацииПраваНаЗемлю</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация права на землю</v8:content>
+				</v8:item>
+			</Title>
+			<TitleHeight>2</TitleHeight>
+			<ContextMenu name="ДатаРегистрацииПраваНаЗемлюКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ДатаРегистрацииПраваНаЗемлюРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<UsualGroup name="ГруппаНачалоПримененияВычета" id="115">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало применения вычета</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<HorizontalSpacing>Half</HorizontalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНачалоПримененияВычетаРасширеннаяПодсказка" id="116"/>
+			<ChildItems>
+				<InputField name="НачалоПримененияВычета" id="22">
+					<DataPath>НачалоПримененияВычета</DataPath>
+					<TitleHeight>2</TitleHeight>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>года</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ChoiceButton>false</ChoiceButton>
+					<SpinButton>true</SpinButton>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=yyyy</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="НачалоПримененияВычетаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="НачалоПримененияВычетаРасширеннаяПодсказка" id="24"/>
+					<Events>
+						<Event name="OnChange">НачалоПримененияВычетаПриИзменении</Event>
+						<Event name="Tuning">НачалоПримененияВычетаРегулирование</Event>
+					</Events>
+				</InputField>
+				<LabelDecoration name="НадписьГод" id="117">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>года</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьГодКонтекстноеМеню" id="118"/>
+					<ExtendedTooltip name="НадписьГодРасширеннаяПодсказка" id="119"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗаявлениеОРаспределенииВычета" id="214">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявление о распределении вычета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<Group>Horizontal</Group>
+			<HorizontalSpacing>Half</HorizontalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаявлениеОРаспределенииВычетаРасширеннаяПодсказка" id="215">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Если недвижимость приобретена в общую собственность супругов, 
+оформите заявление о распределении расходов на приобретение 
+недвижимости.
+ 
+Заявление оформляется в произвольной форме один раз перед 
+подачей декларации и не требует нотариального заверения.
+В заявлении указывается сумма расходов каждого из супругов 
+на приобретение недвижимости.
+
+Имущественный вычет предоставляется в сумме расходов, 
+указанных в заявлении, но не более 2 000 000 рублей 
+на каждого из супругов.</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+			<ChildItems>
+				<CheckBoxField name="ОформленоЗаявлениеОРаспределенииВычета" id="216">
+					<DataPath>ОформленоЗаявлениеОРаспределенииВычета</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="ОформленоЗаявлениеОРаспределенииВычетаКонтекстноеМеню" id="217"/>
+					<ExtendedTooltip name="ОформленоЗаявлениеОРаспределенииВычетаРасширеннаяПодсказка" id="218"/>
+					<Events>
+						<Event name="OnChange">ОформленоЗаявлениеОРаспределенииВычетаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ДатаЗаявленияОРаспределенииРасходов" id="37">
+					<DataPath>ДатаЗаявленияОРаспределенииРасходов</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<TitleHeight>2</TitleHeight>
+					<ContextMenu name="ДатаЗаявленияОРаспределенииРасходовКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ДатаЗаявленияОРаспределенииРасходовРасширеннаяПодсказка" id="39"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДоля" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доля в праве собственности</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<HorizontalSpacing>Half</HorizontalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДоляРасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<InputField name="ДоляЧислитель" id="45">
+					<DataPath>ДоляЧислитель</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Размер доли</v8:content>
+						</v8:item>
+					</Title>
+					<MinValue xsi:type="xs:decimal">1</MinValue>
+					<ContextMenu name="ДоляЧислительКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ДоляЧислительРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<LabelDecoration name="РазделительДробь" id="51">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>/</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="РазделительДробьКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="РазделительДробьРасширеннаяПодсказка" id="53"/>
+				</LabelDecoration>
+				<InputField name="ДоляЗнаменатель" id="48">
+					<DataPath>ДоляЗнаменатель</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<MinValue xsi:type="xs:decimal">1</MinValue>
+					<ContextMenu name="ДоляЗнаменательКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ДоляЗнаменательРасширеннаяПодсказка" id="50"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСтоимостьНедвижимости" id="193">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость недвижимости</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСтоимостьНедвижимостиРасширеннаяПодсказка" id="194"/>
+			<ChildItems>
+				<InputField name="Стоимость" id="25">
+					<DataPath>Стоимость</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость недвижимости</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<ChoiceButton>false</ChoiceButton>
+					<ContextMenu name="СтоимостьКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="СтоимостьРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<CheckBoxField name="СредиСобственниковРебенок" id="195">
+					<DataPath>СредиСобственниковРебенок</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В том числе стоимость доли ребенка</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="СредиСобственниковРебенокКонтекстноеМеню" id="196"/>
+					<ExtendedTooltip name="СредиСобственниковРебенокРасширеннаяПодсказка" id="197">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>При покупке жилья в общую долевую собственность, стоимость
+недвижимости указывается с учетом доли в праве собственности.
+
+Если несовершеннолетнему ребенку принадлежит доля в приобретенной
+недвижимости, один из родителей может увеличить декларируемую
+стоимость недвижимости на долю ребенка.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="СуммаРасходов" id="211">
+			<DataPath>СуммаРасходов</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<ChoiceButton>false</ChoiceButton>
+			<ContextMenu name="СуммаРасходовКонтекстноеМеню" id="212"/>
+			<ExtendedTooltip name="СуммаРасходовРасширеннаяПодсказка" id="213">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма расходов на приобретение или строительство жилья
+без учета стоимости недвижимости и расходов на погашение
+процентов по кредитам.
+
+В сумму расходов включаются расходы на разработку
+проектной и сметной документации, приобретение строительных
+и отделочных материалов, подведение коммуникаций, выполнение
+строительных и отделочных работ.
+
+Указываются только документально подтвержденные расходы.</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</InputField>
+		<UsualGroup name="ГруппаПроцентыПоИпотеке" id="219">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проценты по ипотеке</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПроцентыПоИпотекеРасширеннаяПодсказка" id="220"/>
+			<ChildItems>
+				<CheckBoxField name="ИспользоватьВычетПоПроцентам" id="221">
+					<DataPath>ИспользоватьВычетПоПроцентам</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Недвижимость приобретена в кредит</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="ИспользоватьВычетПоПроцентамКонтекстноеМеню" id="222"/>
+					<ExtendedTooltip name="ИспользоватьВычетПоПроцентамРасширеннаяПодсказка" id="223">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>При приобретении или строительстве жилья в кредит,
+предоставляется вычет в сумме расходов на погашение процентов.
+ 
+Такой вычет предоставляется только по одному объекту недвижимости.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">ИспользоватьВычетПоПроцентамПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаСуммыПроцентов" id="224">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Суммы процентов</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСуммыПроцентовРасширеннаяПодсказка" id="225"/>
+					<ChildItems>
+						<CheckBoxField name="КредитОформленДо2014Года" id="229">
+							<DataPath>КредитОформленДо2014Года</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кредит получен</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Tumbler</CheckBoxType>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ='после 01.01.2014'; БИ='до 01.01.2014'</v8:content>
+								</v8:item>
+							</EditFormat>
+							<EqualItemsWidth>false</EqualItemsWidth>
+							<ContextMenu name="КредитОформленДо2014ГодаКонтекстноеМеню" id="230"/>
+							<ExtendedTooltip name="КредитОформленДо2014ГодаРасширеннаяПодсказка" id="231">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Если договор кредитования заключен до 01.01.2014, 
+вычет по процентам предоставляется без ограничений
+
+Если договор кредитования заключен после 01.01.2014,
+вычет по процентам не может превышать 3 000 000 рублей</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</CheckBoxField>
+						<InputField name="СуммаПроцентовЗаВсеГоды" id="226">
+							<DataPath>СуммаПроцентовЗаВсеГоды</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Всего выплачено процентов</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ChoiceButton>false</ChoiceButton>
+							<ContextMenu name="СуммаПроцентовЗаВсеГодыКонтекстноеМеню" id="227"/>
+							<ExtendedTooltip name="СуммаПроцентовЗаВсеГодыРасширеннаяПодсказка" id="228">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Сумма фактически выплаченных процентов
+с начала действия договора кредитования
+по конец отчетного периода</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПрименениеВычета" id="82">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток вычета</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаПрименениеВычетаРасширеннаяПодсказка" id="83"/>
+			<ChildItems>
+				<CheckBoxField name="ВычетПрименяетсяВпервые" id="176">
+					<DataPath>ВычетПрименяетсяВпервые</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имущественный вычет</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ='Применялся в предыдущие годы'; БИ='Применяется впервые'</v8:content>
+						</v8:item>
+					</EditFormat>
+					<EqualItemsWidth>false</EqualItemsWidth>
+					<ContextMenu name="ВычетПрименяетсяВпервыеКонтекстноеМеню" id="177"/>
+					<ExtendedTooltip name="ВычетПрименяетсяВпервыеРасширеннаяПодсказка" id="178"/>
+					<Events>
+						<Event name="OnChange">ВычетПрименяетсяВпервыеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаДанныеПредыдущихДеклараций" id="237">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные предыдущих деклараций</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДанныеПредыдущихДекларацийРасширеннаяПодсказка" id="238"/>
+					<ChildItems>
+						<InputField name="ВычетПрошлыхЛетСтоимость" id="239">
+							<DataPath>ВычетПрошлыхЛетСтоимость</DataPath>
+							<TitleHeight>2</TitleHeight>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ChoiceButton>false</ChoiceButton>
+							<ContextMenu name="ВычетПрошлыхЛетСтоимостьКонтекстноеМеню" id="240"/>
+							<ExtendedTooltip name="ВычетПрошлыхЛетСтоимостьРасширеннаяПодсказка" id="241">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Вычет по расходам на приобретение или строительство недвижимости, предоставленный в предыдущие годы
+</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</InputField>
+						<InputField name="ВычетПрошлыхЛетПроценты" id="234">
+							<DataPath>ВычетПрошлыхЛетПроценты</DataPath>
+							<TitleHeight>2</TitleHeight>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ChoiceButton>false</ChoiceButton>
+							<ContextMenu name="ВычетПрошлыхЛетПроцентыКонтекстноеМеню" id="235"/>
+							<ExtendedTooltip name="ВычетПрошлыхЛетПроцентыРасширеннаяПодсказка" id="236">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Вычет по расходам на погашение процентов по кредитам, предоставленный в предыдущие годы</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОбъектНедвижимости" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект недвижимости</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="АдресОбъектаНедвижимости" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ФормаСобственности" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид собственности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="СобственностьСупруга" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собственность оформлена на супругу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаРегистрацииПраваСобственности" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата регистрации права собственности на жилье</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="НачалоПримененияВычета" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычет по объекту применяется с</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Стоимость" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость недвижимости</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоляЧислитель" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размер доли</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДоляЗнаменатель" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего долей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДатаРегистрацииПраваНаЗемлю" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата регистрации права на землю</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаЗаявленияОРаспределенииРасходов" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата заявления о распределении вычета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="КадастровыйНомер" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадастровый, условный или инвентарный номер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="КодНомераОбъекта" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код номера объекта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаАктаПередачиПрав" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата акта приема-передачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="СредиСобственниковРебенок" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Среди собственников ребенок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВычетПрименяетсяВпервые" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычет применяется впервые</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаРасходов" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма прочих расходов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОформленоЗаявлениеОРаспределенииВычета" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформлено заявление о распределении вычета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьВычетПоПроцентам" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать вычет по процентам с ипотеки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаПроцентовЗаВсеГоды" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма процентов за все годы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КредитОформленДо2014Года" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ипотека оформлена до 01.01.2014</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВычетПоПроцентамНедоступен" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычет по процентам недоступен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВычетПрошлыхЛетПроценты" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычет по процентам, примененный ранее</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВычетПрошлыхЛетСтоимость" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычет по расходам, примененный ранее</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Период" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Декларация3НДФЛВыбраннаяФорма" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декларация 3-НДФЛ - выбранная форма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресКлючейПоказателей" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес ключей показателей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СобственностьСупругаПредставление" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собственность супруга представление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособПриобретенияНедвижимости" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ приобретения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДопРеквизитыФормы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доп реквизиты формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Период">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ВычетПоПроцентамНедоступен">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Декларация3НДФЛВыбраннаяФорма">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="АдресКлючейПоказателей">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

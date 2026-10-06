@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<CommandsVisibility>
+		<Command name="CommonCommand.ОткрытьРазделОперации">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРазделКалендарь">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ОткрытьШаблоныОпераций">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРазделНакопления">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРазделБюджет">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СверкаСВыпискойБанка.Command.СверкаСВыпискойБанка">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоПоступлениямДенег.Command.ПолученныеДеньги">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоСписаниямДенег.Command.ПотраченныеДеньги">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоКошелькам.Command.ДеньгиВКошельках">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоДолгам.Command.СверкаПоДолгам">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоИмуществу.Command.СтоимостьИмущества">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураДоходов.Command.СтруктураДоходов">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СтруктураРасходов.Command.СтруктураРасходов">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ДинамикаДоходовИРасходов.Command.ДинамикаДоходовИРасходов">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетОбИзмененииФинансовогоСостояния.Command.ИзмененияФинансовогоСостояния">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.СравнениеДоходовИРасходовЗа2Периода.Command.СравнениеДоходовИРасходовЗа2Периода">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоФинансовымЦелям.Command.НакопленияНаФинЦели">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоБюджету.Command.ОтчетПоБюджету">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоКурсамВалют.Command.КурсыВалют">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоСкидкам.Command.ПолученныеСкидки">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОтчетыСервис">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРегламентированныеОтчеты">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ЗагрузкаКурсовВалют">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="0:5f85d93c-463b-42cc-b068-074fa5f836b0">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.УправлениеПодписками.Command.УправлениеПодписками">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ВыбратьСпособСинхронизации">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonForm.УправлениеСервисомАвтосинхронизации.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.МониторСинхронизацииСМобильнымиУстройствами.Command.СинхронизацияСМобильнымиУстройствами">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.МониторСинхронизацииССервисом.Command.Синхронизация">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ЗагрузкаВыпискиБанка.Command.ЗагрузкаВыпискиБанка">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.НастройкаИОбслуживание.Command.НастройкаИОбслуживание">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.РедакторАналитики.Command.ИзменитьАналитикуВОперациях">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ПолнотекстовыйПоискВДанных.Command.ПолнотекстовыйПоиск">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.СообщитьВСлужбуПоддержки">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОбработкиСервис">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.Конференция1СДеньги8">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.НаписатьОтзывОПрограмме">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ОбзорОсновныхВозможностей.Command.Обучение">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Валюты.Command.Валюты">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.КошелькиИСчета.Command.КошелькиИСчета">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.СтатьиДоходов.Command.СтатьиДоходов">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.СтатьиРасходов.Command.СтатьиРасходов">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Контакты.Command.Контакты">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Долги.Command.Долги">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Имущество.Command.Имущество">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ФинансовыеЦели.Command.ФинансовыеЦели">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ВариантыБюджетов.Command.ВариантыБюджетов">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="ChartOfCharacteristicTypes.ВидыАналитик.Command.АналитикаСтатей">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ПрикрепленныеФайлы.Command.ПрикрепленныеФайлы">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.НаборыДополнительныхРеквизитовИСведений.Command.ДополнительныеРеквизиты">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="CommonCommand.ОткрытьРазделОперации">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРазделКалендарь">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ОткрытьШаблоныОпераций">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРазделНакопления">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРазделБюджет">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.СверкаСВыпискойБанка.Command.СверкаСВыпискойБанка">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоПоступлениямДенег.Command.ПолученныеДеньги">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоСписаниямДенег.Command.ПотраченныеДеньги">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоКошелькам.Command.ДеньгиВКошельках">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоДолгам.Command.СверкаПоДолгам">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоИмуществу.Command.СтоимостьИмущества">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.СтруктураДоходов.Command.СтруктураДоходов">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.СтруктураРасходов.Command.СтруктураРасходов">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ДинамикаДоходовИРасходов.Command.ДинамикаДоходовИРасходов">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетОбИзмененииФинансовогоСостояния.Command.ИзмененияФинансовогоСостояния">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.СравнениеДоходовИРасходовЗа2Периода.Command.СравнениеДоходовИРасходовЗа2Периода">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоФинансовымЦелям.Command.НакопленияНаФинЦели">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоБюджету.Command.ОтчетПоБюджету">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоКурсамВалют.Command.КурсыВалют">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоСкидкам.Command.ПолученныеСкидки">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОтчетыСервис">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРегламентированныеОтчеты">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ЗагрузкаКурсовВалют">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="0:5f85d93c-463b-42cc-b068-074fa5f836b0">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.УправлениеПодписками.Command.УправлениеПодписками">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ВыбратьСпособСинхронизации">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonForm.УправлениеСервисомАвтосинхронизации.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.МониторСинхронизацииСМобильнымиУстройствами.Command.СинхронизацияСМобильнымиУстройствами">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.МониторСинхронизацииССервисом.Command.Синхронизация">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.ЗагрузкаВыпискиБанка.Command.ЗагрузкаВыпискиБанка">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.НастройкаИОбслуживание.Command.НастройкаИОбслуживание">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.РедакторАналитики.Command.ИзменитьАналитикуВОперациях">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.ПолнотекстовыйПоискВДанных.Command.ПолнотекстовыйПоиск">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.СообщитьВСлужбуПоддержки">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОбработкиСервис">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.Конференция1СДеньги8">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.НаписатьОтзывОПрограмме">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.ОбзорОсновныхВозможностей.Command.Обучение">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Валюты.Command.Валюты">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.КошелькиИСчета.Command.КошелькиИСчета">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.СтатьиДоходов.Command.СтатьиДоходов">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.СтатьиРасходов.Command.СтатьиРасходов">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Контакты.Command.Контакты">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Долги.Command.Долги">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Имущество.Command.Имущество">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ФинансовыеЦели.Command.ФинансовыеЦели">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ВариантыБюджетов.Command.ВариантыБюджетов">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="ChartOfCharacteristicTypes.ВидыАналитик.Command.АналитикаСтатей">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ПрикрепленныеФайлы.Command.ПрикрепленныеФайлы">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.НаборыДополнительныхРеквизитовИСведений.Command.ДополнительныеРеквизиты">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="CommonCommand.ОткрытьРазделОперации">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРазделКалендарь">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОткрытьШаблоныОпераций">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРазделНакопления">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРазделБюджет">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.СверкаСВыпискойБанка.Command.СверкаСВыпискойБанка">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоПоступлениямДенег.Command.ПолученныеДеньги">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоСписаниямДенег.Command.ПотраченныеДеньги">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоКошелькам.Command.ДеньгиВКошельках">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоДолгам.Command.СверкаПоДолгам">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоИмуществу.Command.СтоимостьИмущества">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.СтруктураДоходов.Command.СтруктураДоходов">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.СтруктураРасходов.Command.СтруктураРасходов">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ДинамикаДоходовИРасходов.Command.ДинамикаДоходовИРасходов">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетОбИзмененииФинансовогоСостояния.Command.ИзмененияФинансовогоСостояния">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.СравнениеДоходовИРасходовЗа2Периода.Command.СравнениеДоходовИРасходовЗа2Периода">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоФинансовымЦелям.Command.НакопленияНаФинЦели">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоБюджету.Command.ОтчетПоБюджету">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоКурсамВалют.Command.КурсыВалют">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ОтчетПоСкидкам.Command.ПолученныеСкидки">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОтчетыСервис">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОткрытьРегламентированныеОтчеты">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ЗагрузкаКурсовВалют">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="0:5f85d93c-463b-42cc-b068-074fa5f836b0">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.УправлениеПодписками.Command.УправлениеПодписками">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ВыбратьСпособСинхронизации">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="CommonForm.УправлениеСервисомАвтосинхронизации.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.МониторСинхронизацииСМобильнымиУстройствами.Command.СинхронизацияСМобильнымиУстройствами">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.МониторСинхронизацииССервисом.Command.Синхронизация">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ЗагрузкаВыпискиБанка.Command.ЗагрузкаВыпискиБанка">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.НастройкаИОбслуживание.Command.НастройкаИОбслуживание">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.РедакторАналитики.Command.ИзменитьАналитикуВОперациях">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ПолнотекстовыйПоискВДанных.Command.ПолнотекстовыйПоиск">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.СообщитьВСлужбуПоддержки">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ДополнительныеОбработкиСервис">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.Конференция1СДеньги8">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.НаписатьОтзывОПрограмме">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.ОбзорОсновныхВозможностей.Command.Обучение">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="Catalog.Валюты.Command.Валюты">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.КошелькиИСчета.Command.КошелькиИСчета">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.СтатьиДоходов.Command.СтатьиДоходов">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.СтатьиРасходов.Command.СтатьиРасходов">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.Контакты.Command.Контакты">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.Долги.Command.Долги">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.Имущество.Command.Имущество">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.ФинансовыеЦели.Command.ФинансовыеЦели">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.ВариантыБюджетов.Command.ВариантыБюджетов">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+		</Command>
+		<Command name="ChartOfCharacteristicTypes.ВидыАналитик.Command.АналитикаСтатей">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.ПрикрепленныеФайлы.Command.ПрикрепленныеФайлы">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+		</Command>
+		<Command name="Catalog.НаборыДополнительныхРеквизитовИСведений.Command.ДополнительныеРеквизиты">
+			<CommandGroup>CommandGroup.ПанельДействийСправочники</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelOrdinary</Group>
+		<Group>ActionsPanelReports</Group>
+		<Group>ActionsPanelTools</Group>
+		<Group>CommandGroup.ПанельДействийСправочники</Group>
+	</GroupsOrder>
+</CommandInterface>

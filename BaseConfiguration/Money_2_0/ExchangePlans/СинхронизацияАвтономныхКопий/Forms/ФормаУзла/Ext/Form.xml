@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="22">
+			<DataPath>Объект.Code</DataPath>
+			<ContextMenu name="КодКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="НомерОтправленного" id="4">
+			<DataPath>Объект.SentNo</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="НомерОтправленногоКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НомерОтправленногоРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="НомерПринятого" id="7">
+			<DataPath>Объект.ReceivedNo</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="НомерПринятогоКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="НомерПринятогоРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ЗатребованныйСценарий" id="28">
+			<DataPath>Объект.ЗатребованныйСценарий</DataPath>
+			<ContextMenu name="ЗатребованныйСценарийКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ЗатребованныйСценарийРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="ВерсияФорматаОбмена" id="13">
+			<DataPath>Объект.ВерсияФорматаОбмена</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="ВерсияФорматаОбменаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВерсияФорматаОбменаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ПользовательБазы" id="19">
+			<DataPath>Объект.ПользовательБазы</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="ПользовательБазыКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ПользовательБазыРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<CheckBoxField name="МобильноеУстройство" id="31">
+			<DataPath>Объект.МобильноеУстройство</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ContextMenu name="МобильноеУстройствоКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="МобильноеУстройствоРасширеннаяПодсказка" id="33"/>
+		</CheckBoxField>
+		<CheckBoxField name="СинхронизацияЗапрещена" id="25">
+			<DataPath>Объект.СинхронизацияЗапрещена</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запретить синхронизацию в случае потери или дискредитации информационной базы.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ContextMenu name="СинхронизацияЗапрещенаКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="СинхронизацияЗапрещенаРасширеннаяПодсказка" id="27"/>
+		</CheckBoxField>
+		<CheckBoxField name="Активность" id="10">
+			<DataPath>Объект.Активность</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информационна база активна</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снимите отметку, если информационная база временно или совсем не используется. Нективные базы не участвуют в синхронизации и не занимают лицензии в подписках на платные услуги</v8:content>
+				</v8:item>
+			</ToolTip>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="АктивностьКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="АктивностьРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExchangePlanObject.СинхронизацияАвтономныхКопий</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

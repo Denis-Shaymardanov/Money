@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Subsystem uuid="31b34312-cd31-4dcb-b384-4e1d233a1486">
+		<Properties>
+			<Name>ОбменОбщийФункционал</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен общий функционал</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Общий функционал для всех способов синхронизации данных</Comment>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.МенеджерСинхронизацииАвтономныхКопий_10</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.MoneyData_2_0</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СинхронизацияАвтономныхКопийВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПараметрыСинхронизацииАвтономныхКопий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыОтбораЭлементовСинхронизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СинхронизацияАвтономныхКопий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">WebService.MoneyDataExchange</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.СинхронизацияАвтономныхКопийЭтоЦентральнаяБаза</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СинхронизацияАвтономныхКопийЭтоЦентральнаяБаза</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СинхронизацияАвтономныхКопийЭтоАвтономнаяКопия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.СинхронизацияАвтономныхКопийЭтоАвтономнаяКопия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СинхронизацияАвтономныхКопийКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СценарииСинхронизацииАвтономныхКопий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ОтборыСинхронизацииАвтономныхКопий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДеньгиВыбранныйСпособСинхронизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыСинхронизацииДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДеньгиСинхронизацияНеИспользуется</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ДеньгиСинхронизацияНеИспользуется</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ДеньгиОбработкаВебЗапросов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">HTTPService.ДеньгиСинхронизация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ДействияПроцессаСинхронизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыПакетовСинхронизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РезультатыДействийСинхронизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ОчередностьЭтаповОбменаДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПакетыСинхронизацииКОтправке</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПакетыСинхронизацииПолученные</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.СинхронизацияАвтономныхКопийПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДеньгиПриостановитьАвтосинхронизацию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостоянияПроцессовОбменаДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПроцессыОбменаДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АвтоматСинхронизацииССервисом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ДействияПроцессовОбмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КонтрольПроцессовОбменаДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПроцессыОбменаСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПроцессыОбменаПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПроцессыОбменаВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПроцессыОбменаКлиент</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

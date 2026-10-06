@@ -1,0 +1,4009 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Накопления</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницыФормы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыФормыExtendedTooltip" id="324"/>
+			<ChildItems>
+				<Page name="ГруппаСтраницаСостояниеФинансовыхЦелей" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние финансовых целей</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница Состояние финансовых целей</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ГруппаСтраницаСостояниеФинансовыхЦелейExtendedTooltip" id="325"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСостояниеОбщихНакоплений" id="497">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Состояние общих накоплений</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа состояние общих накоплений</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>style:ДеньгиФонИнформационнойГруппы</BackColor>
+							<ExtendedTooltip name="ГруппаСостояниеОбщихНакопленийРасширеннаяПодсказка" id="498"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОбщиеНакопленияВсего" id="499">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа общие накопления всего</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа общие накопления всего</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОбщиеНакопленияВсегоРасширеннаяПодсказка" id="500"/>
+									<ChildItems>
+										<LabelDecoration name="ПредсталвлениеОбщихНакоплений" id="501">
+											<Font ref="style:LargeTextFont" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>1. Накопление без конкретной цели</v8:content>
+												</v8:item>
+											</Title>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<ContextMenu name="ПредсталвлениеОбщихНакопленийКонтекстноеМеню" id="502"/>
+											<ExtendedTooltip name="ПредсталвлениеОбщихНакопленийРасширеннаяПодсказка" id="503"/>
+										</LabelDecoration>
+										<LabelField name="ПредставлениеОбщихНакоплений" id="504">
+											<DataPath>ПредставлениеОбщихНакоплений</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<Width>10</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>16</MaxWidth>
+											<TextColor>style:ЗаголовокГруппыЦвет</TextColor>
+											<Font ref="style:LargeTextFont" kind="StyleItem"/>
+											<ContextMenu name="ПредставлениеОбщихНакопленийКонтекстноеМеню" id="505"/>
+											<ExtendedTooltip name="ПредставлениеОбщихНакопленийРасширеннаяПодсказка" id="506"/>
+										</LabelField>
+										<LabelField name="ПредставлениеПлановНакопленийБезЦели" id="507">
+											<DataPath>ПредставлениеПлановНакопленийБезЦели</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>22</MaxWidth>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ПредставлениеПлановНакопленийБезЦелиКонтекстноеМеню" id="508"/>
+											<ExtendedTooltip name="ПредставлениеПлановНакопленийБезЦелиРасширеннаяПодсказка" id="509"/>
+											<Events>
+												<Event name="Click">ПредставлениеПлановНакопленийБезЦелиНажатие</Event>
+											</Events>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="ПясненияОбщихНакоплений" id="510">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ИнформационнаяНадписьЦвет</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Эта сумма распределяется по финансовым целям в порядке их приоритетов</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПясненияОбщихНакопленийКонтекстноеМеню" id="511"/>
+									<ExtendedTooltip name="ПясненияОбщихНакопленийРасширеннаяПодсказка" id="512"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ФинансовыеЦели" id="513">
+							<Representation>List</Representation>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ФинансовыеЦели</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ФинансовыеЦелиКонтекстноеМеню" id="514">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ФинансовыеЦелиДобавить1" id="620">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ФинансовыеЦели.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="ФинансовыеЦелиДобавить1РасширеннаяПодсказка" id="621"/>
+									</Button>
+									<Button name="ФинансовыеЦелиСкопировать1" id="622">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ФинансовыеЦели.StandardCommand.Copy</CommandName>
+										<ExtendedTooltip name="ФинансовыеЦелиСкопировать1РасширеннаяПодсказка" id="623"/>
+									</Button>
+									<Button name="ФинансовыеЦелиИзменить1" id="624">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ФинансовыеЦели.StandardCommand.Change</CommandName>
+										<ExtendedTooltip name="ФинансовыеЦелиИзменить1РасширеннаяПодсказка" id="625"/>
+									</Button>
+									<ButtonGroup name="ФинансовыеЦелиГруппа3" id="626">
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ФинансовыеЦелиГруппа3РасширеннаяПодсказка" id="627"/>
+										<ChildItems>
+											<Button name="ФинансовыеЦелиПоднятьПрииоритет1" id="628">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПоднятьПрииоритет</CommandName>
+												<ExtendedTooltip name="ФинансовыеЦелиПоднятьПрииоритет1РасширеннаяПодсказка" id="629"/>
+											</Button>
+											<Button name="ФинансовыеЦелиОпуститьПриоритет1" id="630">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОпуститьПриоритет</CommandName>
+												<ExtendedTooltip name="ФинансовыеЦелиОпуститьПриоритет1РасширеннаяПодсказка" id="631"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="ФинансовыеЦелиЗапланировать1" id="632">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Запланировать</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ФинансовыеЦелиЗапланировать1РасширеннаяПодсказка" id="633"/>
+									</Button>
+									<Button name="ФинансовыеЦелиУдалить1" id="634">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ФинансовыеЦели.StandardCommand.Delete</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Пометить на удаление / Снять пометку</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ФинансовыеЦелиУдалить1РасширеннаяПодсказка" id="635"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ФинансовыеЦелиКоманднаяПанель" id="515">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ФинансовыеЦелиОбновитьФинансовыеЦели" id="618">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОбновитьФинансовыеЦели</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ФинансовыеЦелиОбновитьФинансовыеЦелиРасширеннаяПодсказка" id="619"/>
+									</Button>
+									<ButtonGroup name="ФинансовыеЦелиГруппаКнопокРедактирование" id="636">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа кнопок редактирование</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Финансовые цели группа кнопок редактирование</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ФинансовыеЦелиГруппаКнопокРедактированиеРасширеннаяПодсказка" id="637"/>
+										<ChildItems>
+											<Button name="ФинансовыеЦелиДобавить" id="562">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ФинансовыеЦели.StandardCommand.Add</CommandName>
+												<ExtendedTooltip name="ФинансовыеЦелиДобавитьРасширеннаяПодсказка" id="563"/>
+											</Button>
+											<Button name="ФинансовыеЦелиСкопировать" id="564">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ФинансовыеЦели.StandardCommand.Copy</CommandName>
+												<ExtendedTooltip name="ФинансовыеЦелиСкопироватьРасширеннаяПодсказка" id="565"/>
+											</Button>
+											<Button name="ФинансовыеЦелиИзменить" id="566">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ФинансовыеЦели.StandardCommand.Change</CommandName>
+												<ExtendedTooltip name="ФинансовыеЦелиИзменитьРасширеннаяПодсказка" id="567"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ФинансовыеЦелиГруппаИзменениеПриоритета" id="568">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменение приоритета</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Финансовые цели группа изменение приоритета</v8:content>
+											</v8:item>
+										</ToolTip>
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ФинансовыеЦелиГруппаИзменениеПриоритетаРасширеннаяПодсказка" id="569"/>
+										<ChildItems>
+											<Button name="ФинансовыеЦелиПоднятьПрииоритет" id="570">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПоднятьПрииоритет</CommandName>
+												<ExtendedTooltip name="ФинансовыеЦелиПоднятьПрииоритетРасширеннаяПодсказка" id="571"/>
+											</Button>
+											<Button name="ФинансовыеЦелиОпуститьПриоритет" id="572">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОпуститьПриоритет</CommandName>
+												<ExtendedTooltip name="ФинансовыеЦелиОпуститьПриоритетРасширеннаяПодсказка" id="573"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="ФинансовыеЦелиЗапланировать" id="574">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Запланировать</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ФинансовыеЦелиЗапланироватьРасширеннаяПодсказка" id="575"/>
+									</Button>
+									<Button name="ФинансовыеЦелиУдалить" id="576">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ФинансовыеЦели.StandardCommand.Delete</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Пометить на удаление / Снять пометку</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ФинансовыеЦелиУдалитьРасширеннаяПодсказка" id="577"/>
+									</Button>
+									<ButtonGroup name="ФинансовыеЦелиГруппаКомандыФормы" id="613">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Команды формы</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Финансовые цели группа команды формы</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ФинансовыеЦелиГруппаКомандыФормыРасширеннаяПодсказка" id="614"/>
+										<ChildItems>
+											<Button name="ОткрыватьПриЗапускеПрограммы" id="609">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОткрыватьПриЗапускеПрограммы</CommandName>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ОткрыватьПриЗапускеПрограммыРасширеннаяПодсказка" id="610"/>
+											</Button>
+											<Button name="ИзменитьФорму1" id="607">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+												<ExtendedTooltip name="ИзменитьФорму1РасширеннаяПодсказка" id="608"/>
+											</Button>
+											<Button name="Справка1" id="611">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.StandardCommand.Help</CommandName>
+												<ExtendedTooltip name="Справка1РасширеннаяПодсказка" id="612"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ФинансовыеЦелиРасширеннаяПодсказка" id="516"/>
+							<SearchStringAddition name="ФинансовыеЦелиСтрокаПоиска" id="517">
+								<AdditionSource>
+									<Item>ФинансовыеЦели</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ФинансовыеЦелиСтрокаПоискаКонтекстноеМеню" id="518"/>
+								<ExtendedTooltip name="ФинансовыеЦелиСтрокаПоискаРасширеннаяПодсказка" id="519"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ФинансовыеЦелиСостояниеПросмотра" id="520">
+								<AdditionSource>
+									<Item>ФинансовыеЦели</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ФинансовыеЦелиСостояниеПросмотраКонтекстноеМеню" id="521"/>
+								<ExtendedTooltip name="ФинансовыеЦелиСостояниеПросмотраРасширеннаяПодсказка" id="522"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ФинансовыеЦелиУправлениеПоиском" id="523">
+								<AdditionSource>
+									<Item>ФинансовыеЦели</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ФинансовыеЦелиУправлениеПоискомКонтекстноеМеню" id="524"/>
+								<ExtendedTooltip name="ФинансовыеЦелиУправлениеПоискомРасширеннаяПодсказка" id="525"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ФинансовыеЦелиВыбор</Event>
+								<Event name="BeforeAddRow">ФинансовыеЦелиПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ФинансовыеЦелиПередУдалением</Event>
+								<Event name="OnActivateRow">ФинансовыеЦелиПриАктивизацииСтроки</Event>
+								<Event name="Drag">ФинансовыеЦелиПеретаскивание</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ФинансовыеЦелиГруппаПредставлениеЦели" id="593">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма и срок</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Финансовые цели группа осталось накопить</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ФинансовыеЦелиГруппаПредставлениеЦелиРасширеннаяПодсказка" id="594"/>
+									<ChildItems>
+										<InputField name="ФинансовыеЦелиПредставлениеФинансоваяЦель" id="578">
+											<DataPath>ФинансовыеЦели.ПредставлениеФинансоваяЦель</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<Width>25</Width>
+											<ContextMenu name="ФинансовыеЦелиПредставлениеФинансоваяЦельКонтекстноеМеню" id="579"/>
+											<ExtendedTooltip name="ФинансовыеЦелиПредставлениеФинансоваяЦельРасширеннаяПодсказка" id="580"/>
+										</InputField>
+										<InputField name="ФинансовыеЦелиПредставлениеСуммы" id="581">
+											<DataPath>ФинансовыеЦели.ПредставлениеСуммы</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<AutoEditMode>true</AutoEditMode>
+											<Width>25</Width>
+											<MaxWidth>17</MaxWidth>
+											<Font ref="style:SmallTextFont" kind="StyleItem"/>
+											<ContextMenu name="ФинансовыеЦелиПредставлениеСуммыКонтекстноеМеню" id="582"/>
+											<ExtendedTooltip name="ФинансовыеЦелиПредставлениеСуммыРасширеннаяПодсказка" id="583"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ФинансовыеЦелиПредставлениеПотрачено" id="615">
+									<DataPath>ФинансовыеЦели.ПредставлениеПотрачено</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<Width>12</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>17</MaxWidth>
+									<ContextMenu name="ФинансовыеЦелиПредставлениеПотраченоКонтекстноеМеню" id="616"/>
+									<ExtendedTooltip name="ФинансовыеЦелиПредставлениеПотраченоРасширеннаяПодсказка" id="617"/>
+								</InputField>
+								<InputField name="ФинансовыеЦелиПредставлениеНакопленоВсего" id="584">
+									<DataPath>ФинансовыеЦели.ПредставлениеНакопленоВсего</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<Width>12</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>17</MaxWidth>
+									<ContextMenu name="ФинансовыеЦелиПредставлениеНакопленоВсегоКонтекстноеМеню" id="585"/>
+									<ExtendedTooltip name="ФинансовыеЦелиПредставлениеНакопленоВсегоРасширеннаяПодсказка" id="586"/>
+								</InputField>
+								<ColumnGroup name="ФинансовыеЦелиГруппаСоставНакоплений" id="535">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>в том числе:</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Финансовые цели группа состав накоплений</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="ФинансовыеЦелиГруппаСоставНакопленийРасширеннаяПодсказка" id="536"/>
+									<ChildItems>
+										<InputField name="ФинансовыеЦелиПредставлениеЗарезервировано" id="587">
+											<DataPath>ФинансовыеЦели.ПредставлениеЗарезервировано</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>17</MaxWidth>
+											<ContextMenu name="ФинансовыеЦелиПредставлениеЗарезервированоКонтекстноеМеню" id="588"/>
+											<ExtendedTooltip name="ФинансовыеЦелиПредставлениеЗарезервированоРасширеннаяПодсказка" id="589"/>
+										</InputField>
+										<InputField name="ФинансовыеЦелиПредставлениеРаспределено" id="590">
+											<DataPath>ФинансовыеЦели.ПредставлениеРаспределено</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>17</MaxWidth>
+											<TextColor>style:ЗаголовокГруппыЦвет</TextColor>
+											<ContextMenu name="ФинансовыеЦелиПредставлениеРаспределеноКонтекстноеМеню" id="591"/>
+											<ExtendedTooltip name="ФинансовыеЦелиПредставлениеРаспределеноРасширеннаяПодсказка" id="592"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ФинансовыеЦелиГруппаОсталосьНакопить" id="546">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Осталось накопить</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Финансовые цели группа осталось накопить</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ФинансовыеЦелиГруппаОсталосьНакопитьРасширеннаяПодсказка" id="547"/>
+									<ChildItems>
+										<InputField name="ФинансовыеЦелиПредставлениеОсталосьНакопить" id="595">
+											<DataPath>ФинансовыеЦели.ПредставлениеОсталосьНакопить</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>17</MaxWidth>
+											<ContextMenu name="ФинансовыеЦелиПредставлениеОсталосьНакопитьКонтекстноеМеню" id="596"/>
+											<ExtendedTooltip name="ФинансовыеЦелиПредставлениеОсталосьНакопитьРасширеннаяПодсказка" id="597"/>
+										</InputField>
+										<InputField name="ФинансовыеЦелиПредставлениеСрока" id="598">
+											<DataPath>ФинансовыеЦели.ПредставлениеСрока</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>17</MaxWidth>
+											<ContextMenu name="ФинансовыеЦелиПредставлениеСрокаКонтекстноеМеню" id="599"/>
+											<ExtendedTooltip name="ФинансовыеЦелиПредставлениеСрокаРасширеннаяПодсказка" id="600"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ФинансовыеЦелиГруппаПлановыеНакопления" id="554">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Плановые накопления</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Финансовые цели группа плановые накопления</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ФинансовыеЦелиГруппаПлановыеНакопленияРасширеннаяПодсказка" id="555"/>
+									<ChildItems>
+										<InputField name="ФинансовыеЦелиПредставлениеОткладыватьВМесяц" id="601">
+											<DataPath>ФинансовыеЦели.ПредставлениеОткладыватьВМесяц</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Рекомендуется откладывать</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>17</MaxWidth>
+											<ContextMenu name="ФинансовыеЦелиПредставлениеОткладыватьВМесяцКонтекстноеМеню" id="602"/>
+											<ExtendedTooltip name="ФинансовыеЦелиПредставлениеОткладыватьВМесяцРасширеннаяПодсказка" id="603"/>
+										</InputField>
+										<InputField name="ФинансовыеЦелиПредставлениеЗапланировано" id="604">
+											<DataPath>ФинансовыеЦели.ПредставлениеЗапланировано</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Плановые операции</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<CellHyperlink>true</CellHyperlink>
+											<AutoEditMode>true</AutoEditMode>
+											<CellHyperlinkRepresentation>Show</CellHyperlinkRepresentation>
+											<CellHyperlinkDisplayVariant>Always</CellHyperlinkDisplayVariant>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>17</MaxWidth>
+											<TextColor>style:ДеньгиЦветГиперссылки</TextColor>
+											<ContextMenu name="ФинансовыеЦелиПредставлениеЗапланированоКонтекстноеМеню" id="605"/>
+											<ExtendedTooltip name="ФинансовыеЦелиПредставлениеЗапланированоРасширеннаяПодсказка" id="606"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтраницаНакопленияПоКошелькам" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Накопления по кошелькам</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница накопления по кошелькам</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ГруппаСтраницаНакопленияПоКошелькамExtendedTooltip" id="384"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКартинкаКоманднаяПанель1" id="124">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинка, командная панель</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКартинкаКоманднаяПанель1ExtendedTooltip" id="385"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияИконкаЦели1" id="125">
+									<Visible>false</Visible>
+									<Width>7</Width>
+									<Height>2</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Иконка</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.Накопления48</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияИконкаЦели1КонтекстноеМеню" id="126"/>
+									<ExtendedTooltip name="ДекорацияИконкаЦели1ExtendedTooltip" id="386"/>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаОтступКоманднаяПанель1" id="127">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отступ, командная панель</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОтступКоманднаяПанель1ExtendedTooltip" id="387"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияОтступ1" id="128">
+											<Visible>false</Visible>
+											<ContextMenu name="ДекорацияОтступ1КонтекстноеМеню" id="129"/>
+											<ExtendedTooltip name="ДекорацияОтступ1ExtendedTooltip" id="388"/>
+										</LabelDecoration>
+										<CommandBar name="НакопленияПоКошелькамГруппаКоманднаяПанель" id="130">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Командная панель</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalStretch>true</VerticalStretch>
+											<CommandSource>Item.НакопленияПоКошелькам</CommandSource>
+											<ExtendedTooltip name="НакопленияПоКошелькамГруппаКоманднаяПанельExtendedTooltip" id="389"/>
+											<ChildItems>
+												<Button name="НакопленияПоКошелькамОбновить" id="261">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ОбновитьТаблицуНакопленияПоКошелькам</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Обновить</v8:content>
+														</v8:item>
+													</Title>
+													<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+													<ExtendedTooltip name="НакопленияПоКошелькамОбновитьExtendedTooltip" id="390"/>
+												</Button>
+												<ButtonGroup name="НакопленияПоКошелькамГруппаДокументы" id="311">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Накопления по кошелькам группа документы</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Накопления по кошелькам группа документы</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="НакопленияПоКошелькамГруппаДокументыExtendedTooltip" id="391"/>
+												</ButtonGroup>
+												<Button name="ИзменитьФорму2" id="133">
+													<Type>CommandBarButton</Type>
+													<SkipOnInput>false</SkipOnInput>
+													<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+													<ExtendedTooltip name="ИзменитьФорму2ExtendedTooltip" id="392"/>
+												</Button>
+												<Button name="Справка2" id="134">
+													<Type>CommandBarButton</Type>
+													<SkipOnInput>false</SkipOnInput>
+													<CommandName>Form.StandardCommand.Help</CommandName>
+													<ExtendedTooltip name="Справка2ExtendedTooltip" id="393"/>
+												</Button>
+												<Button name="НакопленияПоКошелькамСоздатьПеревод" id="236">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.СоздатьПеремещение</CommandName>
+													<ExtendedTooltip name="НакопленияПоКошелькамСоздатьПереводExtendedTooltip" id="394"/>
+												</Button>
+												<Popup name="НакопленияПоКошелькамГруппаВсеОперации" id="240">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Создать операцию</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Накопления по кошелькам группа все операции</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Picture>
+														<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="НакопленияПоКошелькамГруппаВсеОперацииExtendedTooltip" id="395"/>
+													<ChildItems>
+														<Button name="НакопленияПоКошелькамСоздатьРасход" id="252">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.СоздатьРасход</CommandName>
+															<ExtendedTooltip name="НакопленияПоКошелькамСоздатьРасходРасширеннаяПодсказка" id="396"/>
+														</Button>
+														<Button name="НакопленияПоКошелькамСоздатьПоступлениеДенег" id="254">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.СоздатьДоход</CommandName>
+															<ExtendedTooltip name="НакопленияПоКошелькамСоздатьПоступлениеДенегExtendedTooltip" id="397"/>
+														</Button>
+														<ButtonGroup name="НакопленияПоКошелькамГруппаПереводы" id="241">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Операции переводов</v8:content>
+																</v8:item>
+															</Title>
+															<ExtendedTooltip name="НакопленияПоКошелькамГруппаПереводыExtendedTooltip" id="398"/>
+															<ChildItems>
+																<Button name="НакопленияПоКошелькамСоздатьПеревод1" id="477">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Command.СоздатьПеремещение</CommandName>
+																	<ExtendedTooltip name="НакопленияПоКошелькамСоздатьПеревод1РасширеннаяПодсказка" id="478"/>
+																</Button>
+																<Button name="НакопленияПоКошелькамСоздатьОбменВалюты" id="253">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Command.СоздатьОбменВалюты</CommandName>
+																	<ExtendedTooltip name="НакопленияПоКошелькамСоздатьОбменВалютыExtendedTooltip" id="399"/>
+																</Button>
+															</ChildItems>
+														</ButtonGroup>
+														<ButtonGroup name="НакопленияПоКошелькамГруппаЗаймы" id="243">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Операции займов</v8:content>
+																</v8:item>
+															</Title>
+															<ExtendedTooltip name="НакопленияПоКошелькамГруппаЗаймыExtendedTooltip" id="400"/>
+															<ChildItems>
+																<Button name="НакопленияПоКошелькамСоздатьМыДалиВДолг" id="255">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Command.СоздатьМыДалиВДолг</CommandName>
+																	<ExtendedTooltip name="НакопленияПоКошелькамСоздатьМыДалиВДолгExtendedTooltip" id="401"/>
+																</Button>
+																<Button name="НакопленияПоКошелькамСоздатьНамВернулиДолг" id="256">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Command.СоздатьНамВернулиДолг</CommandName>
+																	<ExtendedTooltip name="НакопленияПоКошелькамСоздатьНамВернулиДолгExtendedTooltip" id="402"/>
+																</Button>
+															</ChildItems>
+														</ButtonGroup>
+														<ButtonGroup name="НакопленияПоКошелькамГруппаКредиты" id="246">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Операции кредитов</v8:content>
+																</v8:item>
+															</Title>
+															<ExtendedTooltip name="НакопленияПоКошелькамГруппаКредитыExtendedTooltip" id="403"/>
+															<ChildItems>
+																<Button name="НакопленияПоКошелькамСоздатьМыВзялиВДолг" id="257">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Command.СоздатьМыВзялиВДолг</CommandName>
+																	<ExtendedTooltip name="НакопленияПоКошелькамСоздатьМыВзялиВДолгРасширеннаяПодсказка" id="404"/>
+																</Button>
+																<Button name="НакопленияПоКошелькамСоздатьМыВернулиДолг" id="258">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Command.СоздатьМыВернулиДолг</CommandName>
+																	<ExtendedTooltip name="НакопленияПоКошелькамСоздатьМыВернулиДолгРасширеннаяПодсказка" id="405"/>
+																</Button>
+															</ChildItems>
+														</ButtonGroup>
+														<ButtonGroup name="НакопленияПоКошелькамГруппаУниверсальныеДокументы" id="249">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Универсальные операции</v8:content>
+																</v8:item>
+															</Title>
+															<ExtendedTooltip name="НакопленияПоКошелькамГруппаУниверсальныеДокументыExtendedTooltip" id="406"/>
+															<ChildItems>
+																<Button name="НакопленияПоКошелькамСоздатьВводИзменениеОстатка" id="259">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Command.СоздатьВводИзменениеОстатка</CommandName>
+																	<ExtendedTooltip name="НакопленияПоКошелькамСоздатьВводИзменениеОстаткаExtendedTooltip" id="407"/>
+																</Button>
+																<Button name="НакопленияПоКошелькамСоздатьУниверсальнаяОперация" id="260">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>Form.Command.СоздатьУниверсальнаяОперация</CommandName>
+																	<ExtendedTooltip name="НакопленияПоКошелькамСоздатьУниверсальнаяОперацияExtendedTooltip" id="408"/>
+																</Button>
+															</ChildItems>
+														</ButtonGroup>
+													</ChildItems>
+												</Popup>
+											</ChildItems>
+										</CommandBar>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="НакопленияПоКошелькам" id="203">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<DefaultItem>true</DefaultItem>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>НакопленияПоКошелькам</DataPath>
+							<RowPictureDataPath>НакопленияПоКошелькам.ИндексКартинкиЭлемента</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.ПиктограммыЭлементов</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<CommandSet>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НакопленияПоКошелькамКонтекстноеМеню" id="204"/>
+							<AutoCommandBar name="НакопленияПоКошелькамКоманднаяПанель" id="205">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="НакопленияПоКошелькамExtendedTooltip" id="409"/>
+							<SearchStringAddition name="НакопленияПоКошелькамSearchString" id="488">
+								<AdditionSource>
+									<Item>НакопленияПоКошелькам</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НакопленияПоКошелькамSearchStringContextMenu" id="489"/>
+								<ExtendedTooltip name="НакопленияПоКошелькамSearchStringExtendedTooltip" id="490"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НакопленияПоКошелькамViewStatus" id="491">
+								<AdditionSource>
+									<Item>НакопленияПоКошелькам</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НакопленияПоКошелькамViewStatusContextMenu" id="492"/>
+								<ExtendedTooltip name="НакопленияПоКошелькамViewStatusExtendedTooltip" id="493"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НакопленияПоКошелькамSearchControl" id="494">
+								<AdditionSource>
+									<Item>НакопленияПоКошелькам</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НакопленияПоКошелькамSearchControlContextMenu" id="495"/>
+								<ExtendedTooltip name="НакопленияПоКошелькамSearchControlExtendedTooltip" id="496"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="DragCheck">НакопленияПоКошелькамПроверкаПеретаскивания</Event>
+								<Event name="Selection">НакопленияПоКошелькамВыбор</Event>
+								<Event name="OnActivateRow">НакопленияПоКошелькамПриАктивизацииСтроки</Event>
+								<Event name="DragStart">НакопленияПоКошелькамНачалоПеретаскивания</Event>
+								<Event name="Drag">НакопленияПоКошелькамПеретаскивание</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="НакопленияПоКошелькамФинансоваяЦель" id="208">
+									<DataPath>НакопленияПоКошелькам.ФинансоваяЦель</DataPath>
+									<Visible>false</Visible>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<DefaultItem>true</DefaultItem>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<AutoEditMode>true</AutoEditMode>
+									<ContextMenu name="НакопленияПоКошелькамФинансоваяЦельКонтекстноеМеню" id="209"/>
+									<ExtendedTooltip name="НакопленияПоКошелькамФинансоваяЦельExtendedTooltip" id="412"/>
+								</LabelField>
+								<ColumnGroup name="НакопленияПоКошелькамГруппаФинансоваяЦель" id="638">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа финансовая цель</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Накопления по кошелькам группа финансовая цель</v8:content>
+										</v8:item>
+									</ToolTip>
+									<FixingInTable>Left</FixingInTable>
+									<ExtendedTooltip name="НакопленияПоКошелькамГруппаФинансоваяЦельРасширеннаяПодсказка" id="639"/>
+									<ChildItems>
+										<InputField name="НакопленияПоКошелькамПредставлениеФинансоваяЦель" id="640">
+											<DataPath>НакопленияПоКошелькам.ПредставлениеФинансоваяЦель</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ContextMenu name="НакопленияПоКошелькамПредставлениеФинансоваяЦельКонтекстноеМеню" id="641"/>
+											<ExtendedTooltip name="НакопленияПоКошелькамПредставлениеФинансоваяЦельРасширеннаяПодсказка" id="642"/>
+										</InputField>
+										<InputField name="НакопленияПоКошелькамПредставлениеСуммы" id="643">
+											<DataPath>НакопленияПоКошелькам.ПредставлениеСуммы</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<ShowInFooter>false</ShowInFooter>
+											<AutoEditMode>true</AutoEditMode>
+											<Font ref="style:SmallTextFont" kind="StyleItem"/>
+											<ContextMenu name="НакопленияПоКошелькамПредставлениеСуммыКонтекстноеМеню" id="644"/>
+											<ExtendedTooltip name="НакопленияПоКошелькамПредставлениеСуммыРасширеннаяПодсказка" id="645"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="НакопленияПоКошелькамГруппаНакоплено" id="265">
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Накоплено</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="НакопленияПоКошелькамГруппаНакопленоExtendedTooltip" id="417"/>
+									<ChildItems>
+										<ColumnGroup name="НакопленияПоКошелькамГруппаНакопленоВалюта" id="266">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Накоплено, валюта</v8:content>
+												</v8:item>
+											</Title>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="НакопленияПоКошелькамГруппаНакопленоВалютаExtendedTooltip" id="418"/>
+											<ChildItems>
+												<LabelField name="НакопленияПоКошелькамНакоплено" id="216">
+													<DataPath>НакопленияПоКошелькам.Накоплено</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<FooterText>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>0,00 руб.</v8:content>
+														</v8:item>
+													</FooterText>
+													<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>10</Width>
+													<ContextMenu name="НакопленияПоКошелькамНакопленоКонтекстноеМеню" id="217"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамНакопленоExtendedTooltip" id="419"/>
+												</LabelField>
+												<LabelField name="НакопленияПоКошелькамНакопленоВалюта" id="306">
+													<DataPath>НакопленияПоКошелькам.Валюта</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>1</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="НакопленияПоКошелькамНакопленоВалютаКонтекстноеМеню" id="307"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамНакопленоВалютаExtendedTooltip" id="420"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="НакопленияПоКошелькамГруппаНакопленоВПроцентах" id="267">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Накоплено, %</v8:content>
+												</v8:item>
+											</Title>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="НакопленияПоКошелькамГруппаНакопленоВПроцентахExtendedTooltip" id="421"/>
+											<ChildItems>
+												<LabelField name="НакопленияПоКошелькамНакопленоВПроцентах" id="218">
+													<DataPath>НакопленияПоКошелькам.НакопленоВПроцентах</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>4</Width>
+													<ContextMenu name="НакопленияПоКошелькамНакопленоВПроцентахКонтекстноеМеню" id="219"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамНакопленоВПроцентахExtendedTooltip" id="422"/>
+												</LabelField>
+												<LabelField name="НакопленияПоКошелькамНакопленоСимволПроцента" id="304">
+													<DataPath>НакопленияПоКошелькам.СимволПроцента</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>1</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="НакопленияПоКошелькамНакопленоСимволПроцентаКонтекстноеМеню" id="305"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамНакопленоСимволПроцентаExtendedTooltip" id="423"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="НакопленияПоКошелькамГруппаНакопленияВКошельках" id="268">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Всего в кошельках</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="НакопленияПоКошелькамГруппаНакопленияВКошелькахExtendedTooltip" id="424"/>
+									<ChildItems>
+										<ColumnGroup name="НакопленияПоКошелькамГруппаНакопленияВКошелькахВалюта" id="272">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Всего в кошельках, валюта</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content> </v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="НакопленияПоКошелькамГруппаНакопленияВКошелькахВалютаExtendedTooltip" id="425"/>
+											<ChildItems>
+												<LabelField name="НакопленияПоКошелькамНакопленияВКошельках" id="220">
+													<DataPath>НакопленияПоКошелькам.НакопленияВКошельках</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<FooterText>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>0,00 руб.</v8:content>
+														</v8:item>
+													</FooterText>
+													<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>10</Width>
+													<ContextMenu name="НакопленияПоКошелькамНакопленияВКошелькахКонтекстноеМеню" id="221"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамНакопленияВКошелькахExtendedTooltip" id="426"/>
+												</LabelField>
+												<LabelField name="НакопленияПоКошелькамНакопленияВКошелькахВалюта" id="292">
+													<DataPath>НакопленияПоКошелькам.Валюта</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>1</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="НакопленияПоКошелькамНакопленияВКошелькахВалютаКонтекстноеМеню" id="293"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамНакопленияВКошелькахВалютаExtendedTooltip" id="427"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="НакопленияПоКошелькамГруппаНакопленияВКошелькахВПроцентах" id="273">
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Всего в кошельках, %</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content> </v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="НакопленияПоКошелькамГруппаНакопленияВКошелькахВПроцентахExtendedTooltip" id="428"/>
+											<ChildItems>
+												<LabelField name="НакопленияПоКошелькамНакопленияВКошелькахВПроцентах" id="222">
+													<DataPath>НакопленияПоКошелькам.НакопленияВКошелькахВПроцентах</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>В кошельках, %</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>4</Width>
+													<ContextMenu name="НакопленияПоКошелькамНакопленияВКошелькахВПроцентахКонтекстноеМеню" id="223"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамНакопленияВКошелькахВПроцентахExtendedTooltip" id="429"/>
+												</LabelField>
+												<LabelField name="НакопленияПоКошелькамНакопленияВКошелькахСимволПроцента" id="302">
+													<DataPath>НакопленияПоКошелькам.СимволПроцента</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>1</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="НакопленияПоКошелькамНакопленияВКошелькахСимволПроцентаКонтекстноеМеню" id="303"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамНакопленияВКошелькахСимволПроцентаExtendedTooltip" id="430"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="НакопленияПоКошелькамГруппаВТомЧисле" id="271">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>в том числе</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="НакопленияПоКошелькамГруппаВТомЧислеExtendedTooltip" id="431"/>
+									<ChildItems>
+										<ColumnGroup name="НакопленияПоКошелькамГруппаНакопленияВКошельке_Кошелек" id="281">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;Кошелек&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content> </v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="НакопленияПоКошелькамГруппаНакопленияВКошельке_КошелекExtendedTooltip" id="432"/>
+											<ChildItems>
+												<ColumnGroup name="НакопленияПоКошелькамГруппаНакопленияВКошельке_Кошелек_Валюта" id="282">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>&lt;Кошелек&gt;, Валюта</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content> </v8:content>
+														</v8:item>
+													</ToolTip>
+													<HorizontalStretch>false</HorizontalStretch>
+													<Group>InCell</Group>
+													<ExtendedTooltip name="НакопленияПоКошелькамГруппаНакопленияВКошельке_Кошелек_ВалютаExtendedTooltip" id="433"/>
+													<ChildItems>
+														<LabelField name="НакопленияПоКошелькамНакопленияВКошельке_Кошелек" id="284">
+															<DataPath>НакопленияПоКошелькам.Кошелек_ИД_Накопления</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;Кошелек&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<TitleHeight>2</TitleHeight>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;Кошелек&gt;, в валюте целей</v8:content>
+																</v8:item>
+															</ToolTip>
+															<EditMode>EnterOnInput</EditMode>
+															<FooterText>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>0,00 руб.</v8:content>
+																</v8:item>
+															</FooterText>
+															<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+															<AutoEditMode>true</AutoEditMode>
+															<Width>10</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<MarkNegatives>true</MarkNegatives>
+															<ContextMenu name="НакопленияПоКошелькамНакопленияВКошельке_КошелекКонтекстноеМеню" id="285"/>
+															<ExtendedTooltip name="НакопленияПоКошелькамНакопленияВКошельке_КошелекExtendedTooltip" id="434"/>
+														</LabelField>
+														<LabelField name="НакопленияПоКошелькамНакопленияВКошельке_Кошелек_Валюта" id="286">
+															<DataPath>НакопленияПоКошелькам.Валюта</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Валюта цели</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>None</TitleLocation>
+															<TitleHeight>2</TitleHeight>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<Width>1</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ContextMenu name="НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВалютаКонтекстноеМеню" id="287"/>
+															<ExtendedTooltip name="НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВалютаExtendedTooltip" id="435"/>
+														</LabelField>
+													</ChildItems>
+												</ColumnGroup>
+												<ColumnGroup name="НакопленияПоКошелькамГруппаНакопленияВКошельке_Кошелек_ВалютаКошелька" id="283">
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>&lt;Кошелек&gt;, Валюта кошелька</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content> </v8:content>
+														</v8:item>
+													</ToolTip>
+													<HorizontalStretch>false</HorizontalStretch>
+													<Group>InCell</Group>
+													<ExtendedTooltip name="НакопленияПоКошелькамГруппаНакопленияВКошельке_Кошелек_ВалютаКошелькаExtendedTooltip" id="436"/>
+													<ChildItems>
+														<LabelField name="НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВВалютеКошелька" id="288">
+															<DataPath>НакопленияПоКошелькам.Кошелек_ИД_НакопленияВВалютеКошелька</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;Кошелек&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<TitleHeight>2</TitleHeight>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;Кошелек&gt;, в валюте кошелька</v8:content>
+																</v8:item>
+															</ToolTip>
+															<EditMode>EnterOnInput</EditMode>
+															<FooterText>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>0,00 руб.</v8:content>
+																</v8:item>
+															</FooterText>
+															<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+															<AutoEditMode>true</AutoEditMode>
+															<Width>10</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<MarkNegatives>true</MarkNegatives>
+															<ContextMenu name="НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВВалютеКошелькаКонтекстноеМеню" id="289"/>
+															<ExtendedTooltip name="НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВВалютеКошелькаExtendedTooltip" id="437"/>
+														</LabelField>
+														<LabelField name="НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВалютаКошелька" id="290">
+															<DataPath>НакопленияПоКошелькам.Кошелек_ИД_ВалютаКошелька</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>&lt;ВалютаКошелька&gt;</v8:content>
+																</v8:item>
+															</Title>
+															<TitleHeight>2</TitleHeight>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<Width>1</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ContextMenu name="НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВалютаКошелькаКонтекстноеМеню" id="291"/>
+															<ExtendedTooltip name="НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВалютаКошелькаExtendedTooltip" id="438"/>
+														</LabelField>
+													</ChildItems>
+												</ColumnGroup>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="НакопленияПоКошелькамГруппаПотрачено" id="269">
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Потрачено</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="НакопленияПоКошелькамГруппаПотраченоExtendedTooltip" id="439"/>
+									<ChildItems>
+										<ColumnGroup name="НакопленияПоКошелькамГруппаПотраченоВалюта" id="274">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Потрачено, валюта</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content> </v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="НакопленияПоКошелькамГруппаПотраченоВалютаExtendedTooltip" id="440"/>
+											<ChildItems>
+												<LabelField name="НакопленияПоКошелькамПотрачено" id="224">
+													<DataPath>НакопленияПоКошелькам.Потрачено</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<FooterText>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>0,00 руб.</v8:content>
+														</v8:item>
+													</FooterText>
+													<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>10</Width>
+													<ContextMenu name="НакопленияПоКошелькамПотраченоКонтекстноеМеню" id="225"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамПотраченоExtendedTooltip" id="441"/>
+												</LabelField>
+												<LabelField name="НакопленияПоКошелькамПотраченоВалюта" id="294">
+													<DataPath>НакопленияПоКошелькам.Валюта</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>1</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="НакопленияПоКошелькамПотраченоВалютаКонтекстноеМеню" id="295"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамПотраченоВалютаExtendedTooltip" id="442"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="НакопленияПоКошелькамГруппаПотраченоВПроцентах" id="275">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Потрачено, %</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content> </v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="НакопленияПоКошелькамГруппаПотраченоВПроцентахExtendedTooltip" id="443"/>
+											<ChildItems>
+												<LabelField name="НакопленияПоКошелькамПотраченоВПроцентах" id="226">
+													<DataPath>НакопленияПоКошелькам.ПотраченоВПроцентах</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>4</Width>
+													<ContextMenu name="НакопленияПоКошелькамПотраченоВПроцентахКонтекстноеМеню" id="227"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамПотраченоВПроцентахExtendedTooltip" id="444"/>
+												</LabelField>
+												<LabelField name="НакопленияПоКошелькамПотраченоСимволПроцента" id="300">
+													<DataPath>НакопленияПоКошелькам.СимволПроцента</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>1</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="НакопленияПоКошелькамПотраченоСимволПроцентаКонтекстноеМеню" id="301"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамПотраченоСимволПроцентаExtendedTooltip" id="445"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="НакопленияПоКошелькамГруппаОсталосьНакопить" id="270">
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Осталось накопить</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="НакопленияПоКошелькамГруппаОсталосьНакопитьExtendedTooltip" id="446"/>
+									<ChildItems>
+										<ColumnGroup name="НакопленияПоКошелькамГруппаОсталосьНакопитьВалюта" id="276">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Осталось накопить, валюта</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content> </v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="НакопленияПоКошелькамГруппаОсталосьНакопитьВалютаExtendedTooltip" id="447"/>
+											<ChildItems>
+												<LabelField name="НакопленияПоКошелькамОсталосьНакопить" id="228">
+													<DataPath>НакопленияПоКошелькам.ОсталосьНакопить</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<FooterText>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>0,00 руб.</v8:content>
+														</v8:item>
+													</FooterText>
+													<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>10</Width>
+													<ContextMenu name="НакопленияПоКошелькамОсталосьНакопитьКонтекстноеМеню" id="229"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамОсталосьНакопитьExtendedTooltip" id="448"/>
+												</LabelField>
+												<LabelField name="НакопленияПоКошелькамОсталосьНакопитьВалюта" id="296">
+													<DataPath>НакопленияПоКошелькам.Валюта</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>1</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="НакопленияПоКошелькамОсталосьНакопитьВалютаКонтекстноеМеню" id="297"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамОсталосьНакопитьВалютаExtendedTooltip" id="449"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="НакопленияПоКошелькамГруппаОсталосьНакопитьВПроцентах" id="277">
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Осталось накопить, %</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content> </v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="НакопленияПоКошелькамГруппаОсталосьНакопитьВПроцентахExtendedTooltip" id="450"/>
+											<ChildItems>
+												<LabelField name="НакопленияПоКошелькамОсталосьНакопитьВПроцентах" id="230">
+													<DataPath>НакопленияПоКошелькам.ОсталосьНакопитьВПроцентах</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>4</Width>
+													<ContextMenu name="НакопленияПоКошелькамОсталосьНакопитьВПроцентахКонтекстноеМеню" id="231"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамОсталосьНакопитьВПроцентахExtendedTooltip" id="451"/>
+												</LabelField>
+												<LabelField name="НакопленияПоКошелькамОсталосьНакопитьСимволПроцента" id="298">
+													<DataPath>НакопленияПоКошелькам.СимволПроцента</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>1</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="НакопленияПоКошелькамОсталосьНакопитьСимволПроцентаКонтекстноеМеню" id="299"/>
+													<ExtendedTooltip name="НакопленияПоКошелькамОсталосьНакопитьСимволПроцентаExtendedTooltip" id="452"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="НакопленияПоКошелькамГруппаОсталосьДоСрока" id="278">
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Осталось до срока</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="НакопленияПоКошелькамГруппаОсталосьДоСрокаExtendedTooltip" id="453"/>
+									<ChildItems>
+										<LabelField name="НакопленияПоКошелькамОсталосьМесяцев" id="232">
+											<DataPath>НакопленияПоКошелькам.ОсталосьМесяцев</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Осталось до срока</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<Width>10</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=0</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="НакопленияПоКошелькамОсталосьМесяцевКонтекстноеМеню" id="233"/>
+											<ExtendedTooltip name="НакопленияПоКошелькамОсталосьМесяцевExtendedTooltip" id="454"/>
+										</LabelField>
+										<LabelField name="НакопленияПоКошелькамЕдиницаИзмеренияМесяц" id="279">
+											<DataPath>НакопленияПоКошелькам.ЕдиницаИзмеренияМесяц</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<Width>1</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="НакопленияПоКошелькамЕдиницаИзмеренияМесяцКонтекстноеМеню" id="280"/>
+											<ExtendedTooltip name="НакопленияПоКошелькамЕдиницаИзмеренияМесяцExtendedTooltip" id="455"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+						<CheckBoxField name="ПересчитыватьНакопленияВКошелькахВВалютуЦелей" id="312">
+							<DataPath>ВыводитьНакопленияВКошелькахВВалютеЦелей</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="ПересчитыватьНакопленияВКошелькахВВалютуЦелейКонтекстноеМеню" id="313"/>
+							<ExtendedTooltip name="ПересчитыватьНакопленияВКошелькахВВалютуЦелейExtendedTooltip" id="456"/>
+							<Events>
+								<Event name="OnChange">ПересчитыватьНакопленияВКошелькахВВалютуЦелейПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаОбменСостояние" id="646">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа состояния обмена данными</v8:content>
+				</v8:item>
+			</Title>
+			<Group>HorizontalIfPossible</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбменСостояниеРасширеннаяПодсказка" id="647"/>
+			<ChildItems>
+				<PictureDecoration name="ОбменКартинка" id="648">
+					<Width>2</Width>
+					<Height>1</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка состояния обмена данными</v8:content>
+						</v8:item>
+					</Title>
+					<GroupVerticalAlign>Top</GroupVerticalAlign>
+					<Hyperlink>true</Hyperlink>
+					<Picture>
+						<xr:Ref>CommonPicture.СинхронизацияНетОбмена16</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ОбменКартинкаКонтекстноеМеню" id="649"/>
+					<ExtendedTooltip name="ОбменКартинкаРасширеннаяПодсказка" id="650"/>
+					<Events>
+						<Event name="Click">СостояниеОбменаНажатие</Event>
+					</Events>
+				</PictureDecoration>
+				<LabelDecoration name="ОбменТекст" id="651">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>нет обмена</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ОбменТекстКонтекстноеМеню" id="652"/>
+					<ExtendedTooltip name="ОбменТекстРасширеннаяПодсказка" id="653"/>
+					<Events>
+						<Event name="Click">СостояниеОбменаНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РазделНакопления</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="НакопленияПоКошелькам" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Накопления по кошелькам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Приоритет" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приоритет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФинансоваяЦель" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Финансовая цель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФинансовыеЦели</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Срок" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Валюта" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Накоплено" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Накоплено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НакопленоВПроцентах" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Накоплено, %</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НакопленияВКошельках" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Всего в кошельках</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НакопленияВКошелькахВПроцентах" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В кошельках, %</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Потрачено" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Потрачено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПотраченоВПроцентах" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Потрачено, %</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОсталосьНакопить" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Осталось накопить</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОсталосьНакопитьВПроцентах" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Осталось накопить, %</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОсталосьМесяцев" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Осталось месяцев</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОсталосьМесяцевСтрокой" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Осталось месяцев (строкой)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Активность" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Актуальна</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинкиЭлемента" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки элемента</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЕдиницаИзмеренияМесяц" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Единица измерения месяц</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СимволПроцента" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>%</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Кошелек_ИД_ВалютаКошелька" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта кошелька &lt;Кошелек&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Кошелек_ИД_Накопления" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Накопления в кошельке &lt;Кошелек&gt; </v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Кошелек_ИД_НакопленияВВалютеКошелька" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Накопления в кошельке &lt;Кошелек&gt; (в валюте кошелька)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Категория" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Категория</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.КатегорииИсточниковФинансирования</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПометкаУдаления" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Кошелек_ИД_ЭтоГруппа" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;Кошелек&gt; - это группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеФинансоваяЦель" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Финансовая цель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеСуммы" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма цели</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Предопределенный" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предопределенный</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЖурналОпераций" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал операций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:AccountingRegisterRecordSet.ЖурналОпераций</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МассивВидыСубконтоКошелькиИЦели" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Массив виды субконто кошельки и цели</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВалютаУчета" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта учета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕдиницаИзмеренияМесяцСтрокой" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Единица измерения месяц строкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокИДКошельков" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список ИД кошельков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.КошелькиИСчета</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПараметрыПереходаПоСсылке" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры перехода по ссылке</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВыводитьНакопленияВКошелькахВВалютеЦелей" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитывать накопления в кошельках в валюту целей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВыводитьНакопленияВКошелькахВВалютеЦелей</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВыводитьНакопленияВКошелькахВВалютеКошельков" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выводить накопления в кошельках в валюте кошельков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВыводитьНакопленияВКошелькахВВалютеКошельков</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ДопНастройкиФормы" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доп. настройки формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+			<Save>
+				<Field>ДопНастройкиФормы</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВалютаОтчета" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта отчета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредельныйСрок" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предельный срок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеОбщихНакоплений" id="15">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеПлановНакопленийБезЦели" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План пополнения (в среднем в месяц)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФинансовыеЦели" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Финансовые цели</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ФинансоваяЦель" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Финансовая цель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФинансовыеЦели</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Приоритет" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приоритет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Активность" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Активность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПометкаУдаления" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Срок" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВалютаЦели" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта цели</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СуммаЦели" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма цели</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НакопленоВсего" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Накоплено всего</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Зарезервировано" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зарезервировано</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПотраченоНаЦель" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Потрачено на цель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="РаспределеноОбщихНакоплений" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Распределено общих накоплений</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОткладыватьВМесяц" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Откладывать в месяц</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗапланированоОткладывать" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запланировано откладывать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОсталосьМесяцев" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Осталось месяцев</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОсталосьДней" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Осталось дней</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОсталосьЛет" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Осталось лет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеФинансоваяЦель" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Финансовая цель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеСуммы" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма цели</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеНакопленоВсего" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступно накоплений</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеЗарезервировано" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зарезервировано на цель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеРаспределено" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Из накоплений без цели</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеПотрачено" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Потрачено на цель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеОсталосьНакопить" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Осталось накопить</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеСрока" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеОткладыватьВМесяц" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Откладывать в месяц</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеЗапланировано" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление запланировано</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОсталосьНакопить" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Осталось накопить</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПрежнийПриоритет" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приоритет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПотраченоСвободныхДенег" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Потрачено свободных денег</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗапланированоВМесяц" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запланировано в месяц</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекущийПорядок" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий порядок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ФинансовыеЦелиПредставлениеОсталосьНакопить</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ФинансовыеЦелиПредставлениеСрока</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="xs:boolean">true</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:FieldAlternativeBackColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:BorderColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельках</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошелькахВалюта</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Предопределенный</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:FieldAlternativeBackColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:BorderColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ФинансовыеЦели</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ФинансовыеЦели.Активность</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:BorderColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ФинансовыеЦелиПредставлениеФинансоваяЦель</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ФинансовыеЦелиПредставлениеСуммы</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ФинансовыеЦели.ПометкаУдаления</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" strikeout="true" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькам</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Активность</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:BorderColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамПриоритет</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамФинансоваяЦель</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамСумма</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамВалюта</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.ПометкаУдаления</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" strikeout="true" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection/>
+				<dcsset:filter/>
+				<dcsset:appearance/>
+				<dcsset:presentation xsi:type="xs:string">При пустой сумме цели:</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамСумма</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Сумма</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">&lt;без суммы&gt;</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамВалюта</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленоСимволПроцента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошелькахСимволПроцента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамПотраченоСимволПроцента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамОсталосьНакопитьСимволПроцента</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Сумма</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:BorderColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленоВПроцентах</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошелькахВПроцентах</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамПотраченоВПроцентах</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамОсталосьНакопитьВПроцентах</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамОсталосьНакопить</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Сумма</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">-</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection/>
+				<dcsset:filter/>
+				<dcsset:appearance/>
+				<dcsset:presentation xsi:type="xs:string">При пустом сроке:</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамСрок</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Срок</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">&lt;без срока&gt;</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамОсталосьМесяцев</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Срок</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">-</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection/>
+				<dcsset:filter/>
+				<dcsset:appearance/>
+				<dcsset:presentation xsi:type="xs:string">Нет суммы - нет валюты и символа процента:</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленоВалюта</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленоСимволПроцента</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Накоплено</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошелькахВалюта</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошелькахСимволПроцента</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.НакопленияВКошельках</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамПотраченоВалюта</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамПотраченоСимволПроцента</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Потрачено</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамОсталосьНакопитьВалюта</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамОсталосьНакопитьСимволПроцента</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.ОсталосьНакопить</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамЕдиницаИзмеренияМесяц</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.ОсталосьМесяцев</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельке_Кошелек_Валюта</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Кошелек_ИД_Накопления</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+				<dcsset:presentation xsi:type="xs:string">ОформлениеДляКошелька_Кошелек</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВалютаКошелька</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Кошелек_ИД_НакопленияВВалютеКошелька</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string"/>
+					</dcscor:item>
+				</dcsset:appearance>
+				<dcsset:presentation xsi:type="xs:string">ОформлениеДляКошелька_Кошелек_ВВалютеКошелька</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection/>
+				<dcsset:filter/>
+				<dcsset:appearance/>
+				<dcsset:presentation xsi:type="xs:string">Отрицательное красным:</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ФинансовыеЦелиПредставлениеНакопленоВсего</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ФинансовыеЦели.НакопленоВсего</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ФинансовыеЦелиПредставлениеЗарезервировано</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ФинансовыеЦели.Зарезервировано</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ФинансовыеЦелиПредставлениеПотрачено</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ФинансовыеЦели.ПотраченоНаЦель</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ФинансовыеЦелиПредставлениеОсталосьНакопить</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ФинансовыеЦели.ОсталосьНакопить</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ФинансовыеЦелиПредставлениеСрока</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ФинансовыеЦели.ОсталосьДней</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ФинансовыеЦели.Активность</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакоплено</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленоВалюта</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Накоплено</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельках</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошелькахВалюта</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.НакопленияВКошельках</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамПотрачено</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамПотраченоВалюта</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Потрачено</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамОсталосьНакопить</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамОсталосьНакопитьВалюта</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.ОсталосьНакопить</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамОсталосьМесяцев</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамЕдиницаИзмеренияМесяц</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.ОсталосьМесяцев</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Активность</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькам</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Предопределенный</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ДеньгиФонИнформационнойГруппы</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельке_Кошелек</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельке_Кошелек_Валюта</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Кошелек_ИД_Накопления</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Предопределенный</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+				<dcsset:presentation xsi:type="xs:string">ОформлениеДляКошелька_Кошелек</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельке_Кошелек</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельке_Кошелек_Валюта</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Кошелек_ИД_Накопления</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Предопределенный</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЗаголовокГруппыЦвет</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+				<dcsset:presentation xsi:type="xs:string">ОформлениеДляКошелька_Кошелек</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВВалютеКошелька</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВалютаКошелька</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Кошелек_ИД_НакопленияВВалютеКошелька</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Предопределенный</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+				<dcsset:presentation xsi:type="xs:string">ОформлениеДляКошелька_Кошелек_ВВалютеКошелька</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВВалютеКошелька</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВалютаКошелька</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Кошелек_ИД_НакопленияВВалютеКошелька</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Предопределенный</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЗаголовокГруппыЦвет</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+				<dcsset:presentation xsi:type="xs:string">ОформлениеДляКошелька_Кошелек_ВВалютеКошелька</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection/>
+				<dcsset:filter/>
+				<dcsset:appearance/>
+				<dcsset:presentation xsi:type="xs:string">Видимость колонок кошельков:</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельке_Кошелек</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельке_Кошелек_Валюта</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ВыводитьНакопленияВКошелькахВВалютеЦелей</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+				<dcsset:presentation xsi:type="xs:string">ОформлениеДляКошелька_Кошелек</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВВалютеКошелька</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельке_Кошелек_ВалютаКошелька</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ВыводитьНакопленияВКошелькахВВалютеКошельков</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+				<dcsset:presentation xsi:type="xs:string">ОформлениеДляКошелька_Кошелек_ВВалютеКошелька</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошельках</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НакопленияПоКошелькамНакопленияВКошелькахВалюта</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.Предопределенный</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НакопленияПоКошелькам.НакопленияВКошельках</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЗаголовокГруппыЦвет</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection/>
+				<dcsset:filter/>
+				<dcsset:appearance/>
+				<dcsset:presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Цвета фона</v8:content>
+					</v8:item>
+				</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ФинансовыеЦелиПредставлениеПотрачено</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ФинансовыеЦели.ПотраченоНаЦель</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:НакопленияПотрачено</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ФинансовыеЦелиПредставлениеОсталосьНакопить</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ФинансовыеЦели.ПредставлениеОсталосьНакопить</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:НакопленияОсталосьНакопить</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:FieldBackColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьВводИзменениеОстатка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввод / изменение остатка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать корректировка остатка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ИзменениеОстатка16</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСоздатьДокумент</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьМыВзялиВДолг" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мы взяли в долг</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать мы взяли кредит</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.МыВзялиВДолг16</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСоздатьДокумент</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьМыДалиВДолг" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мы дали в долг</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать мы дали в долг</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыдачаЗайма16</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСоздатьДокумент</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьНамВернулиДолг" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нам вернули долг</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать нам вернули долг</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВозвратВыданногоЗайма16</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСоздатьДокумент</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьОбменВалюты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен валюты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать обмен валюты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Валюта16</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСоздатьДокумент</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьРасход" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расход</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать Расход</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.РасходИзКошелька16</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСоздатьДокумент</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьПеремещение" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перемещение накоплений по целям/кошелькам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать перемещение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Перемещение16</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСоздатьДокумент</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьДоход" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доход</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать Доход</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ДоходВКошелек16</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСоздатьДокумент</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьМыВернулиДолг" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мы вернули долг</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать расчеты за кредит</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПогашениеПолученногоКредита16</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСоздатьДокумент</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьУниверсальнаяОперация" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Универсальная операция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать универсальная операция</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УниверсальнаяОперация16</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСоздатьДокумент</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьТаблицуНакопленияПоКошелькам" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить таблицу накопления по кошелькам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить таблицу накопления по кошелькам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьТаблицуНакопленияПоКошелькам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрыватьПриЗапускеПрограммы" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открывать при запуске программы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открывать при запуске программы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрыватьПриЗапускеПрограммы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Запланировать" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запланировать...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запланировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Запланировать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОпуститьПриоритет" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Опустить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Опустить приоритет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОпуститьПриоритет</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">ГруппаСтраницыФормы</AssociatedTableElementId>
+		</Command>
+		<Command name="ПоднятьПрииоритет" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поднять</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поднять прииоритет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоднятьПрииоритет</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">ГруппаСтраницыФормы</AssociatedTableElementId>
+		</Command>
+		<Command name="ОбновитьФинансовыеЦели" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить финансовые цели</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить финансовые цели</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьФинансовыеЦели</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

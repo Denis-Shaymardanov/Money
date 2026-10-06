@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<DataProcessor uuid="998a1b93-60f9-4b95-bc39-eea62602ffc6">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.МониторСинхронизацииСМобильнымиУстройствами" category="Object">
+				<xr:TypeId>693aa77a-e4e2-4ece-8741-a36eca894872</xr:TypeId>
+				<xr:ValueId>b203f0eb-30b0-4304-bb5a-7c5e2dd9d07b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.МониторСинхронизацииСМобильнымиУстройствами" category="Manager">
+				<xr:TypeId>ef7113af-0183-40e7-98a8-0ec7e91d3793</xr:TypeId>
+				<xr:ValueId>b63c5e9c-8ae4-4286-91ec-4adc13b8ee3f</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>МониторСинхронизацииСМобильнымиУстройствами</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Монитор синхронизации с мобильными устройствами</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<DefaultForm>DataProcessor.МониторСинхронизацииСМобильнымиУстройствами.Form.Монитор</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>ИнструкцияОбменаФайлами</Form>
+			<Form>ИнтерактивныйОбменЧерезСервис</Form>
+			<Form>ИспользованиеДомашнейСети</Form>
+			<Form>ИспользованиеОблачногоСервиса</Form>
+			<Form>Монитор</Form>
+			<Form>НастройкаДомашнейСети</Form>
+			<Form>НастройкаОблачногоСервиса</Form>
+			<Form>ПримерНастройкиРоутера</Form>
+			<Form>ПубликацияБазыНаВебсервере</Form>
+			<Form>УстановкаВебРасширения</Form>
+			<Form>УстановкаВебСервераApache</Form>
+			<Form>АвтоматическаяСинхронизация</Form>
+			<Template>ФайлVRD</Template>
+			<Template>ТекстКонфигурации</Template>
+			<Template>ТекстТипов</Template>
+			<Command uuid="1831c488-7bb0-490b-aa47-b2573648dede">
+				<Properties>
+					<Name>СинхронизацияСМобильнымиУстройствами</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синхронизация с мобильными устройствами</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>CommandGroup.ПанельДействийИнтеграция</Group>
+					<CommandParameterType/>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

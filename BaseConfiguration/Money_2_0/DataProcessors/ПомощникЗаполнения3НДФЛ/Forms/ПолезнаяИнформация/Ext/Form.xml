@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="11">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="12"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ДекорацияКакИзменитьДекларацию" id="1">
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Если нашли ошибку в указанных доходах и вычетах, то вернитесь на этап "Доходы и вычеты" и внесите исправления.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияКакИзменитьДекларациюКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДекорацияКакИзменитьДекларациюРасширеннаяПодсказка" id="3"/>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияКакВнестиДругиеДоходы" id="13">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Если хотите задекларировать:
+1. Доходы, полученные от адвокатской деятельности, частной практики
+2. Авторские вознаграждения, кроме вознаграждений, полученных наследниками (правопреемниками) авторов
+3. Доходы от участия в инвестиционных товариществах
+4. Доходы, полученные за пределами РФ, предусматривающие получение налогового вычета:
+  - доходы от деятельности контролируемых иностранных компаний,
+  - доходы от продажи недвижимости за рубежом и иностранных компаний,
+  - доходы, полученные на иностранных биржах и т.д.
+5. Вычеты,предоставленные в упрощенном порядке
+перейдите в &lt;link РегламентированнаяОтчетность&gt;1С-Отчетность&lt;/&gt; и добавьте их вручную.
+В этом случае работа помощника будет завершена.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияКакВнестиДругиеДоходыКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ДекорацияКакВнестиДругиеДоходыРасширеннаяПодсказка" id="15"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаКот" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кот</v8:content>
+				</v8:item>
+			</Title>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКотРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияКот" id="6">
+					<Width>13</Width>
+					<Height>3</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кот</v8:content>
+						</v8:item>
+					</Title>
+					<PictureSize>Proportionally</PictureSize>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДекорацияКотКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ДекорацияКотРасширеннаяПодсказка" id="8"/>
+				</PictureDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Организация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="ЗаголовокФормы">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="КлючНазначенияФормы">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

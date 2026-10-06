@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Subsystem uuid="6cb0e9fb-d62d-44af-8bb2-2d3d6dc91efe">
+		<Properties>
+			<Name>УчетДолгов</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет долгов</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Долги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыВзялиВДолг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контакты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыДалиВДолг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НамВернулиДолг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.МыВернулиДолг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводИзменениеОстатка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Расход</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УниверсальнаяОперация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПараметрыГрафикаПогашенияДолгов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыДолгов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоДолгам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ИзменениеОстатка16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.УниверсальнаяОперация16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВыданныйЗаем48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВыданныйЗаем32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВыданныйЗаем16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПроцентыПоВыданнымЗаймам16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПроцентыПоВыданнымЗаймам32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПолученныйКредит48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПолученныйКредит16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПолученныйКредит32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПроцентыПоПолученнымКредитам16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПроцентыПоПолученнымКредитам32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВозвратВыданногоЗайма16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ВыдачаЗайма16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПогашениеПолученногоКредита16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МыВзялиВДолг16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПомощникСозданияДолга</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.РедакторГрафикаПогашенияДолга</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ДополнительныеЗначенияВидовАналитик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыПогашенияКредита</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>
